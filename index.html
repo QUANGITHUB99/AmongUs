@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta name="theme-color" content="#09121c">
-<title>ORBIT 28 · Trust is a fragile thing</title>
+<title>ORBIT 31 · Trust is a fragile thing</title>
 <style>
 *{box-sizing:border-box}[hidden]{display:none!important}:root{color-scheme:dark;--mint:#a3e87b;--red:#ee5467;--gold:#ffe48a;--muted:#b2c4cc;--line:#64787f}body{margin:0;background:#0b1319;color:#fff;font:14px system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer;color:white;background:#344c59;border:2px solid #081015;border-radius:10px;padding:10px 14px;font-weight:800;box-shadow:inset 0 1px #ffffff35,0 2px 0 #0009;touch-action:manipulation}button:hover{filter:brightness(1.16)}button:disabled{opacity:.4;cursor:default;filter:saturate(.4)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}input,select{min-width:0;width:100%;background:#172630;border:2px solid #081015;color:white;padding:12px;border-radius:9px}p{line-height:1.6}main{max-width:1800px;margin:auto;padding:10px}.topline{display:flex;align-items:center;justify-content:space-between;gap:10px;height:40px;margin-bottom:8px}.wordmark{font-weight:950;letter-spacing:4px;font-size:17px}.wordmark em{font-style:normal;color:#e8a94e}.connection{text-align:right;color:#afc6d0;font-size:11px}.connection b{color:#aee998}.shell{display:grid;grid-template-columns:minmax(0,1fr) 222px;gap:10px}.world{position:relative;min-width:0;height:min(82dvh,900px);min-height:440px;overflow:hidden;background:#101c22;border:4px solid #030709;border-radius:12px;box-shadow:0 0 0 1px #62757d}#game{display:block;width:100%;height:100%;outline:none}.hud{position:absolute;top:10px;left:12px;right:76px;display:flex;align-items:center;gap:8px;z-index:2;pointer-events:none}.task-track{position:relative;flex:1;height:31px;background:#162623df;border:2px solid #b4c2bd;box-shadow:0 0 0 2px #101715;overflow:hidden}.progress{position:absolute;inset:0}.progress div{height:100%;background:linear-gradient(#7fa56d,#537751);width:0;transition:width .3s}.task-track strong{position:absolute;left:8px;top:4px;font-size:13px;font-weight:950;white-space:nowrap;text-shadow:-1px -1px #18231c,1px 1px #18231c,2px 2px #18231c}.hud button{pointer-events:auto;padding:6px 12px;background:#334244df;font-size:12px}.gear{position:absolute;right:12px;top:9px;z-index:3;width:47px;height:47px;border:3px solid #e5e9e6;border-radius:50%;background:#283138;font-size:29px;line-height:1;padding:0;box-shadow:0 0 0 3px #111c21}.task-drawer{position:absolute;z-index:2;left:12px;top:53px;width:min(270px,52%);background:#101b25c9;border:1px solid #ffffff42;border-radius:8px;padding:10px 12px;pointer-events:none}.task-list{margin:0;padding:0;list-style:none;font-size:11px;line-height:1.75}.task-list li.done{color:#a9ed91}.role-mini{font-size:11px;font-weight:900;letter-spacing:1px;color:#b6ef9f;margin-bottom:5px}.badge{position:absolute;top:63px;right:12px;color:#e9f2f2;background:#223b45a8;border:1px solid #a5bac147;border-radius:5px;padding:5px 8px;font-size:10px;letter-spacing:1px;pointer-events:none}.banner{position:absolute;top:100px;left:50%;transform:translateX(-50%);z-index:3;padding:9px 13px;border:2px solid #5f1322;border-radius:8px;background:#d74355ed;color:white;max-width:90%;width:max-content;font-size:12px;text-align:center;font-weight:800}.actions{position:absolute;right:14px;bottom:14px;z-index:2;display:grid;grid-template-columns:repeat(3,75px);gap:8px}.action{height:77px;position:relative;padding:7px 3px;border:2px solid #152229;border-radius:14px;background:linear-gradient(#eef4ec,#a1b3b4);color:#142734;text-align:center;filter:drop-shadow(0 3px 1px #0008)}.action i{display:block;font:900 27px system-ui;font-style:normal;line-height:32px}.action strong{font-size:10px;display:block;white-space:nowrap}.action kbd{position:absolute;right:5px;top:3px;font-size:8px;opacity:.65}.action.danger{background:linear-gradient(#ff697b,#ae223e);color:#fff3f1}.action.gold{background:linear-gradient(#ffdf83,#b59142);color:#30260b}.action:not(:disabled){border-color:#f3f7e9}.dpad{position:absolute;left:15px;bottom:16px;z-index:2;display:grid;grid-template-columns:repeat(3,43px);gap:4px}.dpad button{padding:10px 0;background:#192c3bae;border:1px solid #adc3d975;color:#fff;touch-action:none}.dpad button:first-child{grid-column:2}.dpad button:nth-child(2){grid-column:1}.instructions{position:absolute;bottom:117px;left:14px;right:260px;font-size:10px;color:#fff;text-shadow:1px 1px 2px black;pointer-events:none;min-height:15px}.rail{display:flex;flex-direction:column;gap:9px;min-width:0}.map-card,.rail-card{background:#263841;border:2px solid #071015;border-radius:11px;padding:11px;box-shadow:inset 0 1px #ffffff21}.rail-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;font-size:10px;letter-spacing:1.5px;font-weight:850;color:#d4e4e7}.rail-heading button{font-size:10px;padding:3px 7px;letter-spacing:0}#minimap{display:block;width:100%;height:auto;background:#14242c;border:1px solid #5b737d;border-radius:6px}.map-legend{display:flex;gap:10px;margin-top:7px;font-size:9px;color:#b7cbd0}.map-legend span:before{content:'';display:inline-block;width:6px;height:6px;margin-right:4px;background:#ffe185;border-radius:50%}.map-legend span:last-child:before{background:#72eff1}.crew-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}.crew-list li{display:flex;align-items:center;gap:6px;font-size:11px}.crew-list small{margin-left:auto;color:#aabcc5;font-size:9px}.dot{width:10px;height:13px;display:inline-block;border-radius:4px;border:1px solid #071019}.rail-stat{display:flex;justify-content:space-between;font-size:12px;font-weight:800;color:#e7ede3}.rail-info{font-size:10px;line-height:1.6;color:#b0c4cf;margin:0}.rail-buttons{display:flex;gap:5px}.rail-buttons button{font-size:10px;padding:9px;flex:1}.smallprint{font-size:10px;color:#8c9ea5;margin:8px 0 0}.veil{position:absolute;inset:0;z-index:5;display:grid;align-content:center;justify-items:center;padding:22px;background:radial-gradient(ellipse at center,#18374be8,#071119f0);text-align:center;overflow:auto}.veil h2{font-size:clamp(29px,4vw,55px);line-height:1.08;letter-spacing:-1px;font-weight:950;text-shadow:3px 4px #020a10;margin:0 0 15px}.veil p{max-width:500px;color:#c8d8dd;font-size:13px;margin:0 0 16px}.orbit-tag{font-size:11px;letter-spacing:6px;color:#ffd990;margin-bottom:15px}.menu-modes{display:flex;gap:10px;width:min(470px,100%);margin-bottom:17px}.mode-button{flex:1;padding:13px 10px;background:#223644;border:2px solid #526b7c;color:#d7e1e6;text-align:left}.mode-button.selected{border-color:#ffe39a;background:#42676a;color:white}.mode-button b{display:block;font-size:14px;margin-bottom:5px}.mode-button span{font-size:10px;font-weight:500;line-height:1.5;display:block}.start-form{display:flex;gap:8px;width:min(470px,100%)}.start-form button{background:#6c9550;color:white;white-space:nowrap;border-color:#b9d69b}.menu-options{display:flex;gap:8px;align-items:center;margin:14px 0;color:#c4d2d6;font-size:11px}.menu-options select{padding:7px;width:auto}.mini{font-size:11px;color:#9db3c0;line-height:1.7}.lobby-chat{width:min(510px,100%);text-align:left;margin:14px 0}.lobby-chat .chat{height:110px;margin:0 0 8px}.curtain-buttons{display:flex;gap:9px;justify-content:center}.secondary{background:#2e4859;color:#eaf3f6}.gold{background:#8b733e}.danger{background:#9c394c}.modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:18px;background:#071017d9;overflow:auto}.dialog{width:min(720px,100%);max-height:92dvh;overflow:auto;padding:23px;background:linear-gradient(#d2dedc,#9baeb0);color:#192f3c;border:5px solid #172833;border-radius:19px;box-shadow:0 0 0 2px #dde9e6,0 20px 70px #000b}.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.dialog h2{font-size:24px;margin:0;font-weight:900}.dialog p{font-size:13px;margin:9px 0;color:#294554}.dialog .mini{color:#4a606d}.dialog-head button{padding:6px 12px;background:#435e6b}.vote-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.vote-grid button{text-align:left;background:#edf2e9;color:#243b48;border:2px solid #718d96;min-height:48px;font-size:13px}.chat{height:150px;overflow:auto;border-radius:9px;background:#18313c;color:#e9f2ef;padding:11px;margin:13px 0;overflow-wrap:anywhere}.chat p{color:#e1eee9;font-size:12px;margin:0 0 5px}.chat-form{display:flex;gap:8px}.chat-form input{flex:1}.help-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.help-grid p{margin:0}.task-bar{height:15px;background:#50666a;border:2px solid #2a414d;border-radius:8px;overflow:hidden;margin:18px 0}.task-bar div{height:100%;background:#88d777;width:0}.hold{width:100%;padding:18px;touch-action:none}.sequence{display:flex;gap:12px;justify-content:center;margin:20px 0}.sequence button{width:75px;height:75px;font-size:24px}.wire-board{position:relative;background:#2a353a;border:9px solid #54666d;border-radius:13px;width:100%;aspect-ratio:560/320;touch-action:none}.wire-board canvas{width:100%;height:100%;display:block}.wire-plug{position:absolute;width:47px;height:36px;transform:translate(-50%,-50%);padding:0;border:3px solid #13202a;border-radius:7px;color:#17242d;font-size:15px;z-index:1}.wire-plug.selected{outline:3px solid white}.wire-plug:disabled{opacity:.5}.sequence-display{display:flex;gap:8px;justify-content:center;padding:14px;background:#273e4c;border-radius:10px;color:white;letter-spacing:8px;font-size:22px}.memory-grid{display:grid;grid-template-columns:repeat(2,90px);gap:12px;justify-content:center;margin:20px 0}.memory-pad{height:80px;background:var(--pad);border:4px solid #263b49;opacity:.45}.memory-pad.flash{opacity:1;box-shadow:0 0 18px var(--pad)}.swipe-track{position:relative;height:105px;background:#314e5b;border:4px solid #172c38;border-radius:9px;margin:20px 0;overflow:hidden;touch-action:none}.swipe-track:after{content:'← SWIPE CARD FROM LEFT TO RIGHT →';position:absolute;inset:40px 0;text-align:center;color:#91afb8;font-size:11px;pointer-events:none}.swipe-card{position:absolute;z-index:1;top:11px;left:8px;width:115px;height:74px;background:#f0e9ca;color:#233f4f;border:3px solid #283b46;border-radius:9px;padding:10px;cursor:grab;touch-action:none;font-size:11px;font-weight:900}.swipe-card:before{content:'▤';display:block;color:#c48c3f;font-size:20px}.swipe-card:active{cursor:grabbing}.tune-row{display:grid;grid-template-columns:100px 1fr 42px;align-items:center;gap:12px;margin:25px 0}.tune-row input{padding:0;accent-color:#4c8bb2}.asteroid-field{position:relative;height:280px;overflow:hidden;border:5px solid #2c4553;background:radial-gradient(ellipse,#21425c,#081d30);border-radius:12px}.asteroid-field:before{content:'·     ✧       ·       ✦       ·      ✧';position:absolute;color:#a7ccdf;inset:20px;font-size:25px;line-height:3}.asteroid{position:absolute;width:55px;height:55px;padding:0;border:3px solid #3c3635;border-radius:44% 58% 48% 60%;background:radial-gradient(at 30% 25%,#c2b59d,#706e66);color:#253945;font-size:18px;box-shadow:inset -6px -5px #4b555b70;touch-action:manipulation}.scan-figure{height:170px;position:relative;background:repeating-linear-gradient(0deg,#36585c 0 2px,#24464c 2px 12px);border:4px solid #496c6f;border-radius:10px;display:grid;place-items:center;color:#88dfb7;font-size:95px;overflow:hidden}.scan-beam{position:absolute;left:0;right:0;height:8px;top:0;background:#baffd4;box-shadow:0 0 20px #84ffba}.task-feedback{min-height:24px;font-weight:800}.fuel{height:170px;position:relative;background:#253f4c;border:4px solid #486975;border-radius:10px;display:grid;place-items:center;font-size:60px;color:#edcb63}.fuel-level{position:absolute;left:0;right:0;bottom:0;background:#d4b74c77;height:0;transition:height .1s;pointer-events:none}
 @media(max-width:1050px){.shell{grid-template-columns:minmax(0,1fr) 190px}.rail{gap:7px}.rail-card,.map-card{padding:8px}.world{min-height:410px}.actions{grid-template-columns:repeat(3,64px);gap:5px}.action{height:68px}.action i{font-size:23px}.instructions{right:220px;font-size:9px}.task-track strong{font-size:11px;top:6px}}
 @media(max-width:760px){main{padding:5px}.topline{height:33px}.wordmark{font-size:13px}.connection{font-size:9px}.shell{grid-template-columns:1fr}.world{height:65dvh;min-height:380px}.rail{display:grid;grid-template-columns:160px 1fr}.map-card{grid-row:span 2}.rail-card.crew-card{grid-row:span 2}.rail-info{grid-column:1/-1}.rail-buttons{grid-column:1/-1}.crew-list{grid-template-columns:1fr 1fr;gap:7px}.crew-list li{font-size:10px}.crew-list small{font-size:8px}.mode-button{padding:10px}.mode-button b{font-size:12px}.mode-button span{font-size:9px}.veil{padding:16px}.veil h2{font-size:30px;margin-bottom:10px}.veil p{font-size:11px;margin-bottom:12px}.orbit-tag{font-size:9px;margin-bottom:10px}.menu-modes{gap:7px;margin-bottom:10px}.start-form input,.start-form button{font-size:11px;padding:9px}.menu-options{margin:10px 0;font-size:10px}.actions{right:8px;bottom:8px;grid-template-columns:repeat(3,56px);gap:4px}.action{height:59px;border-radius:10px}.action i{font-size:21px;line-height:25px}.action strong{font-size:8px}.dpad{left:8px;bottom:10px;grid-template-columns:repeat(3,36px);gap:3px}.dpad button{padding:8px 0}.instructions{left:9px;right:185px;bottom:100px}.hud{left:8px;right:59px;top:8px;gap:5px}.task-track strong{font-size:9px;top:7px;left:5px}.hud button{font-size:9px;padding:7px}.gear{right:8px;width:39px;height:39px;font-size:24px}.task-drawer{left:8px;top:49px;padding:7px;width:220px}.task-list{font-size:9px}.role-mini{font-size:9px}.badge{top:52px;right:8px;font-size:8px}.dialog{padding:16px}.dialog h2{font-size:20px}.help-grid{grid-template-columns:1fr}.wire-plug{width:34px;height:28px;font-size:12px}.tune-row{grid-template-columns:70px 1fr 32px;gap:6px}.lobby-chat .chat{height:80px}.smallprint{font-size:9px}}
 @media(orientation:landscape) and (max-height:600px){.world{height:calc(100dvh - 57px);min-height:290px}.veil{padding:12px}.veil h2{font-size:27px}.veil p{margin-bottom:10px;font-size:11px}.orbit-tag{margin-bottom:7px}.mode-button{padding:8px}.menu-modes{margin-bottom:8px}.menu-options{margin:6px 0}.rail .crew-list{gap:5px}.rail-info{display:none}}
 
-/* ORBIT 28: restrained ship HUD, illustrated capsule crew, tactile task panels. */
+/* ORBIT 31: restrained ship HUD, illustrated capsule crew, tactile task panels. */
 body{background:#060b13;background-image:radial-gradient(1px 1px at 9% 18%,#b5cbdd 80%,transparent),radial-gradient(1px 1px at 67% 8%,#7b9baa 80%,transparent),radial-gradient(1px 1px at 89% 75%,#afc8d7 80%,transparent);background-size:383px 337px,467px 419px,293px 523px}
 main{padding:12px 18px}.topline{height:38px}.wordmark{font-size:18px;letter-spacing:6px}.wordmark em{color:#7dd6e3}.world{border-radius:7px;box-shadow:0 0 0 1px #73929d,0 12px 60px #0008}.map-card,.rail-card{background:linear-gradient(140deg,#263f4c,#152631);border-color:#020b12;border-radius:7px}.rail-info{font-size:10px}.rail-heading{color:#a6c4ce;letter-spacing:2px}.crew-list{gap:11px}.dot{border-width:1.5px;border-radius:5px;box-shadow:inset -3px -2px #0003;width:13px;height:17px}
 .veil{background:radial-gradient(ellipse at 50% 75%,#192d4270,transparent 65%),#070c16ed}.veil h2{font-size:clamp(38px,5vw,67px);line-height:.98;letter-spacing:1px;text-transform:uppercase}.veil h2 em{font-style:normal;color:#f5cd76}.veil p{font-size:12px;color:#9bb2c5;line-height:1.7}.orbit-tag{color:#9cb9c9;letter-spacing:5px;font-size:9px}.menu-modes{margin-bottom:12px}.mode-button{background:#102130;border-color:#354c60;box-shadow:none;border-radius:5px}.mode-button.selected{background:#203c46;border-color:#8dd5d2}.mode-button b{font-size:12px;letter-spacing:.7px}.mode-button span{color:#afc2cf}.start-form input{border:1px solid #4a6577;border-radius:4px;background:#112130}.start-form button{border:1px solid #d5ebaf;border-radius:4px;background:#6c8b4f;font-size:12px}.menu-options{margin:11px 0}.menu-options select{font-size:11px;padding:5px;border-radius:4px;border:1px solid #536a79}
@@ -157,12 +157,21 @@ body.round-active:has(#skill-status:not([hidden])) .rail{display:grid!important;
 body.mobile-flight.round-active:has(#skill-status:not([hidden])) .rail{height:92px;grid-template-columns:100px minmax(0,1fr) auto;gap:4px 5px;align-content:center}body.mobile-flight.round-active:has(#skill-status:not([hidden])) .rail-buttons{grid-column:2/4}body.mobile-flight #skill-status{gap:4px;justify-content:stretch}body.mobile-flight #skill-status .skill-chip{flex:1 1 0;min-width:0;min-height:42px;padding:3px 1px;flex-direction:column;gap:2px}body.mobile-flight #skill-status .skill-chip-label{font-size:9px}body.mobile-flight #skill-status .skill-chip kbd{display:none}body.mobile-flight #skill-status .skill-chip strong{font-size:9px;overflow-wrap:anywhere}body.mobile-flight.round-active:has(#skill-status:not([hidden])) .joystick{bottom:108px}body.mobile-flight.round-active:has(#skill-status:not([hidden])) .actions{bottom:104px}
 
 @media(max-height:500px){body.mobile-flight.round-active:has(#skill-status:not([hidden])) .shell{height:calc(100dvh - 82px)!important;padding-bottom:0!important}body.mobile-flight.round-active:has(#skill-status:not([hidden])) .world{width:min(100vw,calc((100dvh - 82px)*1.6))!important;height:min(calc(100dvh - 82px),62.5vw)!important}body.mobile-flight.round-active:has(#skill-status:not([hidden])) .rail{height:82px}body.mobile-flight #skill-status .skill-chip{min-height:32px;padding:2px}body.mobile-flight.round-active:has(#skill-status:not([hidden])) .joystick{bottom:96px}body.mobile-flight.round-active:has(#skill-status:not([hidden])) .actions{bottom:94px}}
+
+#minimize-report{flex:none;min-width:34px;min-height:30px;padding:1px 8px;line-height:1;border:1px solid #5c7d93;border-radius:5px;background:#d4e5ed;color:#294b60;font-size:20px;box-shadow:none}#meeting-modal[data-stage=results] #meeting-time{display:none!important}#restore-report{background:#477487;color:#f1fbfa;border-color:#8aadb8}body.mobile-flight .rail-buttons:has(#restore-report:not([hidden])) button{min-width:0;flex:1;font-size:8px;padding:6px}
+@media(hover:hover) and (pointer:fine){#game,#lobby-scene{cursor:crosshair}.watching-match #game{cursor:grab}}
+
+/* Report is a movable non-modal window, leaving the map available for panning. */
+#meeting-modal{pointer-events:none;background:transparent}#report-window{pointer-events:auto;margin:0}#report-titlebar{cursor:move;touch-action:none;user-select:none}#report-titlebar button{cursor:pointer;touch-action:manipulation}#compact-report{flex:none;min-width:32px;min-height:30px;padding:1px 7px;font-size:21px;border:1px solid #5c7d93;border-radius:5px;background:#d4e5ed;color:#294b60;box-shadow:none}
+#meeting-modal[data-size=compact] #report-window{width:min(460px,calc(100vw - 20px));height:min(540px,76dvh);padding:10px;border-width:6px}#meeting-modal[data-size=compact] #meeting-title{font-size:18px!important}#meeting-modal[data-size=compact] .vote-person{height:52px!important;min-height:52px!important}#meeting-modal[data-size=compact] .vote-person>.mini-crew{transform:scale(.7)!important}#meeting-modal[data-size=compact] .reporter-icon{font-size:22px!important}#meeting-modal[data-size=compact][data-stage=results] .vote-person{height:74px!important;min-height:74px!important}#meeting-modal[data-size=compact][data-stage=results] .vote-person>.mini-crew{transform:scale(.65)!important}
+.meeting-map-view #game{cursor:grab;touch-action:none}.meeting-map-view #game:active{cursor:grabbing}@media(max-width:480px){#meeting-modal[data-size=compact] #report-window{width:min(360px,calc(100vw - 20px));height:min(520px,70dvh)}#meeting-modal .dialog-head{gap:5px}#compact-report,#minimize-report{min-width:28px}}
+#vent-directions{position:absolute;inset:0;z-index:4;pointer-events:none}#vent-directions button{pointer-events:auto;position:absolute;transform:translate(-50%,-50%);background:#172b36e8;border:2px solid #ffd587;color:#fff4ce;padding:8px;min-width:90px;max-width:130px;font-size:10px}#vent-directions b{display:block;font-size:30px;line-height:30px}#vent-directions .vent-exit{background:#8b3647;border-color:#ffb1b1}
 </style>
 </head>
 <body>
 
 <main>
-<header class="topline"><div class="wordmark">ORBIT <em>28</em></div><div class="connection"><b id="network">Ready for departure</b><br><span id="population">Ready for departure</span></div></header>
+<header class="topline"><div class="wordmark">ORBIT <em>30</em></div><div class="connection"><b id="network">Ready for departure</b><br><span id="population">Ready for departure</span></div></header>
 <div class="shell"><section class="world">
 <canvas id="game" width="1000" height="650" tabindex="0" aria-label="Spaceship game. Move with WASD or the arrow keys."></canvas>
 <div class="hud"><div class="task-track"><div class="progress"><div id="total-progress"></div></div><strong id="task-count">TOTAL TASKS COMPLETED</strong></div><button id="toggle-tasks" aria-expanded="true">TASKS ▾</button><button id="journal-shortcut" title="J · Sensor log">LOGS</button></div>
@@ -171,30 +180,30 @@ body.mobile-flight.round-active:has(#skill-status:not([hidden])) .rail{height:92
 <span class="badge room-label" id="location" aria-label="Current room"></span><div class="banner" id="alert" hidden></div>
 <div class="instructions" id="hint" role="status" aria-live="polite">WASD / arrows to move · E interact · R report</div>
 <div id="joystick" class="joystick" aria-label="Touch joystick"><span id="joystick-knob"></span></div><div class="dpad" aria-label="Movement controls"><button data-key="arrowup" aria-label="Up">▲</button><button data-key="arrowleft" aria-label="Left">◀</button><button data-key="arrowdown" aria-label="Down">▼</button><button data-key="arrowright" aria-label="Right">▶</button></div>
-<div class="actions"><button id="use" class="action"><i>☝</i><strong>USE / TASK</strong><kbd>E</kbd></button><button id="report" class="action gold"><i>⚑</i><strong>REPORT</strong><kbd>R</kbd></button><button id="kill" class="action danger" title="Q · Kill a nearby crewmate" aria-keyshortcuts="Q"><i>✕</i><strong>KILL</strong><kbd>Q</kbd></button></div><div class="tactical"><button id="stealth" class="action utility danger" title="H · Cloak for five seconds, once per round"><i>◌</i><strong>CLOAK</strong><kbd>H</kbd></button><button id="door" class="action utility" title="Z · Close the nearest door for six seconds"><i>▥</i><strong>DOORS</strong><kbd>Z</kbd></button><button id="comms" class="action utility" title="C · Sabotage communications"><i>⌁</i><strong>COMMS</strong><kbd>C</kbd></button><button id="critical" class="action utility danger" title="X · Sabotage reactor; two crewmates must repair it"><i>☢</i><strong>REACTOR</strong><kbd>X</kbd></button><button id="sabotage" class="action danger"><i>ϟ</i><strong>LIGHTS</strong><kbd>F</kbd></button><button id="vent" class="action" title="V · Use a nearby vent" aria-keyshortcuts="V"><i>▤</i><strong>VENT</strong><kbd>V</kbd></button><button id="meeting" class="action gold"><i>!</i><strong>EMERGENCY</strong><kbd>SPACE</kbd></button></div>
+<div id="vent-directions" hidden aria-label="Vent routes"></div><div class="actions"><button id="use" class="action"><i>☝</i><strong>USE / TASK</strong><kbd>E</kbd></button><button id="report" class="action gold"><i>⚑</i><strong>REPORT</strong><kbd>R</kbd></button><button id="kill" class="action danger" title="Q · Kill a nearby crewmate" aria-keyshortcuts="Q"><i>✕</i><strong>KILL</strong><kbd>Q</kbd></button></div><div class="tactical"><button id="stealth" class="action utility danger" title="H · Cloak for five seconds, once per round"><i>◌</i><strong>CLOAK</strong><kbd>H</kbd></button><button id="door" class="action utility" title="Z · Close the nearest door for six seconds"><i>▥</i><strong>DOORS</strong><kbd>Z</kbd></button><button id="comms" class="action utility" title="C · Sabotage communications"><i>⌁</i><strong>COMMS</strong><kbd>C</kbd></button><button id="critical" class="action utility danger" title="X · Sabotage reactor; two crewmates must repair it"><i>☢</i><strong>REACTOR</strong><kbd>X</kbd></button><button id="sabotage" class="action danger"><i>ϟ</i><strong>LIGHTS</strong><kbd>F</kbd></button><button id="vent" class="action" title="V · Use a nearby vent" aria-keyshortcuts="V"><i>▤</i><strong>VENT</strong><kbd>V</kbd></button><button id="meeting" class="action gold"><i>!</i><strong>EMERGENCY</strong><kbd>SPACE</kbd></button></div>
 <div class="veil home-menu" id="menu">
 <button id="home-settings" class="home-gear" aria-label="Settings">⚙</button>
-<div class="home-brand"><svg class="orbit-logo" viewBox="0 0 100 90" aria-hidden="true"><ellipse cx="50" cy="48" rx="44" ry="18" transform="rotate(-27 50 48)" fill="none" stroke="#b2e2d9" stroke-width="3"/><circle cx="50" cy="43" r="26" fill="#163c4a" stroke="#b2e2d9" stroke-width="2"/><path d="M39 58V37q0-13 12-13t12 13v21h-8v-8h-8v8z" fill="#e9b16b" stroke="#081522" stroke-width="2"/><rect x="48" y="32" width="21" height="12" rx="6" fill="#c6f0f4" stroke="#081522" stroke-width="2"/><circle cx="83" cy="25" r="5" fill="#e9b16b"/></svg><h1>ORBIT<span>28</span></h1><p class="brand-caption">TRUST IS A FRAGILE THING.</p></div>
+<div class="home-brand"><svg class="orbit-logo" viewBox="0 0 100 90" aria-hidden="true"><ellipse cx="50" cy="48" rx="44" ry="18" transform="rotate(-27 50 48)" fill="none" stroke="#b2e2d9" stroke-width="3"/><circle cx="50" cy="43" r="26" fill="#163c4a" stroke="#b2e2d9" stroke-width="2"/><path d="M39 58V37q0-13 12-13t12 13v21h-8v-8h-8v8z" fill="#e9b16b" stroke="#081522" stroke-width="2"/><rect x="48" y="32" width="21" height="12" rx="6" fill="#c6f0f4" stroke="#081522" stroke-width="2"/><circle cx="83" cy="25" r="5" fill="#e9b16b"/></svg><h1>ORBIT<span>30</span></h1><p class="brand-caption">TRUST IS A FRAGILE THING.</p></div>
 <div class="home-actions"><button id="play-menu" class="home-play">Play <span aria-hidden="true">↗</span></button><button id="create-room" class="home-create">Create Room <span aria-hidden="true">＋</span></button><button id="join-menu" class="home-create">Join Room</button></div>
 <span id="home-account" hidden></span>
 <input id="preference" value="random" type="hidden"><div id="solo-options" hidden></div>
 </div>
-<div class="veil" id="curtain" hidden><button id="lobby-settings" class="home-gear" aria-label="Lobby settings" hidden>⚙</button><div class="lobby-room" id="lobby-room" hidden><canvas id="lobby-scene" width="800" height="520" aria-label="Waiting room. Move with WASD, arrow keys or the touch joystick."></canvas></div><div id="lobby-roster" class="lobby-roster" hidden></div><div class="victory-fireworks" aria-hidden="true"><span style="--burst:0"></span><span style="--burst:1"></span><span style="--burst:2"></span><span style="--burst:3"></span><span style="--burst:4"></span><span style="--burst:5"></span></div><div class="orbit-tag" id="curtain-tag">ORBIT 28</div><div class="mini-crew reveal-crew" id="reveal-crew"></div><div class="mini-crew eject-crew" id="eject-crew" hidden></div><h2 id="curtain-title"></h2><p id="curtain-text"></p><div id="round-summary" class="round-summary" hidden></div><details class="lobby-chat" id="lobby-chat-panel" hidden><summary>Lobby chat</summary><div class="chat" id="lobby-chat" aria-live="polite"></div><form class="chat-form" id="lobby-chat-form"><input id="lobby-chat-input" maxlength="100" placeholder="Say hello to the crew…" aria-label="Lobby message"><button type="submit">Send</button></form></details><div class="invite" id="invite" hidden><label>INVITE LINK<input id="invite-link" readonly aria-label="Invite link"></label><button id="copy-invite">Copy</button><p id="ready-note"></p></div><div class="curtain-buttons"><button id="ready-button" hidden>READY</button><button id="curtain-action" hidden>Continue</button><button id="curtain-back" class="secondary">Main menu</button></div></div>
+<div class="veil" id="curtain" hidden><button id="lobby-settings" class="home-gear" aria-label="Lobby settings" hidden>⚙</button><div class="lobby-room" id="lobby-room" hidden><canvas id="lobby-scene" width="800" height="520" aria-label="Waiting room. Move with WASD, arrow keys or the touch joystick."></canvas></div><div id="lobby-roster" class="lobby-roster" hidden></div><div class="victory-fireworks" aria-hidden="true"><span style="--burst:0"></span><span style="--burst:1"></span><span style="--burst:2"></span><span style="--burst:3"></span><span style="--burst:4"></span><span style="--burst:5"></span></div><div class="orbit-tag" id="curtain-tag">ORBIT 31</div><div class="mini-crew reveal-crew" id="reveal-crew"></div><div class="mini-crew eject-crew" id="eject-crew" hidden></div><h2 id="curtain-title"></h2><p id="curtain-text"></p><div id="round-summary" class="round-summary" hidden></div><details class="lobby-chat" id="lobby-chat-panel" hidden><summary>Lobby chat</summary><div class="chat" id="lobby-chat" aria-live="polite"></div><form class="chat-form" id="lobby-chat-form"><input id="lobby-chat-input" maxlength="100" placeholder="Say hello to the crew…" aria-label="Lobby message"><button type="submit">Send</button></form></details><div class="invite" id="invite" hidden><label>INVITE LINK<input id="invite-link" readonly aria-label="Invite link"></label><button id="copy-invite">Copy</button><p id="ready-note"></p></div><div class="curtain-buttons"><button id="ready-button" hidden>READY</button><button id="curtain-action" hidden>Continue</button><button id="curtain-back" class="secondary">Main menu</button></div></div>
 </section><aside class="rail">
 <div class="map-card"><div class="rail-heading">MINIMAP <button id="map-toggle" aria-label="Open large map">M ⤢</button></div><canvas id="minimap" width="240" height="165" aria-label="Minimap: yellow means tasks, cyan means your position"></canvas><div class="map-legend"><span>Tasks</span><span>You</span></div></div>
 <div class="rail-card"><div class="rail-stat"><span id="timer">06:00</span><span id="alive-count">8/8</span></div></div>
 <div id="skill-status" class="skill-status" role="group" aria-label="Impostor abilities and cooldowns" hidden></div><nav id="keyboard-shortcuts" class="keyboard-shortcuts" aria-label="Keyboard shortcuts" hidden></nav><div class="rail-card crew-card"><div class="rail-heading">CREW <span id="human-count">0/8</span></div><ul class="crew-list" id="crew-list"></ul><p id="spectator-list" class="rail-info"></p></div>
-<div class="onboarding" id="onboarding" hidden>WASD / joystick to move · E task · R report<br>Esc closes a task; completed stages are saved.</div><p class="rail-info" id="role-description">Your role is revealed when the round starts.</p><p class="rail-info" id="connection-note">The minimap stays outside the play area.</p><div class="rail-buttons"><button id="journal-button">Logs</button><button id="rail-help">How to Play</button><button id="leave">Main menu</button></div>
-</aside></div><p class="smallprint">ORBIT 28 · An independent social deduction game. All artwork is drawn in-game.</p>
+<div class="onboarding" id="onboarding" hidden>WASD / joystick to move · E task · R report<br>Esc closes a task; completed stages are saved.</div><p class="rail-info" id="role-description">Your role is revealed when the round starts.</p><p class="rail-info" id="connection-note">The minimap stays outside the play area.</p><div class="rail-buttons"><button id="restore-report" hidden aria-label="Restore report">Report</button><button id="journal-button">Logs</button><button id="rail-help">How to Play</button><button id="leave">Main menu</button></div>
+</aside></div><p class="smallprint">ORBIT 31 · An independent social deduction game. All artwork is drawn in-game.</p>
 </main><div id="power-notice" class="power-notice" role="status" aria-live="polite" hidden></div>
 <div class="modal" id="death-modal" hidden><section class="dialog death-dialog" role="dialog" aria-modal="true" aria-labelledby="death-title"><h2 id="death-title">You died</h2><p>Leave or keep watching. Drag the view, or use WASD / arrows / joystick to look around.</p><div class="death-actions"><button id="death-out" class="danger">Out</button><button id="death-watch">Continue watching</button></div></section></div><div class="modal" id="task-modal" hidden><section class="dialog" aria-labelledby="task-title" role="dialog" aria-modal="true"><div class="dialog-head"><h2 id="task-title">Tasks</h2><button id="close-task" class="secondary" aria-label="Close task and save progress">✕</button></div><p id="task-description"></p><p id="task-hint" class="checkpoint" hidden></p><p id="task-checkpoint" class="checkpoint" hidden>Progress restored · Press Esc to close</p><div id="task-content"></div><p class="mini">Progress is saved when you close the panel or a meeting starts. Press Esc to look around.</p></section></div>
-<div class="modal" id="meeting-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="meeting-title"><div class="dialog-head"><h2 id="meeting-title">Who is the impostor?</h2><strong id="meeting-time" aria-label="Time remaining">30s</strong><button id="journal-meeting">Logs</button></div><nav class="meeting-tabs" aria-label="Meeting views"><button id="meeting-players">Players</button><button id="meeting-chat">Chat</button><button id="meeting-map-toggle">Map & Alibis</button></nav><p id="meeting-reason"></p><div id="reporter-banner" class="reporter-banner"><span id="reporter-avatar" class="mini-crew"></span><span class="reporter-symbol" id="reporter-symbol" aria-hidden="true">📣</span><div><small id="reporter-caption">BODY REPORTER</small><strong id="reporter-name"></strong></div></div><div class="meeting-layout"><div class="vote-column"><div class="vote-grid" id="vote-grid"></div><div class="compact-vote-row" id="vote-confirmation"><span id="compact-self" class="mini-crew" aria-label="Your character"></span><select id="vote-select" aria-label="Choose a player to vote for"></select><button id="compact-vote" aria-label="Confirm vote">✓</button><button id="vote-cancel" aria-label="Cancel vote" hidden>✕</button><button id="compact-skip">Skip vote</button><span id="selection-note" role="status"></span></div></div><details id="meeting-map-panel" class="meeting-map-column"><summary>ROOM MAP & ALIBIS <span>OPTIONAL · TAP TO OPEN</span></summary><div id="meeting-map-board" class="meeting-map-board" role="group" aria-label="Ship room map"></div><div class="meeting-map-selection"><strong id="meeting-map-selected" role="status" aria-live="polite"></strong><p id="meeting-map-claimants"></p><p id="meeting-map-hall" hidden></p></div><p class="meeting-map-note">Markers show unverified alibis. Selecting a room does not submit a statement.</p><div class="testimony"><div class="testimony-selects"><select id="claim-target" aria-label="Player mentioned"></select><select id="claim-room" aria-label="Claimed location"></select></div><div class="testimony-actions"><button id="claim-alibi">Share alibi</button><button id="claim-accuse">Accuse</button><button id="claim-defend">Defend</button><button id="claim-ask">Ask location</button></div><p class="mini"><span id="claim-note">Up to five statements per player. Bots use their own memories.</span></p></div></details><div class="discussion-column"><div class="chat" id="chat" aria-live="polite"></div><details id="quick-chat-panel" class="meeting-quick-chat"><summary>Quick chat ▾</summary><div id="quick-chat-options"></div></details><form class="chat-form" id="chat-form"><input id="chat-input" maxlength="100" placeholder="Discuss with the crew…" aria-label="Discussion message"><button type="submit">Send</button></form><p class="mini" id="vote-note">One vote each. A tie or a skip majority ejects no one.</p></div></div></section></div>
+<div class="modal" id="meeting-modal" hidden><section class="dialog" id="report-window" role="dialog" aria-modal="false" aria-labelledby="meeting-title"><div class="dialog-head" id="report-titlebar"><h2 id="meeting-title">Who is the impostor?</h2><strong id="meeting-time" aria-label="Time remaining">30s</strong><button id="compact-report" aria-label="Compact report" title="Compact / expand report">□</button><button id="minimize-report" aria-label="Minimize report" title="Minimize report">—</button><button id="journal-meeting">Logs</button></div><nav class="meeting-tabs" aria-label="Meeting views"><button id="meeting-players">Players</button><button id="meeting-chat">Chat</button><button id="meeting-map-toggle">Map & Alibis</button></nav><p id="meeting-reason"></p><div id="reporter-banner" class="reporter-banner"><span id="reporter-avatar" class="mini-crew"></span><span class="reporter-symbol" id="reporter-symbol" aria-hidden="true">📣</span><div><small id="reporter-caption">BODY REPORTER</small><strong id="reporter-name"></strong></div></div><div class="meeting-layout"><div class="vote-column"><div class="vote-grid" id="vote-grid"></div><div class="compact-vote-row" id="vote-confirmation"><span id="compact-self" class="mini-crew" aria-label="Your character"></span><select id="vote-select" aria-label="Choose a player to vote for"></select><button id="compact-vote" aria-label="Confirm vote">✓</button><button id="vote-cancel" aria-label="Cancel vote" hidden>✕</button><button id="compact-skip">Skip vote</button><span id="selection-note" role="status"></span></div></div><details id="meeting-map-panel" class="meeting-map-column"><summary>ROOM MAP & ALIBIS <span>OPTIONAL · TAP TO OPEN</span></summary><div id="meeting-map-board" class="meeting-map-board" role="group" aria-label="Ship room map"></div><div class="meeting-map-selection"><strong id="meeting-map-selected" role="status" aria-live="polite"></strong><p id="meeting-map-claimants"></p><p id="meeting-map-hall" hidden></p></div><p class="meeting-map-note">Markers show unverified alibis. Selecting a room does not submit a statement.</p><div class="testimony"><div class="testimony-selects"><select id="claim-target" aria-label="Player mentioned"></select><select id="claim-room" aria-label="Claimed location"></select></div><div class="testimony-actions"><button id="claim-alibi">Share alibi</button><button id="claim-accuse">Accuse</button><button id="claim-defend">Defend</button><button id="claim-ask">Ask location</button></div><p class="mini"><span id="claim-note">Up to five statements per player. Bots use their own memories.</span></p></div></details><div class="discussion-column"><div class="chat" id="chat" aria-live="polite"></div><details id="quick-chat-panel" class="meeting-quick-chat"><summary>Quick chat ▾</summary><div id="quick-chat-options"></div></details><form class="chat-form" id="chat-form"><input id="chat-input" maxlength="100" placeholder="Discuss with the crew…" aria-label="Discussion message"><button type="submit">Send</button></form><p class="mini" id="vote-note">One vote each. A tie or a skip majority ejects no one.</p></div></div></section></div>
 <div class="modal" id="help-modal" hidden><section class="dialog settings-dialog" role="dialog" aria-modal="true" aria-labelledby="help-title"><div class="dialog-head"><div><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2 id="help-title">Settings</h2></div><button id="close-help" aria-label="Close settings">✕</button></div>
 <div class="settings-profile"><div class="crew-preview"><span class="mini-crew" id="menu-crew"></span><span class="preview-shadow"></span></div><label>CALLSIGN<input id="nickname" maxlength="16" value="Astronaut" aria-label="Your name" autocomplete="nickname"></label></div>
 <div class="color-label">SUIT COLOR</div><div id="color-picker" class="color-picker" role="group" aria-label="Suit color"></div><p class="settings-note">Choose a free suit. Occupied colors are reserved; your role is random.</p>
 <div class="settings-links"><button id="settings-login"><span>◎</span> <span id="account-label">Log In</span> <b>↗</b></button><button id="settings-flight" hidden><span>◈</span> Ship & Abilities <b>↗</b></button><button id="settings-guide"><span>⌘</span> How to Play <b>↗</b></button><button id="settings-history"><span>◷</span> History <b>↗</b></button><button id="sound-toggle">SOUND: ON</button><button id="fullscreen">FULLSCREEN</button></div></section></div>
 <div class="modal" id="play-modal" hidden><section class="dialog play-dialog" role="dialog" aria-modal="true" aria-labelledby="play-title"><div class="dialog-head"><div><span class="eyebrow">CHOOSE YOUR FLIGHT</span><h2 id="play-title">Play</h2></div><button id="close-play" aria-label="Close play menu">✕</button></div><div class="menu-modes"><button id="mode-solo" class="mode-button selected"><b>Solo flight</b><span>You + 7 bots. Play instantly, even offline.</span></button><button id="mode-online" class="mode-button"><b>Online</b><span>Meet other players. At least 2 humans; bots fill to 8.</span></button></div><div class="room-options" id="room-options" hidden><label>ROOM CODE<input id="room-code" maxlength="6" placeholder="Leave blank for a public room" autocomplete="off" aria-label="Room code"></label></div><p id="mode-description" class="mini">You + 7 bots. Roles are random.</p><button id="enter" class="primary-wide">Play with bots →</button></section></div>
-<div class="modal" id="flight-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="flight-title"><div class="dialog-head"><h2 id="flight-title">Abilities</h2><button id="close-flight" aria-label="Close ship panel">✕</button></div><p id="flight-status"></p><canvas id="flight-map" width="480" height="330" aria-label="Ship minimap"></canvas><ul id="flight-tasks"></ul><div id="flight-abilities" class="flight-abilities"></div><button id="flight-logs">Sensor log</button><button id="flight-menu">Main menu</button></section></div><div class="modal" id="guide-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="guide-title"><div class="dialog-head"><h2 id="guide-title">How to Play</h2><button id="close-guide" aria-label="Close guide">✕</button></div><div class="help-grid"><p><strong>CREWMATE</strong><br>Learn the rooms and find their task terminals. Press E at a station to complete five brain-training tasks. Then help the crew with support tasks. Finish all tasks or vote out the impostor to win. If you die, choose Out or Continue watching.</p><p><strong>IMPOSTOR</strong><br>Press <strong>Q to KILL</strong> a nearby crewmate, with a 30-second cooldown. E also attacks when a target is in range. H cloaks you for 5 seconds, once per round; killing is disabled while cloaked. Z closes a nearby door. C sabotages comms, X reactor, and <strong>V uses a nearby VENT</strong>. The ship schedules two 15-second outages with a five-second warning; impostor vision is unaffected.</p><p><strong>MEETINGS</strong><br>Meetings last up to 30 seconds. R reports a nearby body. Space calls a meeting at the Cafeteria table. Type an alibi and tap a player to vote. Tap again to cancel; tap someone else to change your vote. Room alibis are unverified claims. A tie or no votes ejects no one.</p><p><strong>CONTROLS</strong><br>WASD / arrow keys / right-hand touch joystick to move. On phones, buttons appear only near targets. Tap the Cafeteria emergency button directly. Use the skill tiles or keyboard shortcuts for impostor abilities. Settings contains help and sound. E to interact or attack. There is no map. Remember room locations. Esc closes a task and saves its checkpoint. P pauses solo play.</p><p><strong>PLAY TOGETHER</strong><br>Play finds a public waiting room. Create Room gives friends a private code and invite link. The host starts with 1–8 humans; bots fill the remaining slots. Choose your unique suit in lobby settings.</p><p><strong>SHIP EMERGENCIES</strong><br>Two different crewmates must activate reactor terminals within 10 seconds. Bots can help. Repair the final emergency before time runs out. Late joiners spectate until the next round.</p></div><p class="mini">A host change returns the group to the lobby. Guest play is always available; signing in is optional.</p></section></div>
+<div class="modal" id="flight-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="flight-title"><div class="dialog-head"><h2 id="flight-title">Abilities</h2><button id="close-flight" aria-label="Close ship panel">✕</button></div><p id="flight-status"></p><canvas id="flight-map" width="480" height="330" aria-label="Ship minimap"></canvas><ul id="flight-tasks"></ul><div id="flight-abilities" class="flight-abilities"></div><button id="flight-logs">Sensor log</button><button id="flight-menu">Main menu</button></section></div><div class="modal" id="guide-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="guide-title"><div class="dialog-head"><h2 id="guide-title">How to Play</h2><button id="close-guide" aria-label="Close guide">✕</button></div><div class="help-grid"><p><strong>CREWMATE</strong><br>Learn the rooms and find their task terminals. Press E at a station to complete five brain-training tasks. Then help the crew with support tasks. Finish all tasks or vote out the impostor to win. If you die, choose Out or Continue watching.</p><p><strong>IMPOSTOR</strong><br>Press <strong>Q to KILL</strong> a nearby crewmate, with a 30-second cooldown. E also attacks when a target is in range. H cloaks you for 5 seconds, once per round; killing is disabled while cloaked. Z closes a nearby door. C sabotages comms, X reactor, and <strong>V enters/exits a nearby VENT</strong>. While hidden, click a directional arrow to travel to its connected room; the exit cooldown is 7 seconds. The ship schedules two 15-second outages with a five-second warning; impostor vision is unaffected.</p><p><strong>MEETINGS</strong><br>Meetings last up to 30 seconds. Use minus to hide the report, the square button to compact/expand it, or drag its title bar to reposition it. The footer button restores a hidden report. During meetings, drag the exposed map or use WASD/arrows to pan; characters and bodies are hidden. The discussion timer keeps running. Results show votes without a second countdown. R reports a nearby body. Space calls a meeting at the Cafeteria table. Type an alibi and tap a player to vote. Tap again to cancel; tap someone else to change your vote. Room alibis are unverified claims. A tie or no votes ejects no one.</p><p><strong>CONTROLS</strong><br>WASD / arrow keys / right-hand touch joystick to move. On PC, right-click an open floor tile to walk there; keyboard or joystick input cancels the route. On phones, buttons appear only near targets. Tap the Cafeteria emergency button directly. Use the skill tiles or keyboard shortcuts for impostor abilities. Settings contains help and sound. E to interact or attack. There is no map. Remember room locations. Esc closes a task and saves its checkpoint. P pauses solo play.</p><p><strong>PLAY TOGETHER</strong><br>Play finds a public waiting room. Create Room gives friends a private code and invite link. The host starts with 1–8 humans; bots fill the remaining slots. Choose your unique suit in lobby settings.</p><p><strong>SHIP EMERGENCIES</strong><br>Two different crewmates must activate reactor terminals within 10 seconds. Bots can help. Repair the final emergency before time runs out. Late joiners spectate until the next round.</p></div><p class="mini">A host change returns the group to the lobby. Guest play is always available; signing in is optional.</p></section></div>
 <div class="modal" id="history-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="history-title"><div class="dialog-head"><div><span class="eyebrow">YOUR FLIGHT RECORDER</span><h2 id="history-title">History</h2></div><button id="close-history" aria-label="Close history">✕</button></div><p>Recent completed rounds on this browser. Guest and account history stay on this device.</p><button id="history-sensors">Open current sensor log ↗</button><div id="history-list" class="history-list"></div></section></div>
 <div class="modal" id="login-modal" hidden><section class="dialog login-dialog" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="dialog-head"><div><span class="eyebrow">WELCOME ABOARD</span><h2 id="login-title">Log In</h2></div><button id="close-login" aria-label="Close login">✕</button></div><div id="login-options"><p>No password to remember. Get a secure sign-in link by email, or continue with Google.</p><form id="email-login-form"><label>EMAIL ADDRESS<input id="login-email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"></label><button id="email-login" type="submit" class="primary-wide">Email me a sign-in link</button></form><div class="login-divider">OR</div><button id="google-login" class="primary-wide google-button">Continue with Google</button></div><div id="signed-in" hidden><p id="signed-in-name"></p><button id="sign-out">Log Out</button></div><p id="auth-status" role="status" aria-live="polite"></p><p class="mini">Sign-in is optional. Your email is never shared in game rooms. Match history is stored on this browser.</p></section></div>
 <div class="modal" id="journal-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="journal-title"><div class="dialog-head"><h2 id="journal-title">SENSOR LOG</h2><button id="close-journal">Close</button></div><p>Completing tasks recovers sensor fragments. Signals are anonymous, and communications sabotage can corrupt records.</p><div id="journal-list"></div></section></div><script>
@@ -211,61 +220,59 @@ const NAMES = ['Red','Blue','Yellow','Green','Purple','Orange','Pink','White'];
 let chosenColor='#e94445';
 const WORLD_W=3200,WORLD_H=2000;
 const KILL_COOLDOWN=30,ROUND_SECONDS=360,TASKS_PER_PLAYER=5;
-const ROOMS = [
- {x:610,y:60,w:380,h:250,name:'CAFETERIA',color:'#243c50'},
- {x:140,y:60,w:320,h:250,name:'MEDBAY',color:'#254353'},
- {x:1200,y:60,w:310,h:250,name:'NAVIGATION',color:'#293650'},
- {x:1020,y:365,w:430,h:230,name:'WEAPONS',color:'#43364a'},
- {x:550,y:365,w:380,h:240,name:'ADMIN',color:'#3e3f38'},
- {x:100,y:610,w:360,h:270,name:'ELECTRICAL',color:'#3e3a47'},
- {x:650,y:660,w:350,h:270,name:'REACTOR',color:'#234548'},
- {x:1130,y:710,w:370,h:220,name:'ENGINE',color:'#3e3844'}
-];
-const CORRIDORS = [
- {x:400,y:165,w:300,h:100},{x:950,y:165,w:360,h:100},
- {x:745,y:260,w:110,h:460},{x:260,y:250,w:110,h:510},
- {x:370,y:440,w:300,h:110},{x:400,y:730,w:350,h:100},
- {x:850,y:425,w:300,h:100},{x:1300,y:260,w:100,h:510},
- {x:940,y:760,w:300,h:100}
-];
-const STATIONS = [
- {x:220,y:160,name:'Medical scan',kind:'hold',room:'MedBay'},
- {x:1380,y:160,name:'Align navigation',kind:'sequence',room:'Navigation'},
- {x:220,y:740,name:'Fix wiring',kind:'wires',room:'Electrical'},
- {x:680,y:480,name:'Download data',kind:'hold',room:'Admin'},
- {x:800,y:800,name:'Start reactor',kind:'sequence',room:'Reactor'},
- {x:1360,y:820,name:'Refuel engine',kind:'hold',room:'Engine'},
- {x:1220,y:480,name:'Connect circuits',kind:'wires',room:'Weapons'}
-];
-const VENTS = [{x:420,y:240},{x:920,y:870},{x:1380,y:530}];
-const TABLE={x:1600,y:265},POWER={x:800,y:1580};
-const GATES=[{x:1060,y:295,w:24,h:270},{x:2200,y:295,w:24,h:270},{x:1455,y:665,w:290,h:20}];
-const COMM={x:2760,y:400},REACTOR_TERMINALS=[{x:1420,y:1500},{x:1840,y:1780}];
-for(const r of [...ROOMS,...CORRIDORS,...STATIONS,...VENTS])for(const key of ['x','y','w','h'])if(key in r)r[key]*=2;
-// Wider rooms and corridors leave clear routes around furniture.
-for(const r of ROOMS){r.x-=70;r.y-=40;r.w+=140;r.h+=80;}
-for(const r of CORRIDORS){if(r.w>=r.h){r.y-=35;r.h+=70;}else{r.x-=35;r.w+=70;}}
-Object.assign(STATIONS[0],{x:600,y:400,name:'Biological scan',kind:'scan'});
-['reaction','numbers','wires','swipe','memory','logic','visual'].forEach((kind,i)=>STATIONS[i].kind=kind);
-STATIONS[0].name='Reaction sync';STATIONS[0].kind='reaction';
-STATIONS[1].name='Hidden coordinates';STATIONS[1].kind='numbers';STATIONS[3].name='Swipe access card';STATIONS[4].name='Reactor sequence';STATIONS[5].name='Decode patterns';STATIONS[5].kind='logic';STATIONS[6].name='Signal memory';STATIONS[6].kind='visual';
+// Enclosed rooms are joined only by doorway-width corridors.
+const ROOMS=[
+{x:1200,y:100,w:800,h:540,name:'CAFETERIA'},
+{x:260,y:100,w:640,h:540,name:'MEDBAY'},
+{x:2460,y:100,w:600,h:540,name:'NAVIGATION'},
+{x:2240,y:900,w:820,h:380,name:'WEAPONS'},
+{x:1120,y:900,w:760,h:380,name:'ADMIN'},
+{x:200,y:1400,w:680,h:460,name:'ELECTRICAL'},
+{x:1320,y:1480,w:680,h:440,name:'REACTOR'},
+{x:2320,y:1480,w:740,h:440,name:'ENGINE'}];
+const CORRIDORS=[
+{x:900,y:360,w:300,h:140},{x:2000,y:360,w:460,h:140},
+{x:960,y:430,w:140,h:1310},{x:2100,y:430,w:140,h:1310},
+{x:1100,y:1050,w:20,h:140},{x:1880,y:1050,w:360,h:140},
+{x:880,y:1600,w:440,h:140},{x:2000,y:1600,w:320,h:140},
+{x:1530,y:640,w:140,h:260},{x:1530,y:1280,w:140,h:200}];
+const STATIONS=[
+{x:540,y:390,name:'Reaction sync',kind:'reaction',room:'MedBay'},
+{x:2840,y:380,name:'Hidden coordinates',kind:'numbers',room:'Navigation'},
+{x:390,y:1680,name:'Fix wiring',kind:'wires',room:'Electrical'},
+{x:1430,y:1110,name:'Swipe access card',kind:'swipe',room:'Admin'},
+{x:1590,y:1740,name:'Reactor sequence',kind:'memory',room:'Reactor'},
+{x:2820,y:1740,name:'Decode patterns',kind:'logic',room:'Engine'},
+{x:2690,y:1110,name:'Signal memory',kind:'visual',room:'Weapons'}];
+const VENTS=[
+{x:480,y:510,room:'MEDBAY',links:[1,2]},
+{x:370,y:1740,room:'ELECTRICAL',links:[0,2]},
+{x:1510,y:1830,room:'REACTOR',links:[0,1]},
+{x:2900,y:450,room:'NAVIGATION',links:[4]},
+{x:2820,y:1180,room:'WEAPONS',links:[3]},
+{x:1320,y:1140,room:'ADMIN',links:[6]},
+{x:2880,y:1830,room:'ENGINE',links:[5]}];
+const TABLE={x:1600,y:265},POWER={x:700,y:1740};
+const COMM={x:2740,y:260},REACTOR_TERMINALS=[{x:1430,y:1580},{x:1870,y:1790}];
+const GATES=[{x:1040,y:360,w:24,h:140},{x:2240,y:360,w:24,h:140},{x:1530,y:755,w:140,h:24}];
 const SPAWNS=[{x:1600,y:450},{x:1540,y:380},{x:1660,y:380},{x:1510,y:580},{x:1600,y:580},{x:1690,y:580},{x:1820,y:335},{x:1380,y:335}];
 const TABLE_SCALE=.68,PLAYER_SCALE=.85,PLAYER_RADIUS=15;
 const TABLES=[TABLE,{x:1390,y:470},{x:1810,y:470}];
-const BEDS=[{x:320,y:320,w:145,h:95},{x:320,y:465,w:145,h:95},{x:755,y:320,w:145,h:95},{x:755,y:465,w:145,h:95}];
-const CRATES=[{x:1140,y:1045,w:120,h:105},{x:1720,y:1040,w:100,h:115},{x:1150,y:790,w:110,h:95}];
-// Task alcoves interrupt sightlines; their open ends keep the main routes connected.
+const BEDS=[{x:300,y:240,w:120,h:85},{x:300,y:430,w:120,h:85}];
+const CRATES=[{x:1760,y:970,w:90,h:90},{x:2380,y:960,w:100,h:90}];
+// Equipment screens make rear task/vent corners private without blocking doorways.
 const PARTITIONS=[
- {room:'ENGINE',x:2608,y:1512,w:256,h:32},{room:'ENGINE',x:2608,y:1544,w:32,h:156},
- {room:'ELECTRICAL',x:330,y:1320,w:302,h:32},{room:'ELECTRICAL',x:600,y:1352,w:32,h:248},
- {room:'ADMIN',x:1280,y:820,w:32,h:260},{room:'ADMIN',x:1280,y:1080,w:240,h:32},
- {room:'WEAPONS',x:2320,y:880,w:32,h:192},{room:'WEAPONS',x:2320,y:1072,w:240,h:32},
- {room:'MEDBAY',x:660,y:280,w:32,h:200},{room:'NAVIGATION',x:2640,y:280,w:32,h:200},
- {room:'REACTOR',x:1536,y:1680,w:240,h:32},{room:'REACTOR',x:1776,y:1584,w:32,h:128}
-];
+{room:'ADMIN',x:1250,y:1010,w:28,h:160},
+{room:'REACTOR',x:1450,y:1640,w:210,h:28},
+{room:'MEDBAY',x:650,y:260,w:28,h:240},
+{room:'NAVIGATION',x:2720,y:280,w:28,h:190},
+{room:'ELECTRICAL',x:500,y:1480,w:28,h:260},
+{room:'ADMIN',x:1520,y:990,w:28,h:210},
+{room:'WEAPONS',x:2530,y:970,w:28,h:230},
+{room:'REACTOR',x:1690,y:1590,w:28,h:260},
+{room:'ENGINE',x:2670,y:1570,w:28,h:280}];
 const insidePartition=(x,y)=>PARTITIONS.some(r=>x>=r.x&&x<=r.x+r.w&&y>=r.y&&y<=r.y+r.h);
-const OBSTACLES=[...PARTITIONS,...TABLES.map(p=>({...p,rx:150*TABLE_SCALE,ry:106*TABLE_SCALE})),...BEDS,...CRATES,{x:2470,y:1540,w:140,h:160}];
-Object.assign(VENTS[0],{x:870,y:255});
+const OBSTACLES=[...PARTITIONS,...TABLES.map(p=>({...p,rx:150*TABLE_SCALE,ry:106*TABLE_SCALE})),...BEDS,...CRATES,{x:2390,y:1560,w:140,h:160}];
 let selectedMode='solo',tasksExpanded=true;
 const floors = [...ROOMS,...CORRIDORS];
 const dist = (a,b) => Math.hypot(a.x-b.x,a.y-b.y);
@@ -275,7 +282,7 @@ const walkable = (x,y) => !insidePartition(x,y)&&floors.some(r=>x>=r.x&&x<=r.x+r
 const blocked=(x,y)=>GATES.some((d,i)=>(G?.doors?.[i]||0)>0&&x>=d.x&&x<=d.x+d.w&&y>=d.y&&y<=d.y+d.h)||OBSTACLES.some(o=>o.rx?((x-o.x)/o.rx)**2+((y-o.y)/o.ry)**2<1:x>=o.x&&x<=o.x+o.w&&y>=o.y&&y<=o.y+o.h);
 const standable=(x,y)=>!blocked(x,y)&&[-PLAYER_RADIUS,PLAYER_RADIUS].every(dx=>[-PLAYER_RADIUS,PLAYER_RADIUS].every(dy=>walkable(x+dx,y+dy)&&!blocked(x+dx,y+dy)));
 const lineOfSight = (a,b) => {const n=Math.ceil(dist(a,b)/16);for(let i=1;i<n;i++)if(!walkable(a.x+(b.x-a.x)*i/n,a.y+(b.y-a.y)*i/n)||GATES.some((d,j)=>(G?.doors?.[j]||0)>0&&a.x+(b.x-a.x)*i/n>=d.x&&a.x+(b.x-a.x)*i/n<=d.x+d.w&&a.y+(b.y-a.y)*i/n>=d.y&&a.y+(b.y-a.y)*i/n<=d.y+d.h))return false;return true;};
-const canReach=(p,target,range=110)=>dist(p,target)<range&&lineOfSight(p,target);
+const canReach=(p,target,range=110)=>!p.inVent&&(!target.room||roomOf(p)===target.room.toUpperCase())&&dist(p,target)<range&&lineOfSight(p,target);
 const me = () => G.players.find(p=>p.controller===myId);
 const authority = () => Net.host || !Net.room;
 const humanCount = () => Net.mode==='online'&&Net.members.size?Net.members.size:G.players.filter(p=>!p.bot).length+(G.spectators?.length||0);
@@ -283,10 +290,11 @@ const isSpectator=()=>!!G.spectators?.some(s=>s.id===myId);
 function readiness(){return Net.host?[...Net.members.values()].map(m=>({id:m.id,ready:!!m.ready,away:!!m.away})):G.ready||[];}
 const cleanName = s => String(s||'Astronaut').trim().slice(0,16)||'Astronaut';
 const Net = {code:'',spectators:new Map(),mode:'solo',control:null,controlReady:false,db:null,lobby:null,room:null,roomReady:false,roomId:'',hostId:'',host:false,status:'idle',members:new Map(),peers:[],avoid:new Map(),online:false,epoch:0,seq:0,lastSeq:-1,lastSnapshot:0,searchAt:0,joinAt:0,lastJoin:0,lastAdvert:'',lastTrack:0,pendingAdvert:false,created:0};
+let mouseGoal=null;
 let G, taskUI=null,lastLobbyUi='',lastVoteUi='',lastChatUi='',lastCrewUi='',lastTaskUi='',lastFrame=0,lastEngine=performance.now(),mapOpen=false;
 
 function makePlayer(i, controller, name, bot) {
- return {id:'p'+i,controller,name,bot,color:controller===myId?chosenColor:COLORS[i],x:SPAWNS[i].x,y:SPAWNS[i].y,alive:true,relays:[],cloak:0,cloakUsed:false,fake:0,kills:0,working:-1,role:'crew',tasks:shuffle(STATIONS.map((_,i)=>i)).slice(0,TASKS_PER_PLAYER),done:[],cooldown:KILL_COOLDOWN,ventCooldown:0,emergency:1,path:[],target:-1,work:0,suspicion:{},brain:{seen:{},room:"CAFETERIA",previousRoom:"CAFETERIA",witness:null,threshold:52+(i%3)*8,trust:.65+(i%4)*.12},botClock:0};
+ return {id:'p'+i,controller,name,bot,color:controller===myId?chosenColor:COLORS[i],x:SPAWNS[i].x,y:SPAWNS[i].y,alive:true,inVent:false,ventIndex:-1,relays:[],cloak:0,cloakUsed:false,fake:0,kills:0,working:-1,role:'crew',tasks:shuffle(STATIONS.map((_,i)=>i)).slice(0,TASKS_PER_PLAYER),done:[],cooldown:KILL_COOLDOWN,ventCooldown:0,emergency:1,path:[],target:-1,work:0,suspicion:{},brain:{seen:{},room:"CAFETERIA",previousRoom:"CAFETERIA",witness:null,threshold:52+(i%3)*8,trust:.65+(i%4)*.12},botClock:0};
 }
 function assignColors(){
  const used=new Set();
@@ -346,18 +354,18 @@ function follow(p,dt) {
  move(p,t.x-p.x,t.y-p.y,dt,245);
 }
 function nearestBody(p){return G.bodies.find(b=>!b.reported&&dist(p,b)<145&&lineOfSight(p,b));}
-function killTarget(p){return G.players.filter(q=>q.id!==p.id&&q.alive&&q.role!=='impostor'&&dist(p,q)<90&&lineOfSight(p,q)).sort((a,b)=>dist(p,a)-dist(p,b))[0];}
+function killTarget(p){return G.players.filter(q=>q.id!==p.id&&q.alive&&!q.inVent&&q.role!=='impostor'&&dist(p,q)<90&&lineOfSight(p,q)).sort((a,b)=>dist(p,a)-dist(p,b))[0];}
 function roomOf(point){return ROOMS.find(r=>point.x>=r.x&&point.x<=r.x+r.w&&point.y>=r.y&&point.y<=r.y+r.h)?.name||'HALLWAY';}
 function playTime(){return ROUND_SECONDS-G.time+(G.overtime>0?60-G.reactor:0);}
 // Each bot observes through its own field of view. Private memories never enter snapshots.
 function observeBots(){
- for(const p of G.players){if(!p.bot||!p.alive)continue;const brain=p.brain,room=roomOf(p);if(room!==brain.room){brain.previousRoom=brain.room;brain.room=room;}
-   for(const q of G.players){if(q.id===p.id||!q.alive||q.cloak>0)continue;if(dist(p,q)<(G.lights>0&&p.role!=='impostor'?200:480)&&lineOfSight(p,q))brain.seen[q.id]={room:roomOf(q),at:playTime(),x:q.x,y:q.y,working:q.fake>0||q.working>=0||q.bot&&q.work>0};}
+ for(const p of G.players){if(!p.bot||!p.alive||p.inVent)continue;const brain=p.brain,room=roomOf(p);if(room!==brain.room){brain.previousRoom=brain.room;brain.room=room;}
+   for(const q of G.players){if(q.id===p.id||!q.alive||q.inVent||q.cloak>0)continue;if(dist(p,q)<(G.lights>0&&p.role!=='impostor'?200:480)&&lineOfSight(p,q))brain.seen[q.id]={room:roomOf(q),at:playTime(),x:q.x,y:q.y,working:q.fake>0||q.working>=0||q.bot&&q.work>0};}
    for(const id of Object.keys(brain.seen))if(playTime()-brain.seen[id].at>90)delete brain.seen[id];
  }
 }
 function doKill(killer) {
- if(G.phase!=='play'||!killer.alive||killer.role!=='impostor'||killer.cooldown>0||killer.cloak>0)return;
+ if(G.phase!=='play'||killer.inVent||!killer.alive||killer.role!=='impostor'||killer.cooldown>0||killer.cloak>0)return;
  const victim=killTarget(killer);if(!victim)return;
  victim.alive=false;victim.path=[];G.bodies.push({id:victim.id,x:victim.x,y:victim.y,color:victim.color,reported:false});killer.cooldown=KILL_COOLDOWN;killer.kills++;
  for(const p of G.players)if(p.alive&&p.id!==killer.id&&p.id!==victim.id&&dist(p,killer)<(G.lights>0?180:480)&&lineOfSight(p,killer)&&lineOfSight(p,victim)){p.suspicion[killer.id]=100;if(p.bot)p.brain.witness={target:killer.id,room:roomOf(killer),at:playTime()};}
@@ -392,9 +400,9 @@ function completeTask(p,index) {
 }
 function callMeeting(reporter,body=null) {
  if(G.phase!=='play'||!reporter.alive||G.overtime>0)return;
- G.phase='meeting';G.phaseTime=30;G.comms=0;G.reactor=0;G.reactorLocks=[null,null];G.doors=[0,0,0];for(const p of G.players){p.cloak=0;p.fake=0;}keys.clear();closeTask();
+ G.phase='meeting';G.phaseTime=30;G.comms=0;G.reactor=0;G.reactorLocks=[null,null];G.doors=[0,0,0];for(const p of G.players){p.cloak=0;p.fake=0;p.inVent=false;p.ventIndex=-1;}keys.clear();closeTask();
  const victim=body&&G.players.find(p=>p.id===body.id);
- G.meeting={reporterId:reporter.id,kind:body?'body':'emergency',results:false,bodyId:body?.id||null,botChatted:[],replied:[],claims:[],reason:body?reporter.name+' reported the body of '+(victim?.name||'a crewmate')+'.':reporter.name+' called an emergency meeting.',votes:{},chat:[]};
+ G.meeting={id:G.round+':'+playTime()+':'+reporter.id,botLines:[],reporterId:reporter.id,kind:body?'body':'emergency',results:false,bodyId:body?.id||null,botChatted:[],replied:[],claims:[],reason:body?reporter.name+' reported the body of '+(victim?.name||'a crewmate')+'.':reporter.name+' called an emergency meeting.',votes:{},chat:[]};
  for(const b of G.bodies)b.reported=true;
  for(const p of G.players){p.path=[];p.work=0;if(!p.alive||!p.bot||!body)continue;
    for(const [id,sighting]of Object.entries(p.brain.seen))if(id!==body.id&&playTime()-sighting.at<10&&dist(sighting,body)<230)p.suspicion[id]=Math.max(p.suspicion[id]||0,32);
@@ -416,7 +424,9 @@ function addClaim(p,type,target='',room='',detail=''){
  const q=G.players.find(q=>q.id===target),claim={source:p.id,type,target:q?.id||'',room,detail};
  let text=type==='alibi'?'When the meeting started, I was in '+room+'.':type==='sighting'?'I just saw '+q?.name+' in '+room+(detail==='contradiction'?' — that contradicts their alibi.':'.'):type==='witness'?'I witnessed '+q?.name+' making a kill in '+room+'!':type==='accuse'?'I suspect '+q?.name+(detail==='kill'?' may have made the kill.':'.'):type==='defend'?'I have seen no evidence against '+q?.name+'.':'Where was '+q?.name+' just now?';
  if(!['alibi','ask'].includes(type)&&!q)return;
- if(type!=='ask')G.meeting.claims.push(claim);G.meeting.chat.push({source:p.id,name:p.name,text});if(G.meeting.chat.length>30)G.meeting.chat.shift();
+ if(type!=='ask'&&G.meeting.claims.length<80&&!G.meeting.claims.some(c=>c.source===claim.source&&c.type===type&&c.target===claim.target&&c.room===room&&c.detail===detail))G.meeting.claims.push(claim);
+ if(p.bot){G.meeting.botLines||=[];if(G.meeting.botLines.includes(text)||G.meeting.botLines.length>=80)return;G.meeting.botLines.push(text);}
+ G.meeting.chat.push({source:p.id,name:p.name,text});if(G.meeting.chat.length>30)G.meeting.chat.shift();
 }
 function botStatement(p){
  const brain=p.brain,witness=brain.witness;
@@ -478,6 +488,8 @@ function repairReactor(p,side){
 }
 function handleAction(controller,type,data={}) {
  const p=G.players.find(p=>p.controller===controller);if(!p)return;
+ if(type==='walk'&&['play','lobby'].includes(G.phase)&&p.alive&&!p.inVent){startHumanWalk(p,data);return;}
+ if(type==='stop-walk'){p.path=[];p.walkTarget=null;return;}
  if(type==='profile'&&G.phase==='lobby'){changeLobbyProfile(controller,data);return;}
  if(type==='ready'&&G.phase==='lobby'){const m=Net.members.get(controller);if(m){m.ready=!m.ready;publish();renderUI();}return;}
  if(type==='start'&&G.phase==='lobby'&&controller===myId&&(Net.mode==='solo'||Net.host)&&Net.members.size>=1&&[...Net.members.values()].every(m=>!m.away)){newRound('random');return;}
@@ -502,6 +514,19 @@ function handleAction(controller,type,data={}) {
  }
  if(type==='restart'&&G.phase==='result'&&authority()){if(Net.mode==='online')prepareLobby();else newRound();return;}
  if(G.phase!=='play'||!p.alive)return;
+ if(['vent','vent-travel'].includes(type)){
+   if(p.role!=='impostor')return;
+   if(type==='vent-travel'){
+     if(!p.inVent||!Number.isInteger(data.target)||!VENTS[p.ventIndex]?.links.includes(data.target))return;
+     const v=VENTS[data.target];p.ventIndex=data.target;p.x=v.x;p.y=v.y;
+   }else if(p.inVent){p.inVent=false;p.ventIndex=-1;p.ventCooldown=7;}
+   else{
+     if(p.ventCooldown>0)return;const i=VENTS.findIndex(v=>canReach(p,v,100));if(i<0)return;
+     p.inVent=true;p.ventIndex=i;p.x=VENTS[i].x;p.y=VENTS[i].y;p.path=[];p.walkTarget=null;p.cloak=0;p.fake=0;
+   }
+   publish();return;
+ }
+ if(p.inVent)return;
  if(type==='deliver'&&p.role==='crew'&&data.station===5&&p.relays.includes(5)&&canReach(p,STATIONS[3])){p.relays=[];if(!p.done.includes(5))p.done.push(5);restoreJournal();checkWin();publish();return;}
  if(type==='working'){p.working=data.on&&Number.isInteger(data.station)&&STATIONS[data.station]&&canReach(p,STATIONS[data.station])?data.station:-1;return;}
  if(type==='reactor')return repairReactor(p,data.side);
@@ -522,7 +547,7 @@ function handleAction(controller,type,data={}) {
  if(type==='meeting'&&G.reactor<=0&&p.emergency>0&&dist(p,TABLE)<185&&G.lights<=0){p.emergency--;callMeeting(p);}
  if(type==='sabotage')return;
  if(type==='fix'){if(data.system==='comms'&&G.comms>0&&canReach(p,COMM))G.comms=0;publish();}
- if(type==='vent'&&p.role==='impostor'&&p.ventCooldown<=0){const index=VENTS.findIndex(v=>canReach(p,v,100));if(index>=0){Object.assign(p,VENTS[(index+1)%VENTS.length]);p.ventCooldown=7;publish();}}
+ 
 }
 function inputMask(){return Number(keys.has('a')||keys.has('arrowleft'))|(Number(keys.has('d')||keys.has('arrowright'))<<1)|(Number(keys.has('w')||keys.has('arrowup'))<<2)|(Number(keys.has('s')||keys.has('arrowdown'))<<3);}
 function updateBot(p,dt) {
@@ -562,17 +587,18 @@ function step(dt) {
  G.time=Math.max(0,G.time-dt);resetSystems(dt);if(G.phase!=='play')return;updateBlackouts();G.sabotageCooldown=Math.max(0,G.sabotageCooldown-dt);
  for(const p of G.players){
    p.cloak=Math.max(0,(p.cloak||0)-dt);p.fake=Math.max(0,(p.fake||0)-dt);p.cooldown=Math.max(0,p.cooldown-dt);p.ventCooldown=Math.max(0,p.ventCooldown-dt);
+   if(p.inVent&&p.bot){p.inVent=false;p.ventIndex=-1;p.ventCooldown=7;}
    if(p.bot){updateBot(p,dt);if(G.phase!=='play')break;continue;}
-   if(!p.alive)continue;
+   if(!p.alive||p.inVent)continue;
    const member=Net.members.get(p.controller),mask=p.controller===myId?(taskUI?0:inputMask()):member&&Date.now()-member.seen<700?member.input:0;
-   if(mask)p.fake=0;move(p,Number(!!(mask&2))-Number(!!(mask&1)),Number(!!(mask&8))-Number(!!(mask&4)),dt);
+   if(mask){p.fake=0;p.path=[];p.walkTarget=null;move(p,Number(!!(mask&2))-Number(!!(mask&1)),Number(!!(mask&8))-Number(!!(mask&4)),dt);}else advanceHumanWalk(p,dt,false);
  }
  checkWin();
 }
 // Presence advertises available ships; Broadcast carries inputs and shared state.
 // shortcut: browser-hosted casual matches, without authoritative anti-cheat; use an authoritative server for ranked play.
 // English room identifiers use a separate lobby from older releases.
-const MATCH_TOPIC='orbit25-public-v1', MAX_HUMANS=8;
+const MATCH_TOPIC='orbit31-public-v1', MAX_HUMANS=8;
 let sdkPromise=null,privateRole=null,lastInput=-1,lastInputAt=0,lastPublish=0,actionSeq=0;
 function sendMovement(){
  if(Net.host||!Net.roomReady||!['playing','spectating'].includes(Net.status))return;
@@ -612,7 +638,7 @@ function advertise(){
 }
 function publicState(){
  const crew=G.players.filter(p=>p.role==='crew');
- return {...G,support:supportStations(),ready:readiness(),away:[...Net.members.values()].filter(m=>m.away).map(m=>m.id),spectators:[...Net.spectators.values()].map(s=>({id:s.id,name:s.name})),progress:{done:crew.reduce((n,p)=>n+p.done.length,0),total:crew.reduce((n,p)=>n+p.tasks.length,0)},players:G.players.map(p=>({id:p.id,controller:p.controller,name:p.name,bot:p.bot,color:p.color,x:p.x,y:p.y,alive:p.alive,role:G.phase==='result'?p.role:'?',tasks:p.tasks,done:p.done,cooldown:p.cooldown,ventCooldown:p.ventCooldown,cloak:p.cloak,cloakUsed:p.cloakUsed,fake:p.fake,working:p.working,relays:p.relays,kills:G.phase==='result'?p.kills:0,emergency:p.emergency}))};
+ return {...G,support:supportStations(),ready:readiness(),away:[...Net.members.values()].filter(m=>m.away).map(m=>m.id),spectators:[...Net.spectators.values()].map(s=>({id:s.id,name:s.name})),progress:{done:crew.reduce((n,p)=>n+p.done.length,0),total:crew.reduce((n,p)=>n+p.tasks.length,0)},players:G.players.map(p=>({id:p.id,controller:p.controller,name:p.name,bot:p.bot,color:p.color,x:p.x,y:p.y,alive:p.alive,inVent:!!p.inVent,ventIndex:p.ventIndex??-1,role:G.phase==='result'?p.role:'?',tasks:p.tasks,done:p.done,cooldown:p.cooldown,ventCooldown:p.ventCooldown,cloak:p.cloak,cloakUsed:p.cloakUsed,fake:p.fake,working:p.working,relays:p.relays,kills:G.phase==='result'?p.kills:0,emergency:p.emergency}))};
 }
 function publish(){
  if(!Net.host||!Net.room||!Net.roomReady)return;
@@ -629,7 +655,7 @@ function validSystems(g){
 function validGame(g){
  const arr=a=>Array.isArray(a),slot=s=>/^p[0-7]$/.test(s),finite=n=>Number.isFinite(n);
  return g&&validSystems(g)&&validBlackouts(g)&&Array.isArray(g.support)&&g.support.length<=STATIONS.length&&g.support.every(i=>Number.isInteger(i)&&i>=0&&i<STATIONS.length&&i!==5)&&new Set(g.support).size===g.support.length&&['lobby','reveal','play','paused','meeting','ejection','result'].includes(g.phase)&&Number.isSafeInteger(g.round)&&g.round>0&&finite(g.time)&&g.time>=0&&g.time<=ROUND_SECONDS&&finite(g.phaseTime)&&finite(g.lights)&&finite(g.sabotageCooldown)&&typeof g.message==='string'&&g.message.length<=250&&
- arr(g.players)&&g.players.length===8&&g.players.every(p=>p&&slot(p.id)&&typeof p.controller==='string'&&p.controller.length<80&&typeof p.name==='string'&&p.name.length<=16&&COLORS.includes(p.color)&&finite(p.x)&&finite(p.y)&&p.x>=0&&p.x<=WORLD_W&&p.y>=0&&p.y<=WORLD_H&&typeof p.alive==='boolean'&&typeof p.bot==='boolean'&&['?','crew','impostor'].includes(p.role)&&arr(p.tasks)&&p.tasks.length===TASKS_PER_PLAYER&&p.tasks.every(i=>Number.isInteger(i)&&i>=0&&i<STATIONS.length)&&new Set(p.tasks).size===TASKS_PER_PLAYER&&arr(p.done)&&p.done.every(i=>p.tasks.includes(i))&&finite(p.cooldown)&&finite(p.ventCooldown)&&finite(p.cloak)&&p.cloak>=0&&p.cloak<=5&&typeof p.cloakUsed==='boolean'&&finite(p.fake)&&p.fake>=0&&p.fake<=8&&arr(p.relays)&&p.relays.length<=1&&p.relays.every(i=>i===5)&&Number.isInteger(p.emergency))&&new Set(g.players.map(p=>p.id)).size===8&&new Set(g.players.map(p=>p.color)).size===8&&
+ arr(g.players)&&g.players.length===8&&g.players.every(p=>p&&slot(p.id)&&typeof p.controller==='string'&&p.controller.length<80&&typeof p.name==='string'&&p.name.length<=16&&COLORS.includes(p.color)&&finite(p.x)&&finite(p.y)&&p.x>=0&&p.x<=WORLD_W&&p.y>=0&&p.y<=WORLD_H&&typeof p.alive==='boolean'&&typeof p.inVent==='boolean'&&Number.isInteger(p.ventIndex)&&p.ventIndex>=-1&&p.ventIndex<VENTS.length&&p.inVent===(p.ventIndex>=0)&&typeof p.bot==='boolean'&&['?','crew','impostor'].includes(p.role)&&arr(p.tasks)&&p.tasks.length===TASKS_PER_PLAYER&&p.tasks.every(i=>Number.isInteger(i)&&i>=0&&i<STATIONS.length)&&new Set(p.tasks).size===TASKS_PER_PLAYER&&arr(p.done)&&p.done.every(i=>p.tasks.includes(i))&&finite(p.cooldown)&&finite(p.ventCooldown)&&finite(p.cloak)&&p.cloak>=0&&p.cloak<=5&&typeof p.cloakUsed==='boolean'&&finite(p.fake)&&p.fake>=0&&p.fake<=8&&arr(p.relays)&&p.relays.length<=1&&p.relays.every(i=>i===5)&&Number.isInteger(p.emergency))&&new Set(g.players.map(p=>p.id)).size===8&&new Set(g.players.map(p=>p.color)).size===8&&
  arr(g.bodies)&&g.bodies.length<=8&&g.bodies.every(b=>b&&slot(b.id)&&finite(b.x)&&finite(b.y)&&COLORS.includes(b.color))&&
  Array.isArray(g.lobbyChat)&&g.lobbyChat.length<=30&&g.lobbyChat.every(m=>m&&typeof m.name==='string'&&m.name.length<=16&&typeof m.text==='string'&&m.text.length<=100)&&
  (g.meeting===null||(g.meeting&&typeof g.meeting.results==='boolean'&&slot(g.meeting.reporterId)&&g.players.some(p=>p.id===g.meeting.reporterId)&&['body','emergency'].includes(g.meeting.kind)&&(g.meeting.bodyId===null||slot(g.meeting.bodyId))&&Array.isArray(g.meeting.claims)&&g.meeting.claims.length<=80&&g.meeting.claims.every(c=>c&&/^p[0-7]$/.test(c.source)&&['alibi','sighting','witness','accuse','defend'].includes(c.type)&&typeof c.target==='string'&&c.target.length<=2&&typeof c.room==='string'&&c.room.length<40)&&Array.isArray(g.meeting.replied)&&g.meeting.replied.length<=40&&typeof g.meeting.reason==='string'&&g.meeting.reason.length<=200&&g.meeting.votes&&typeof g.meeting.votes==='object'&&Object.keys(g.meeting.votes).length<=8&&arr(g.meeting.chat)&&g.meeting.chat.length<=30&&g.meeting.chat.every(m=>m&&typeof m.name==='string'&&m.name.length<=16&&typeof m.text==='string'&&m.text.length<=100)));
@@ -743,7 +769,7 @@ function disconnect(){
  if(Net.db)for(const ch of new Set(old))Net.db.removeChannel(ch).catch(()=>{});
 }
 function offlineFallback(text){disconnect();G.phase='connection-error';G.message=text||'Could not connect. Retry or play solo.';$('connection-note').textContent=G.message;renderUI();}
-function request(type,data={}){if(me()&&!me().alive&&!['restart','profile'].includes(type))return;if(type==='profile'&&G.phase==='connecting'){changeLobbyProfile(myId,data);return;}if(authority())handleAction(myId,type,data);else roomSend('action',{id:myId,seq:++actionSeq,action:type,data});}
+function request(type,data={}){if(type==='walk'&&G.phase==='connecting'){startHumanWalk(me(),data);return;}if(type==='stop-walk'&&G.phase==='connecting'){if(me()){me().path=[];me().walkTarget=null;}return;}if(me()&&!me().alive&&!['restart','profile'].includes(type))return;if(type==='profile'&&G.phase==='connecting'){changeLobbyProfile(myId,data);return;}if(authority())handleAction(myId,type,data);else roomSend('action',{id:myId,seq:++actionSeq,action:type,data});}
 setInterval(()=>{
  const now=Date.now();
  if(Net.lobbyRetryAt&&now>=Net.lobbyRetryAt&&Net.status!=='idle'){Net.lobbyRetryAt=0;subscribeLobby();}
@@ -791,7 +817,7 @@ function feedback(text){const e=$('task-feedback');if(e)e.textContent=text;
  if(taskUI&&/Wrong|Incorrect|Too fast|Too slow|Too early|expired|not in the pattern/i.test(text)){taskUI.failures=(taskUI.failures||0)+1;if(taskUI.failures>=2){$('task-hint').hidden=false;$('task-hint').textContent={reaction:'Tip: wait for TAP NOW instead of guessing the timing.',numbers:'Tip: remember the first three numbers, then the other three.',wires:'Tip: match both the number and the wire color.',swipe:'Tip: swipe steadily for about one second.',memory:'Tip: remember the sequence in pairs.',logic:'Tip: look for differences, ratios, or sums of the previous two numbers.',visual:'Tip: remember the shape made by the lit tiles.'}[taskUI.kind]||'Try taking it one step at a time.';}}
 }
 function openTask(station,fix=false){
- closeTask();const p=me();if(!p||!p.alive)return;
+ cancelMouseWalk();closeTask();const p=me();if(!p||!p.alive)return;
  for(const key of taskSaves.keys())if(!key.startsWith((Net.roomId||'solo')+':'+G.round+':'+myId+':'))taskSaves.delete(key);
  const saved=fix?null:taskSaves.get(taskKey(station));
  const kind=fix?'switches':STATIONS[station].kind;if(!fix)request('working',{on:true,station});$('task-hint').hidden=true;
@@ -948,7 +974,7 @@ function interact(){
  const index=STATIONS.findIndex((s,i)=>canReach(p,s)&&(p.role==='impostor'||(ownTasksDone(p)?supportStations().includes(i):p.tasks.includes(i)&&!p.done.includes(i))));
  if(index>=0)openTask(index);
 }
-function pauseGame(){
+function pauseGame(){cancelMouseWalk();
  keys.clear();if(!authority()||Net.mode!=='solo')return;
  if(G.phase==='play'){G.phase='paused';closeTask();publish();}
  else if(G.phase==='paused'){G.phase='play';publish();}renderUI();
@@ -968,7 +994,7 @@ $('create-room').onclick=()=>{const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let
 $('copy-invite').onclick=async()=>{try{await navigator.clipboard.writeText(invitation());showToast('Invite link copied.');}catch{showToast('Select and copy the invite link in the field.');}};
 $('ready-button').onclick=()=>request('ready');
 function releaseJoystick(){for(const key of ['arrowleft','arrowright','arrowup','arrowdown'])keys.delete(key);$('joystick-knob').style.transform='translate(0,0)';sendMovement();}
-function moveJoystick(e){if(!['play','lobby','connecting'].includes(G.phase)||taskUI||HOME_MODALS.some(id=>!$(id).hidden))return;const r=$('joystick').getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2,length=Math.hypot(dx,dy),scale=Math.min(1,36/Math.max(1,length)),x=dx*scale,y=dy*scale;for(const [key,yes]of [['arrowleft',x< -10],['arrowright',x>10],['arrowup',y< -10],['arrowdown',y>10]]){if(yes)keys.add(key);else keys.delete(key);}$('joystick-knob').style.transform='translate('+x+'px,'+y+'px)';sendMovement();}
+function moveJoystick(e){if(!['play','lobby','connecting','meeting'].includes(G.phase)||taskUI||HOME_MODALS.some(id=>!$(id).hidden))return;cancelMouseWalk();const r=$('joystick').getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2,length=Math.hypot(dx,dy),scale=Math.min(1,36/Math.max(1,length)),x=dx*scale,y=dy*scale;for(const [key,yes]of [['arrowleft',x< -10],['arrowright',x>10],['arrowup',y< -10],['arrowdown',y>10]]){if(yes)keys.add(key);else keys.delete(key);}$('joystick-knob').style.transform='translate('+x+'px,'+y+'px)';sendMovement();}
 $('joystick').onpointerdown=e=>{e.preventDefault();$('joystick').setPointerCapture(e.pointerId);$('joystick').dataset.active='1';moveJoystick(e);};$('joystick').onpointermove=e=>{if($('joystick').dataset.active==='1')moveJoystick(e);};for(const event of ['onpointerup','onpointercancel','onlostpointercapture'])$('joystick')[event]=()=>{$('joystick').dataset.active='0';releaseJoystick();};
 window.addEventListener('pagehide',()=>{closeTask();releaseJoystick();});
  window.addEventListener('blur',releaseJoystick);
@@ -985,11 +1011,11 @@ $('leave').onclick=returnMenu;
 $('close-task').onclick=closeTask;
 $('use').onclick=interact;
 for(const [id,action]of [['report','report'],['kill','kill'],['sabotage','sabotage'],['vent','vent'],['meeting','meeting'],['stealth','cloak'],['door','doors'],['comms','comms'],['critical','critical']])$(id).onclick=()=>{request(action);renderUI();};
-$('help').onclick=()=>{$('help-modal').hidden=false;keys.clear();};$('close-help').onclick=()=>{$('help-modal').hidden=true;};
+$('help').onclick=()=>{cancelMouseWalk();$('help-modal').hidden=false;keys.clear();};$('close-help').onclick=()=>{$('help-modal').hidden=true;};
 $('curtain-action').onclick=()=>{if(G.phase==='paused')pauseGame();else if(G.phase==='result')request('restart');else if(G.phase==='connecting'){prepareLocalLobby();request('start');}else if(G.phase==='lobby')request('start');else if(G.phase==='connection-error')enterGame();};
 for(const [id,kind]of [['claim-alibi','alibi'],['claim-accuse','accuse'],['claim-defend','defend'],['claim-ask','ask']])$(id).onclick=()=>request('statement',{kind,target:$('claim-target').value,room:$('claim-room').value});
 $('journal-shortcut').onclick=()=>$('journal-button').click();$('journal-meeting').onclick=()=>$('journal-button').click();
- $('journal-button').onclick=()=>{keys.clear();sendMovement();$('journal-list').replaceChildren(...(G.logs?.length?G.logs.map(l=>element('p',Math.floor(l.at/60)+':'+String(l.at%60).padStart(2,'0')+' · '+l.room+' · '+l.text)):[element('p','No sensor records yet. Complete tasks to recover data.')]));$('journal-modal').hidden=false;};$('close-journal').onclick=()=>$('journal-modal').hidden=true;
+ $('journal-button').onclick=()=>{cancelMouseWalk();keys.clear();sendMovement();$('journal-list').replaceChildren(...(G.logs?.length?G.logs.map(l=>element('p',Math.floor(l.at/60)+':'+String(l.at%60).padStart(2,'0')+' · '+l.room+' · '+l.text)):[element('p','No sensor records yet. Complete tasks to recover data.')]));$('journal-modal').hidden=false;};$('close-journal').onclick=()=>$('journal-modal').hidden=true;
 $('sound-toggle').onclick=()=>{audioEnabled=!audioEnabled;if(audioEnabled)unlockAudio();$('sound-toggle').textContent='SOUND: '+(audioEnabled?'ON':'OFF');};
 $('chat-form').onsubmit=e=>{e.preventDefault();const input=$('chat-input');if(input.value.trim()){request('chat',{text:input.value});input.value='';}};
 window.addEventListener('keydown',e=>{
@@ -997,15 +1023,15 @@ window.addEventListener('keydown',e=>{
  if(e.ctrlKey||e.metaKey||e.altKey||HOME_MODALS.some(id=>!$(id).hidden)||!$('journal-modal').hidden)return;
  if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)||e.target.isContentEditable)return;
  const k=e.key.toLowerCase();if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright','e','r','q','f','v',' ','p','m'].includes(k))e.preventDefault();
- if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(k)){if(['play','lobby','connecting'].includes(G.phase))keys.add(k);sendMovement();return;}
+ if(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright'].includes(k)){cancelMouseWalk();if(['play','lobby','connecting','meeting'].includes(G.phase))keys.add(k);sendMovement();return;}
  if(k==='e'){keys.add(k);if(!e.repeat&&!taskUI){if(!primaryAttack())interact();}return;}
  if(e.repeat||taskUI)return;
  if(k==='j')$('journal-button').click();if(k==='p')pauseGame();if(k==='m')mapOpen=false;
  const actions={r:'report',q:'kill',v:'vent',h:'cloak',z:'doors',c:'comms',x:'critical',' ':'meeting'};if(actions[k])request(actions[k]);
 });
 window.addEventListener('keyup',e=>{keys.delete(e.key.toLowerCase());sendMovement();});
-window.addEventListener('blur',()=>{keys.clear();sendMovement();if(taskUI)taskUI.holding=false;if(G.phase==='play'&&authority()&&Net.mode==='solo')pauseGame();});
-document.addEventListener('visibilitychange',()=>{if(document.hidden){keys.clear();if(taskUI)taskUI.holding=false;if(G.phase==='play'&&authority()&&Net.mode==='solo')pauseGame();}});
+window.addEventListener('blur',()=>{cancelMouseWalk();keys.clear();sendMovement();if(taskUI)taskUI.holding=false;if(G.phase==='play'&&authority()&&Net.mode==='solo')pauseGame();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelMouseWalk();keys.clear();if(taskUI)taskUI.holding=false;if(G.phase==='play'&&authority()&&Net.mode==='solo')pauseGame();}});
 document.querySelectorAll('[data-key]').forEach(b=>{b.onpointerdown=e=>{e.preventDefault();b.setPointerCapture(e.pointerId);if(['play','lobby','connecting'].includes(G.phase))keys.add(b.dataset.key);sendMovement();};const release=()=>{keys.delete(b.dataset.key);sendMovement();};b.onpointerup=release;b.onpointercancel=release;b.onlostpointercapture=release;});
 
 // Home, optional identity, and browser-local flight history.
@@ -1014,7 +1040,7 @@ let modalReturnFocus=null,accountClient=null,accountPromise=null,accountUser=nul
 const historyRunId=crypto.randomUUID(),recordedFlights=new Set();
 function readLocal(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 function writeLocal(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true;}catch{return false;}}
-function openHomeModal(id){releaseJoystick();keys.clear();sendMovement();modalReturnFocus=document.activeElement;for(const other of HOME_MODALS)$(other).hidden=other!==id;$(id).hidden=false;$(id).querySelector('button,input')?.focus?.();}
+function openHomeModal(id){cancelMouseWalk();releaseJoystick();keys.clear();sendMovement();modalReturnFocus=document.activeElement;for(const other of HOME_MODALS)$(other).hidden=other!==id;$(id).hidden=false;$(id).querySelector('button,input')?.focus?.();}
 function closeHomeModals(){for(const id of HOME_MODALS)$(id).hidden=true;modalReturnFocus?.focus?.();}
 function startFlight(){closeHomeModals();unlockAudio();canvas.focus?.({preventScroll:true});$('preference').value='random';selectedMode==='solo'?beginSolo():enterGame();}
 function createFriendRoom(){const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let code='';for(let i=0;i<6;i++)code+=chars[Math.floor(Math.random()*chars.length)];$('room-code').value=code;chooseMode('online');if(typeof history!=='undefined'){const url=new URL(location.href);url.searchParams.set('room',code);history.replaceState(null,'',url.toString());}startFlight();}
@@ -1127,7 +1153,78 @@ function tapWorld(clientX,clientY){
  if(dist(point,TABLE)<90&&!$('meeting').disabled){request('meeting');renderUI();return true;}
  if(!$('use').disabled&&STATIONS.some(s=>dist(point,s)<65&&canReach(me(),s))){interact();return true;}return false;
 }
-canvas.onclick=e=>{if(!watchingMatch())tapWorld(e.clientX,e.clientY);};
+canvas.onclick=e=>{if(!cameraCanPan()&&tapWorld(e.clientX,e.clientY))cancelMouseWalk();};canvas.oncontextmenu=e=>{e.preventDefault();if(rightMouse(e)&&!cameraCanPan())queueMouseWalk(worldClickPoint(e.clientX,e.clientY),false);};
+
+
+
+// A* minimizes distance on a 40-unit collision grid; visible segments remove extra corners.
+let walkGridCache=null;
+function shortestWalkRoute(start,target,lobby){
+ const step=40,width=lobby?800:WORLD_W,height=lobby?520:WORLD_H,cols=Math.ceil(width/step),rows=Math.ceil(height/step),clear=lobby?waitingSegment:clearNavRoute,valid=lobby?waitingStandable:standable,key=(lobby?'lobby':'ship')+':'+G.doors.map(t=>t>0?1:0).join('');
+ if(!walkGridCache||walkGridCache.key!==key){const points=Array.from({length:cols*rows},(_,i)=>({x:(i%cols)*step+step/2,y:Math.floor(i/cols)*step+step/2}));walkGridCache={key,points,valid:points.map(p=>valid(p.x,p.y)),edges:new Map()};}
+ const grid=walkGridCache,anchors=a=>grid.points.map((p,i)=>({i,d:dist(a,p)})).filter(v=>grid.valid[v.i]).sort((a,b)=>a.d-b.d).slice(0,48).filter(v=>clear(a,grid.points[v.i])).slice(0,8),sources=anchors(start),ends=new Map(anchors(target).map(v=>[v.i,v.d]));if(!sources.length||!ends.size)return [];
+ const costs=new Float64Array(grid.points.length).fill(Infinity),prev=new Int32Array(grid.points.length).fill(-2),open=new Set(),closed=new Set();for(const v of sources){costs[v.i]=v.d;prev[v.i]=-1;open.add(v.i);}
+ let best=Infinity,bestAt=-1;
+ while(open.size){let at=-1,score=Infinity;for(const i of open){const f=costs[i]+dist(grid.points[i],target);if(f<score){at=i;score=f;}}if(score>=best)break;open.delete(at);closed.add(at);
+  if(ends.has(at)&&costs[at]+ends.get(at)<best){best=costs[at]+ends.get(at);bestAt=at;}
+  if(!grid.edges.has(at)){const edges=[];for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){if(!dx&&!dy)continue;const x=at%cols+dx,y=Math.floor(at/cols)+dy,next=y*cols+x;if(x>=0&&x<cols&&y>=0&&y<rows&&grid.valid[next]&&clear(grid.points[at],grid.points[next]))edges.push(next);}grid.edges.set(at,edges);}
+  for(const next of grid.edges.get(at)){if(closed.has(next))continue;const cost=costs[at]+dist(grid.points[at],grid.points[next]);if(cost<costs[next]){costs[next]=cost;prev[next]=at;open.add(next);}}
+ }
+ if(bestAt<0)return [];const route=[];for(let i=bestAt;i!==-1;i=prev[i])route.push(grid.points[i]);return route.reverse();
+}
+const reportWindow={compact:false,x:null,y:null,drag:null,camera:{x:0,y:0},dragCamera:null};
+function applyReportGeometry(){
+ const modal=$('meeting-modal'),win=$('report-window');modal.dataset.size=reportWindow.compact?'compact':'full';$('compact-report').textContent=reportWindow.compact?'▣':'□';$('compact-report').setAttribute('aria-label',reportWindow.compact?'Expand report':'Compact report');
+ if(reportWindow.x===null){win.style.position='relative';win.style.left='auto';win.style.top='auto';return;}
+ const r=win.getBoundingClientRect(),w=window.innerWidth||1000,h=window.innerHeight||650;reportWindow.x=clamp(reportWindow.x,8,Math.max(8,w-r.width-8));reportWindow.y=clamp(reportWindow.y,8,Math.max(8,h-r.height-8));win.style.position='fixed';win.style.left=reportWindow.x+'px';win.style.top=reportWindow.y+'px';
+}
+$('compact-report').onclick=()=>{reportWindow.compact=!reportWindow.compact;applyReportGeometry();};
+$('report-titlebar').onpointerdown=e=>{if(e.target.closest?.('button')||e.button===2)return;e.preventDefault();const r=$('report-window').getBoundingClientRect();reportWindow.x=r.left;reportWindow.y=r.top;reportWindow.drag={x:e.clientX,y:e.clientY};$('report-titlebar').setPointerCapture(e.pointerId);applyReportGeometry();};
+$('report-titlebar').onpointermove=e=>{if(!reportWindow.drag)return;reportWindow.x+=e.clientX-reportWindow.drag.x;reportWindow.y+=e.clientY-reportWindow.drag.y;reportWindow.drag={x:e.clientX,y:e.clientY};applyReportGeometry();};
+$('report-titlebar').onpointerup=$('report-titlebar').onpointercancel=$('report-titlebar').onlostpointercapture=()=>{reportWindow.drag=null;};
+function cameraCanPan(){return watchingMatch()||G.phase==='meeting'&&!isSpectator();}
+function advanceMeetingCamera(dt){
+ if(HOME_MODALS.every(id=>$(id).hidden)){const mask=inputMask(),dx=Number(!!(mask&2))-Number(!!(mask&1)),dy=Number(!!(mask&8))-Number(!!(mask&4)),len=Math.hypot(dx,dy)||1;reportWindow.camera.x=clamp(reportWindow.camera.x+dx/len*650*dt,0,WORLD_W);reportWindow.camera.y=clamp(reportWindow.camera.y+dy/len*650*dt,0,WORLD_H);}
+ return reportWindow.camera;
+}
+
+let reportMinimized=false,reportWindowKey='';
+function syncReportWindow(){
+ const active=G.phase==='meeting'&&!isSpectator(),key=active?(G.meeting.id||G.round+':'+G.meeting.reporterId+':'+G.meeting.bodyId):'';
+ if(key!==reportWindowKey){reportWindowKey=key;reportMinimized=false;reportWindow.compact=false;reportWindow.x=null;reportWindow.y=null;reportWindow.drag=null;reportWindow.dragCamera=null;reportWindow.pan=null;reportWindow.camera={x:me()?.x||WORLD_W/2,y:me()?.y||WORLD_H/2};}
+ $('restore-report').hidden=!active||!reportMinimized;
+ document.body?.classList.toggle('meeting-map-view',active);if(active){$('meeting-modal').hidden=reportMinimized;applyReportGeometry();$('restore-report').textContent=G.meeting.results?'Vote results':'Report · '+Math.max(0,Math.ceil(G.phaseTime))+'s';}
+}
+$('minimize-report').onclick=()=>{reportMinimized=true;keys.clear();sendMovement();renderUI();};
+$('restore-report').onclick=()=>{reportMinimized=false;renderUI();};
+function rightMouse(e){return e.button===2&&(e.pointerType==='mouse'||!e.pointerType&&!mobileLayout());}
+function worldClickPoint(x,y){const r=canvas.getBoundingClientRect(),c=lastViewCamera;if(!c||!r.width||!r.height)return null;return {x:((x-r.left)*canvas.width/r.width-(c.offsetX||0))/c.zoom+c.x,y:((y-r.top)*canvas.height/r.height-(c.offsetY||0))/c.zoom+c.y};}
+function waitingSegment(a,b){const steps=Math.max(1,Math.ceil(dist(a,b)/8));for(let i=0;i<=steps;i++)if(!waitingStandable(a.x+(b.x-a.x)*i/steps,a.y+(b.y-a.y)*i/steps))return false;return true;}
+function startHumanWalk(p,data){
+ if(!p?.alive||!['play','lobby','connecting'].includes(G.phase)||!Number.isFinite(data.x)||!Number.isFinite(data.y))return false;
+ const lobby=G.phase!=='play',target={x:data.x,y:data.y},clear=lobby?waitingSegment:clearNavRoute;
+ if(!(lobby?waitingStandable(target.x,target.y):standable(target.x,target.y)))return false;
+ const route=clear(p,target)?[]:shortestWalkRoute(p,target,lobby);
+ if(!clear(p,target)&&!route.length)return false;if(!clear(route.at(-1)||p,target))return false;
+ p.path=[...route,target];p.walkTarget=target;p.fake=0;return true;
+}
+function advanceHumanWalk(p,dt,lobby){
+ if(!p.walkTarget||!p.path?.length)return;
+ const clear=lobby?waitingSegment:clearNavRoute;while(p.path.length>1&&clear(p,p.path[1]))p.path.shift();const t=p.path[0],d=dist(p,t);
+ if(!clear(p,t)){const target=p.walkTarget;p.path=[];p.walkTarget=null;startHumanWalk(p,target);return;}
+ if(d<.000001){p.x=t.x;p.y=t.y;p.path.shift();if(!p.path.length)p.walkTarget=null;return;}
+ const step=Math.min(dt,d/310),dx=t.x-p.x,dy=t.y-p.y;
+ if(lobby){p.x+=dx/d*310*step;p.y+=dy/d*310*step;}else move(p,dx,dy,step);
+}
+function queueMouseWalk(target,lobby){
+ if(!target||!me()?.alive||taskUI||HOME_MODALS.some(id=>!$(id).hidden)||!$('journal-modal').hidden||!(lobby?['lobby','connecting']:['play']).includes(G.phase))return;
+ const probe={...me(),path:[]};if(!startHumanWalk(probe,target)){showToast('Choose a reachable part of the floor.');return;}
+ mouseGoal={...target,round:G.round,phase:G.phase};request('walk',target);
+}
+function cancelMouseWalk(){if(!mouseGoal)return;mouseGoal=null;request('stop-walk');}
+function syncMouseGoal(){if(mouseGoal&&(!me()?.alive||mouseGoal.round!==G.round||mouseGoal.phase!==G.phase||dist(me(),mouseGoal)<8))mouseGoal=null;}
+function drawMouseGoal(time){if(!mouseGoal||G.phase==='meeting')return;ctx.save();ctx.strokeStyle='#b4f4df';ctx.lineWidth=2;ctx.beginPath();ctx.arc(mouseGoal.x,mouseGoal.y,10+Math.sin(time/160)*2,0,Math.PI*2);ctx.stroke();ctx.restore();}
+$('lobby-scene').oncontextmenu=e=>{e.preventDefault();if(!rightMouse(e))return;const r=$('lobby-scene').getBoundingClientRect();queueMouseWalk({x:(e.clientX-r.left)*800/r.width,y:(e.clientY-r.top)*520/r.height},true);};
 
 function validBlackouts(g){return Array.isArray(g.blackoutTimes)&&[0,2].includes(g.blackoutTimes.length)&&g.blackoutTimes.every(n=>Number.isInteger(n)&&n>=5&&n<=300)&&(g.blackoutTimes.length===0||g.blackoutTimes[1]>g.blackoutTimes[0]+20)&&Number.isInteger(g.blackoutIndex)&&g.blackoutIndex>=0&&g.blackoutIndex<=g.blackoutTimes.length&&Number.isFinite(g.blackoutEnd)&&g.blackoutEnd>=0&&g.blackoutEnd<=320&&Number.isFinite(g.lights)&&g.lights>=0&&g.lights<=15;}
 function updateBlackouts(){const elapsed=ROUND_SECONDS-G.time;while(G.blackoutIndex<G.blackoutTimes.length&&elapsed>=G.blackoutTimes[G.blackoutIndex]){G.blackoutEnd=G.blackoutTimes[G.blackoutIndex]+15;G.blackoutIndex++;}G.lights=Math.max(0,G.blackoutEnd-elapsed);}
@@ -1142,7 +1239,7 @@ function stepWaitingRoom(dt){
   if(G.phase==='connecting'&&p.controller!==myId)continue;
   const member=Net.members.get(p.controller),mask=p.controller===myId?(modal?0:inputMask()):member&&Date.now()-member.seen<700?member.input:0;
   const dx=Number(!!(mask&2))-Number(!!(mask&1)),dy=Number(!!(mask&8))-Number(!!(mask&4)),len=Math.hypot(dx,dy)||1;
-  const nx=p.x+dx/len*310*dt,ny=p.y+dy/len*310*dt;if(waitingStandable(nx,p.y))p.x=nx;if(waitingStandable(p.x,ny))p.y=ny;
+  if(mask){p.path=[];p.walkTarget=null;const nx=p.x+dx/len*310*dt,ny=p.y+dy/len*310*dt;if(waitingStandable(nx,p.y))p.x=nx;if(waitingStandable(p.x,ny))p.y=ny;}else advanceHumanWalk(p,dt,true);
  }
 }
 function renderWaitingRoom(){
@@ -1159,7 +1256,7 @@ function drawWaitingRoom(time,dt){
  rounded(24,25,752,470,40,'#0c202c','#5f7d87',5);rounded(42,90,716,390,22,'#779699','#101f2c',8);
  ctx.save();ctx.beginPath();ctx.roundRect(48,96,704,378,18);ctx.clip();for(let x=48;x<760;x+=50)for(let y=96;y<480;y+=50){ctx.fillStyle=(x+y)%100?'#819e9f':'#718e93';ctx.fillRect(x+2,y+2,46,46);}ctx.restore();
  for(let i=0;i<7;i++){rounded(72+i*99,101,36,7,3,'#c6ead7',null);rounded(72+i*99,463,36,7,3,'#c6ead7',null);}
- for(const r of LOBBY_CRATES)drawCrate(r);
+ for(const r of LOBBY_CRATES)drawCrate(r);drawMouseGoal(time);
  const humans=G.players.filter(p=>!p.bot);for(const p of [...humans].sort((a,b)=>a.y-b.y)){
   let v=waitingVisual.get(p.controller);if(!v){v={x:p.x,y:p.y,step:0,gait:0,face:1};waitingVisual.set(p.controller,v);}
   const dx=p.x-v.x,dy=p.y-v.y,moving=Math.hypot(dx,dy)>1;v.x+=dx*Math.min(1,dt*18);v.y+=dy*Math.min(1,dt*18);v.gait=moving?1:0;v.step+=dt*13;if(Math.abs(dx)>1)v.face=Math.sign(dx);astronaut(p,v,time);
@@ -1171,9 +1268,32 @@ function drawWaitingRoom(time,dt){
 
 
 
+
+let lastVentUI='';
+function layoutVentControls(camera){
+ const p=me();if(G.phase!=='play'||!p?.inVent)return;const box=canvas.getBoundingClientRect(),v=VENTS[p.ventIndex];if(!v||!box.width||!box.height)return;
+ const cx=(v.x-camera.x)*camera.zoom*box.width/canvas.width,cy=(v.y-camera.y)*camera.zoom*box.height/canvas.height,placed=[];
+ for(const b of $('vent-directions').children){if(b.dataset.ventTarget===undefined)continue;const to=VENTS[Number(b.dataset.ventTarget)],angle=Math.atan2(to.y-v.y,to.x-v.x);let x=clamp(cx+Math.cos(angle)*125,65,box.width-65),y=clamp(cy+Math.sin(angle)*110,115,box.height-95);
+ if(placed.some(p=>Math.abs(p.x-x)<115&&Math.abs(p.y-y)<65))x=clamp(x+125,65,box.width-65);placed.push({x,y});b.style.left=x+'px';b.style.top=y+'px';}
+}
+function renderVentControls(){
+ const p=me(),panel=$('vent-directions'),active=G.phase==='play'&&p?.alive&&p.role==='impostor'&&p.inVent;
+ panel.hidden=!active;$('joystick').style.visibility=active?'hidden':'';if(!active){lastVentUI='';return;}
+ const v=VENTS[p.ventIndex];if(!v)return;
+ const key=String(p.ventIndex);if(lastVentUI===key)return;lastVentUI=key;panel.replaceChildren();
+ // Buttons use compass directions to the connected rooms, not a round-robin teleport.
+ const used=[];
+ for(const i of v.links){const to=VENTS[i],angle=Math.atan2(to.y-v.y,to.x-v.x);let x=50+Math.cos(angle)*26,y=47+Math.sin(angle)*27;
+   if(used.some(a=>Math.hypot(a.x-x,a.y-y)<18))y+=20;used.push({x,y});
+   const button=element('button'),arrow=element('b','➜');arrow.style.transform='rotate('+angle+'rad)';button.append(arrow,element('span',to.room));button.style.left=x+'%';button.style.top=y+'%';button.dataset.ventTarget=String(i);button.setAttribute('aria-label','Vent to '+to.room);button.onclick=()=>request('vent-travel',{target:i});panel.append(button);
+ }
+ const exit=element('button','EXIT VENT · V','vent-exit');exit.style.left='50%';exit.style.top='92%';exit.onclick=()=>request('vent');panel.append(exit);
+}
+
 const SKILL_HINTS=[['kill','Q','Kill'],['vent','V','Vent'],['stealth','H','Cloak'],['door','Z','Doors'],['comms','C','Comms'],['critical','X','Reactor']];
 function skillReadout(source,p){
  if(!p)return 'Unavailable';
+ if(p.inVent)return source==='vent'?'Exit · V':'In vent';
  if(source==='stealth')return p.cloak>0?'Active '+Math.ceil(p.cloak)+'s':p.cloakUsed?'Used':'1 use';
  const cooldown=source==='kill'?p.cooldown:source==='vent'?p.ventCooldown:source==='door'?G.doorCooldown:G.sabotageCooldown;
  if(cooldown>0)return Math.ceil(cooldown)+'s';
@@ -1191,13 +1311,13 @@ function renderSkillStatus(){
 function renderRoomLabel(point){
  const badge=$('location');badge.hidden=!['play','paused'].includes(G.phase)||!point;
  if(badge.hidden)return;
- const room=ROOMS.find(r=>point.x>=r.x&&point.x<=r.x+r.w&&point.y>=r.y&&point.y<=r.y+r.h),name=(room?.name||'HALLWAY').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()),caption=watchingMatch()?'Viewing area':'Current room',signature=caption+':'+name;
+ const room=ROOMS.find(r=>point.x>=r.x&&point.x<=r.x+r.w&&point.y>=r.y&&point.y<=r.y+r.h),name=(room?.name||'HALLWAY').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()),caption=(watchingMatch()||G.phase==='meeting')?'Viewing area':'Current room',signature=caption+':'+name;
  if(badge.dataset.signature!==signature){badge.dataset.signature=signature;badge.replaceChildren(element('small',caption),element('strong',name));badge.setAttribute('aria-label',caption+': '+name);}
 }
 
 function renderKeyboardShortcuts(){
  const bar=$('keyboard-shortcuts'),p=me();bar.hidden=!['play','paused'].includes(G.phase)||!p||(!p.alive&&!watchingMatch());if(bar.hidden)return;
- let hints=watchingMatch()?[['WASD / ↑↓←→','Pan'],['Drag','Look around']]:[['WASD / ↑↓←→','Move'],['E','Use / Task'],['R','Report'],['Space','Meeting']];
+ let hints=watchingMatch()?[['WASD / ↑↓←→','Pan'],['Drag','Look around']]:[['WASD / ↑↓←→','Move'],['RMB','Walk'],['E','Use / Task'],['R','Report'],['Space','Meeting']];
  if(Net.mode==='solo')hints.push(['P','Pause']);hints.push(['Esc','Close']);
  const signature=JSON.stringify(hints);if(bar.dataset.signature===signature)return;bar.dataset.signature=signature;
  bar.replaceChildren(...hints.map(([key,action])=>{const item=element('span','','keyboard-shortcut');item.append(element('kbd',key),element('span',action));return item;}));
@@ -1207,7 +1327,7 @@ const deathView={key:'',choice:'',x:0,y:0,drag:null};
 function watchingMatch(){return deathView.choice==='watch'&&!!me()&&!me().alive&&G.phase==='play';}
 function updateDeathView(){
  const p=me(),key=Net.roomId+':'+G.round;
- if(key!==deathView.key||p?.alive||['menu','lobby','connecting'].includes(G.phase)){deathView.key=key;deathView.choice='';deathView.drag=null;}
+ if(key!==deathView.key||p?.alive||['menu','lobby','connecting'].includes(G.phase)){deathView.key=key;deathView.choice='';deathView.drag=null;deathView.dragCamera=null;}
  const dead=p?.role==='crew'&&!p.alive&&['play','meeting'].includes(G.phase);
  if(dead&&!deathView.choice){deathView.choice='prompt';deathView.x=p.x;deathView.y=p.y;keys.clear();closeTask();sendMovement();}
  $('death-modal').hidden=!(dead&&deathView.choice==='prompt');
@@ -1223,9 +1343,9 @@ function advanceWatchCamera(dt){
 }
 $('death-out').onclick=returnMenu;
 $('death-watch').onclick=()=>{deathView.choice='watch';keys.clear();$('death-modal').hidden=true;cameraRig.round=-1;renderUI();};
-canvas.onpointerdown=e=>{if(!watchingMatch())return;e.preventDefault();canvas.setPointerCapture(e.pointerId);deathView.drag={x:e.clientX,y:e.clientY};};
-canvas.onpointermove=e=>{if(!watchingMatch()||!deathView.drag)return;const rect=canvas.getBoundingClientRect(),zoom=lastViewCamera?.zoom||1;deathView.x=clamp(deathView.x-(e.clientX-deathView.drag.x)*canvas.width/rect.width/zoom,0,WORLD_W);deathView.y=clamp(deathView.y-(e.clientY-deathView.drag.y)*canvas.height/rect.height/zoom,0,WORLD_H);deathView.drag={x:e.clientX,y:e.clientY};};
-canvas.onpointerup=canvas.onpointercancel=canvas.onlostpointercapture=()=>{deathView.drag=null;};
+canvas.onpointerdown=e=>{if(!cameraCanPan()||e.button===2)return;e.preventDefault();canvas.setPointerCapture(e.pointerId);const state=G.phase==='meeting'?reportWindow:deathView;state.dragCamera={x:e.clientX,y:e.clientY};};
+canvas.onpointermove=e=>{if(!cameraCanPan())return;const state=G.phase==='meeting'?reportWindow:deathView;if(!state.dragCamera)return;const point=G.phase==='meeting'?reportWindow.camera:deathView,rect=canvas.getBoundingClientRect(),zoom=lastViewCamera?.zoom||1;point.x=clamp(point.x-(e.clientX-state.dragCamera.x)*canvas.width/rect.width/zoom,0,WORLD_W);point.y=clamp(point.y-(e.clientY-state.dragCamera.y)*canvas.height/rect.height/zoom,0,WORLD_H);state.dragCamera={x:e.clientX,y:e.clientY};};
+canvas.onpointerup=canvas.onpointercancel=canvas.onlostpointercapture=()=>{deathView.dragCamera=null;reportWindow.dragCamera=null;};
 
 function prepareLocalLobby(){disconnect();Net.mode='solo';Net.members.set(myId,{id:myId,name:cleanName($('nickname').value),color:chosenColor,seen:Date.now(),input:0,ready:false});G.players=[];$('menu').hidden=true;prepareLobby();}
 function changeLobbyProfile(controller,data){
@@ -1295,14 +1415,15 @@ function renderUI(){
  $('kill').hidden=!imp;$('sabotage').hidden=!imp;$('vent').hidden=!imp;
  $('kill').disabled=!play||!p.alive||!imp||p.cooldown>0||p.cloak>0||!target;label('kill',imp&&p.cooldown>0?Math.ceil(p.cooldown)+'s':'KILL');
  $('sabotage').disabled=!play||!p.alive||!imp||G.sabotageCooldown>0||G.lights>0;label('sabotage',imp&&G.sabotageCooldown>0?Math.ceil(G.sabotageCooldown)+'s':'LIGHTS');
- $('vent').disabled=!play||!p.alive||!imp||p.ventCooldown>0||!VENTS.some(v=>canReach(p,v,100));
+ $('vent').disabled=!play||!p.alive||!imp||(!p.inVent&&(p.ventCooldown>0||!VENTS.some(v=>canReach(p,v,100))));label('vent',p.inVent?'EXIT VENT':'VENT');
  for(const id of ['stealth','door','comms','critical'])$(id).hidden=!imp;
  $('stealth').disabled=!play||!p.alive||p.cloakUsed;label('stealth',p?.cloak>0?Math.ceil(p.cloak)+'s':p?.cloakUsed?'USED':'CLOAK · ONCE');
  $('door').disabled=!play||!p.alive||G.doorCooldown>0||!GATES.some(d=>dist(p,{x:d.x+d.w/2,y:d.y+d.h/2})<750);label('door',G.doorCooldown>0?Math.ceil(G.doorCooldown)+'s':'DOORS');
  for(const id of ['comms','critical'])$(id).disabled=!play||!p.alive||G.sabotageCooldown>0||G.reactor>0;
  $('meeting').disabled=!play||G.reactor>0||!p.alive||p.emergency<=0||dist(p,TABLE)>185||G.lights>0;
  $('alert').hidden=G.lights<=0&&G.comms<=0&&G.reactor<=0||!play;if(G.reactor>0)$('alert').textContent=(G.overtime>0?'FINAL EMERGENCY':'REACTOR SABOTAGE')+' · REPAIR BOTH REACTOR TERMINALS · '+Math.ceil(G.reactor)+'s';else if(G.comms>0)$('alert').textContent='COMMS DOWN · REPAIR IN NAVIGATION · '+Math.ceil(G.comms)+'s';else if(G.lights>0)$('alert').hidden=true;
- renderContextActions();if(!$('flight-modal').hidden)renderFlightPanel();renderLobby();renderPowerAlert();
+ if(p.inVent)for(const id of ['kill','use','report','meeting','stealth','door','comms','critical'])$(id).disabled=true;
+ renderVentControls();renderContextActions();if(!$('flight-modal').hidden)renderFlightPanel();renderLobby();renderPowerAlert();
  $('meeting-modal').hidden=G.phase!=='meeting';if(G.phase==='meeting')renderMeeting();
  if(taskUI&&!taskUI.fix&&!taskUI.assist&&p?.done.includes(taskUI.station))closeTask(false);
  if(!['play','paused'].includes(G.phase)&&taskUI)closeTask();
@@ -1311,7 +1432,7 @@ function renderUI(){
  $('curtain').dataset.phase=G.phase;renderEjectionNotice();
  $('reveal-crew').style.setProperty('--suit',p?.color||chosenColor);$('eject-crew').style.setProperty('--suit',G.ejected?.color||'#d4e2e8');$('eject-crew').hidden=G.phase!=='ejection'||!G.ejected;
  $('invite').hidden=G.phase!=='lobby'||Net.mode==='solo';$('ready-button').hidden=true;if(G.phase==='lobby'){$('invite-link').value=invitation();const ready=readiness();$('ready-button').textContent=ready.find(r=>r.id===myId)?.ready?'UNREADY':'READY';$('ready-note').textContent=ready.filter(r=>r.ready).length+'/'+humans+' players ready'+(Net.code?' · CODE '+Net.code:' · PUBLIC ROOM');}
- $('curtain-tag').textContent=G.phase==='lobby'?(Net.mode==='solo'?'OFFLINE WAITING ROOM':'WAITING ROOM · 1–8 PLAYERS'):'ORBIT 28';
+ $('curtain-tag').textContent=G.phase==='lobby'?(Net.mode==='solo'?'OFFLINE WAITING ROOM':'WAITING ROOM · 1–8 PLAYERS'):'ORBIT 31';
  if(G.phase==='connecting'){$('curtain-title').textContent='FINDING CREWMATES';$('curtain-text').textContent='Finding a waiting room. You can start alone or wait for other players.';}
  if(G.phase==='connection-error'){$('curtain-title').textContent='CONNECTION UNAVAILABLE';$('curtain-text').textContent=G.message;$('curtain-action').hidden=false;$('curtain-action').textContent='RETRY CONNECTION';}
  if(G.phase==='lobby'){
@@ -1324,7 +1445,7 @@ function renderUI(){
  $('round-summary').hidden=G.phase!=='result';if(G.phase==='result')$('round-summary').replaceChildren(...G.players.map(q=>{const row=element('div',q.name+' · '+(q.role==='impostor'?'IMPOSTOR · '+(q.kills||0)+' kills':'CREWMATE · '+q.done.length+'/'+q.tasks.length+' task'));row.style.borderLeft='4px solid '+q.color;return row;}));
  if(G.phase==='result'){const won=p?.role===G.winner;$('curtain').dataset.outcome=won?'victory':'defeat';$('curtain-title').textContent=won?'Victory!':'Defeated!';$('curtain-text').textContent=G.message+(Net.mode==='online'?' Returning to lobby in ':' Next round in ')+Math.ceil(G.phaseTime)+' seconds.';$('curtain-action').hidden=!authority();$('curtain-action').textContent=Net.mode==='online'?'RETURN TO LOBBY':'NEXT FLIGHT';}
  if(G.phase==='paused'){$('curtain-title').textContent='PAUSED';$('curtain-text').textContent='Continue when you are ready.';$('curtain-action').hidden=false;$('curtain-action').textContent='CONTINUE';}
- renderLateWaitingRoom();renderWaitingRoom();updateDeathView();renderKeyboardShortcuts();renderRoomLabel(watchingMatch()?deathView:me());renderSkillStatus();
+ renderLateWaitingRoom();renderWaitingRoom();updateDeathView();renderKeyboardShortcuts();syncReportWindow();syncMouseGoal();renderRoomLabel(G.phase==='meeting'?reportWindow.camera:watchingMatch()?deathView:me());renderSkillStatus();
  if(play&&!watchingMatch()){const hint=taskUI?'Working on a task…':!p.alive?'You died. Choose Out or Continue watching.':body?'R · REPORT BODY':canUse?'E · INTERACT':imp?'Q Kill · V Vent · E Interact':'Find room terminals · E Task';if($('hint').textContent!==hint)$('hint').textContent=hint;}
 }
 const meetingRoomNodes=new Map(),meetingCorridorNodes=[];
@@ -1377,7 +1498,7 @@ function renderMeeting(){
  for(const id of ['claim-alibi','claim-accuse','claim-defend','claim-ask'])$(id).disabled=!p.alive||meeting.claims.filter(c=>c.source===p.id).length>=5;
  const voted=Object.hasOwn(meeting.votes,p.id),sig=JSON.stringify([G.round,meeting.reporterId,meeting.kind,G.players.map(q=>[q.id,q.name,q.alive]),meeting.votes,meeting.results,p.id,meetingSelection,meetingVotePending]);
  if(sig!==lastVoteUi){lastVoteUi=sig;const buttons=G.players.map(q=>{const b=element('button','','vote-person'),avatar=element('span','','mini-crew');avatar.style.setProperty('--suit',q.color);b.append(avatar,element('span',q.name+(q.id===p.id?' (you)':'')+(!q.alive?' · dead':Object.hasOwn(meeting.votes,q.id)?' · voted':'')));if(q.id===meeting.reporterId){const badge=element('span','📣','reporter-icon');badge.setAttribute('aria-label',meeting.kind==='body'?'Body reporter':'Emergency caller');badge.title=meeting.kind==='body'?'Body reporter':'Emergency caller';b.append(badge);}b.setAttribute('aria-label',colorNames[COLORS.indexOf(q.color)]+(!q.alive?', dead':'')+(q.id===meeting.reporterId?', reporter':''));b.classList.toggle('reporter',q.id===meeting.reporterId);b.classList.toggle('dead',!q.alive);b.classList.toggle('selected',q.id===meeting.votes[p.id]);b.setAttribute('aria-pressed',String(q.id===meeting.votes[p.id]));b.disabled=meeting.results||!q.alive||!p.alive||q.id===p.id;if(meeting.results){const rack=element('span','','vote-voters');rack.setAttribute('role','group');rack.setAttribute('aria-label','Votes for '+colorNames[COLORS.indexOf(q.color)]);for(const voter of G.players.filter(v=>v.alive&&meeting.votes[v.id]===q.id)){const token=element('span','','voter-token'),suit=element('span','','mini-crew');suit.style.setProperty('--suit',voter.color);token.append(suit);token.setAttribute('role','img');token.setAttribute('aria-label',colorNames[COLORS.indexOf(voter.color)]+' voted for '+colorNames[COLORS.indexOf(q.color)]);rack.append(token);}b.append(rack);}b.style.borderLeft='4px solid '+q.color;b.onclick=()=>selectMeetingVote(q.id);return b;});$('vote-grid').replaceChildren(...buttons);}
- $('meeting-time').textContent=Math.ceil(G.phaseTime)+'s';
+ $('meeting-time').hidden=!!meeting.results;$('meeting-time').textContent=meeting.results?'':Math.max(0,Math.ceil(G.phaseTime))+'s';
  const chatSig=JSON.stringify(meeting.chat);if(chatSig!==lastChatUi){lastChatUi=chatSig;$('chat').replaceChildren(...meeting.chat.map(meetingChatRow));$('chat').scrollTop=$('chat').scrollHeight;}
  $('chat-input').disabled=!p.alive||meeting.results;$('chat-form').querySelector('button').disabled=!p.alive||meeting.results;
  $('vote-note').textContent=observer?'You are spectating this meeting.':!p.alive?'Spectators can only watch meetings.':voted?'Vote submitted. Waiting for the others.':'One vote each. A tie or a skip majority ejects no one.';
@@ -1458,15 +1579,11 @@ function drawBed(b){
 }
 function drawCrate(b){rounded(b.x+8,b.y+13,b.w,b.h,3,'#20383466',null);rounded(b.x,b.y,b.w,b.h,4,'#7b876b','#2d4140',5);rounded(b.x+8,b.y+8,b.w-16,b.h-21,3,'#9da385','#64795e',3);ctx.strokeStyle='#52644d';ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(b.x+10,b.y+10);ctx.lineTo(b.x+b.w-10,b.y+b.h-22);ctx.moveTo(b.x+b.w-10,b.y+10);ctx.lineTo(b.x+10,b.y+b.h-22);ctx.stroke();}
 function decorRooms(time){
- for(const x of [350,770]){rounded(x,208,130,76,4,'#d2e0d6','#365560',5);ctx.fillStyle='#278eb1';ctx.fillRect(x+5,257,120,20);ctx.fillStyle='#bd547a';ctx.fillRect(x+56,223,19,10);ctx.fillRect(x+61,218,9,20);}
  const scan=STATIONS[0];ellipse(scan.x,scan.y+25,60,38,'#4e817b','#244c56',5);ellipse(scan.x,scan.y+16,51,31,'#7cb998','#d2e2bc',3);ctx.strokeStyle='#b9efc8';ctx.lineWidth=3;ctx.beginPath();ctx.ellipse(scan.x,scan.y+16,39,23,0,0,Math.PI*2);ctx.stroke();
- for(const [x,y,w,h]of [[2535,175,300,94],[2125,790,120,110],[260,1280,110,170],[680,1660,160,75]]){rounded(x,y,w,h,5,'#556d73','#203b46',6);rounded(x+12,y+12,w-24,h-36,4,'#264e64','#122c38',4);ctx.fillStyle='#85d6c9';ctx.fillRect(x+22,y+24,w-44,4);ctx.fillStyle='#e3c16a';ctx.fillRect(x+w-35,y+h-16,15,7);}
- const reactor={x:1760,y:1650};ellipse(reactor.x,reactor.y+80,90,55,'#254f4c');rounded(reactor.x-70,reactor.y-90,140,165,35,'#487e7a','#203c42',7);for(let y=reactor.y-70;y<reactor.y+60;y+=25)rounded(reactor.x-51,y,102,14,5,'#8be1ca','#2d5d63',3);ellipse(reactor.x,reactor.y-84,65,26,'#bad1ac','#284d50',5);
- rounded(2470,1540,140,160,28,'#738f86','#27434b',7);for(let i=0;i<4;i++)rounded(2485,1555+i*34,110,17,6,i%2?'#cd9a58':'#4b6d77','#294650',3);ellipse(2540,1540,62,28,'#a2b9a5','#38545c',5);
+ rounded(2390,1560,140,160,28,'#738f86','#27434b',7);for(let i=0;i<4;i++)rounded(2405,1575+i*34,110,17,6,i%2?'#cd9a58':'#4b6d77','#294650',3);
  for(const [i,s]of STATIONS.entries()){const p=me(),delivery=i===3&&p?.relays?.includes(5),assigned=p?.role==='crew'&&G.comms<=0&&(delivery||(ownTasksDone(p)?supportStations().includes(i):p.tasks.includes(i)&&!(i===5&&p.relays?.includes(5)))),done=!delivery&&!ownTasksDone(p)&&p?.done.includes(i),color=assigned?(done?'#b0daa1':'#ffe68a'):'#a1b5a5';if(assigned&&!done){ctx.strokeStyle='#ffee99';ctx.lineWidth=4;ctx.globalAlpha=.7+Math.sin(time/300)*.25;ctx.strokeRect(s.x-38,s.y-38,76,66);ctx.globalAlpha=1;}if(i!==0){rounded(s.x-29,s.y-27,58,48,7,'#4e6771','#1c343c',5);rounded(s.x-22,s.y-21,44,29,3,color,'#2f535b',3);ctx.fillStyle='#214451';ctx.font='bold 20px system-ui';ctx.textAlign='center';ctx.fillText(done?'✓':String(i+1),s.x,s.y+1);for(let j=0;j<3;j++)ellipse(s.x-16+j*16,s.y+15,3,3,j===1?'#e3b96d':'#b6d1bd',null);}}
  rounded(POWER.x-36,POWER.y-38,72,67,7,G.lights>0?'#dcba64':'#7da99b','#17353e',5);label('ϟ',POWER.x,POWER.y+10,40,'#2f5159');
  for(const v of VENTS){rounded(v.x-40,v.y-23,80,46,8,'#566c72','#152d37',5);for(let i=-27;i<=27;i+=13)rounded(v.x+i-3,v.y-15,6,30,2,'#162b35',null);}
- ctx.font='bold 19px system-ui';ctx.textAlign='center';ctx.fillStyle='#a65e3b';ctx.fillText('← MEDBAY   |   CAFETERIA →',1060,415);ctx.fillStyle='#4a687c';ctx.fillText('↓ ENGINE',2700,1330);
 }
 function astronaut(p,point,time){
  ctx.save();ctx.translate(point.x,point.y);ctx.globalAlpha=p.cloak>0?.22:p.alive?1:.35;
@@ -1495,17 +1612,17 @@ function drawMini(point){
 }
 function draw(time,dt){
  if(['lobby','connecting'].includes(G.phase)){drawWaitingRoom(time,dt);return;}
- mapOpen=false;resizeStage();const p=me()||G.players.find(p=>p.alive)||G.players[0];if(!p)return;updateVisuals(dt);const point=watchingMatch()?advanceWatchCamera(dt):visual.get(p.id)||p,following=followCamera(point,dt),fit=Math.min(canvas.width/WORLD_W,canvas.height/WORLD_H),camera=mapOpen?{x:0,y:0,zoom:fit,offsetX:(canvas.width-WORLD_W*fit)/2,offsetY:(canvas.height-WORLD_H*fit)/2}:following;
- lastViewCamera=camera;
+ mapOpen=false;resizeStage();const p=me()||G.players.find(p=>p.alive)||G.players[0];if(!p)return;updateVisuals(dt);const point=G.phase==='meeting'?advanceMeetingCamera(dt):watchingMatch()?advanceWatchCamera(dt):visual.get(p.id)||p,following=followCamera(point,dt),fit=Math.min(canvas.width/WORLD_W,canvas.height/WORLD_H),camera=mapOpen?{x:0,y:0,zoom:fit,offsetX:(canvas.width-WORLD_W*fit)/2,offsetY:(canvas.height-WORLD_H*fit)/2}:following;
+ lastViewCamera=camera;layoutVentControls(camera);
  ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#111e26';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.setTransform(camera.zoom,0,0,camera.zoom,camera.offsetX-camera.x*camera.zoom,camera.offsetY-camera.y*camera.zoom);
- ctx.fillStyle='#9bc5d0';for(const s of stars){ctx.globalAlpha=.15+(Math.sin(time/1600+s.x)+1)*.12;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;drawFloors(time);decorRooms(time);
+ ctx.fillStyle='#9bc5d0';for(const s of stars){ctx.globalAlpha=.15+(Math.sin(time/1600+s.x)+1)*.12;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();}ctx.globalAlpha=1;drawFloors(time);decorRooms(time);drawMouseGoal(time);
  for(const [i,d]of GATES.entries())if(G.doors[i]>0){rounded(d.x,d.y,d.w,d.h,3,'#af6654','#472d2e',3);label(String(Math.ceil(G.doors[i])),d.x+d.w/2,d.y+d.h/2+6,16);}
  if(G.reactor>0)for(const [i,t]of REACTOR_TERMINALS.entries()){ellipse(t.x,t.y,36,30,G.reactorLocks[i]?'#7ed6a0':'#ef9d66','#253d43',4);label(i?'B':'A',t.x,t.y+7,22);}
 
  const vision=p.alive?(G.lights>0&&p.role!=='impostor'?235:p.role==='impostor'?800:680):1000,visible=q=>q.controller===myId||!p.alive||dist(point,q)<vision&&lineOfSight(point,q);
- for(const b of G.bodies)if(!b.reported&&visible(b)){rounded(b.x-33,b.y-12,66,42,16,b.color,'#111e25',6);rounded(b.x-4,b.y-33,8,31,4,'#dfe6d8','#1d343c',3);ellipse(b.x-5,b.y-31,7,6,'#e2e8d8','#1c3239',2);ellipse(b.x+5,b.y-31,7,6,'#e2e8d8','#1c3239',2);}
+ for(const b of G.bodies)if(G.phase!=='meeting'&&!b.reported&&visible(b)){rounded(b.x-33,b.y-12,66,42,16,b.color,'#111e25',6);rounded(b.x-4,b.y-33,8,31,4,'#dfe6d8','#1d343c',3);ellipse(b.x-5,b.y-31,7,6,'#e2e8d8','#1c3239',2);ellipse(b.x+5,b.y-31,7,6,'#e2e8d8','#1c3239',2);}
  const layers=[];TABLES.forEach((t,i)=>layers.push({y:t.y+75*TABLE_SCALE,draw:()=>drawTable(t,i)}));BEDS.forEach(b=>layers.push({y:b.y+b.h,draw:()=>drawBed(b)}));CRATES.forEach(b=>layers.push({y:b.y+b.h,draw:()=>drawCrate(b)}));
- for(const q of G.players)if(q.alive&&visible(q)&&(q.cloak<=0||q.controller===myId))layers.push({y:(visual.get(q.id)?.y||q.y)+28,draw:()=>astronaut(q,visual.get(q.id)||q,time)});layers.sort((a,b)=>a.y-b.y);for(const layer of layers)layer.draw();
+ for(const q of G.players)if(G.phase!=='meeting'&&q.alive&&!q.inVent&&visible(q)&&(q.cloak<=0||q.controller===myId))layers.push({y:(visual.get(q.id)?.y||q.y)+28,draw:()=>astronaut(q,visual.get(q.id)||q,time)});layers.sort((a,b)=>a.y-b.y);for(const layer of layers)layer.draw();
  if(mapOpen){for(const r of ROOMS)label(r.name,r.x+r.w/2,r.y+r.h/2,38,'#e5eee0');if(p.role==='crew'&&G.comms<=0)for(const i of offeredTasks(p))if(ownTasksDone(p)||!p.done.includes(i)){const site=taskSite(p,i);ellipse(site.x,site.y,35,35,'#ffe78c','#1c3d43',7);}}
  if(['play','paused'].includes(G.phase)&&p.alive&&!mapOpen)drawFog(point,camera,vision);
  ctx.setTransform(1,0,0,1,0,0);renderRoomLabel(point);
