@@ -167,6 +167,7 @@ body.mobile-flight.round-active:has(#skill-status:not([hidden])) .rail{height:92
 .meeting-map-view #game{cursor:grab;touch-action:none}.meeting-map-view #game:active{cursor:grabbing}@media(max-width:480px){#meeting-modal[data-size=compact] #report-window{width:min(360px,calc(100vw - 20px));height:min(520px,70dvh)}#meeting-modal .dialog-head{gap:5px}#compact-report,#minimize-report{min-width:28px}}
 #vent-directions{position:absolute;inset:0;z-index:4;pointer-events:none}#vent-directions button{pointer-events:auto;position:absolute;transform:translate(-50%,-50%);background:#172b36e8;border:2px solid #ffd587;color:#fff4ce;padding:8px;min-width:90px;max-width:130px;font-size:10px}#vent-directions b{display:block;font-size:30px;line-height:30px}#vent-directions .vent-exit{background:#8b3647;border-color:#ffb1b1}
 #meeting-modal .vote-person>.self-label{display:block!important;position:absolute;left:4px;top:4px;z-index:3;font:900 12px system-ui;background:#173b52;color:#fff4a6;padding:2px 5px;border-radius:4px;line-height:1.1;pointer-events:none}#meeting-modal .camera-toolbar{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:10px;color:#264c62}#meeting-modal #check-camera{min-height:36px;padding:6px 12px;background:#284f66;color:#fff4c4;border:2px solid #607f92;font-size:12px;box-shadow:none}#meeting-modal #camera-evidence{padding:9px;margin-top:6px;max-height:100px;overflow:auto;background:#173b48;color:#f9e6a5;border:2px solid #d5b960;border-radius:7px;font-size:11px}#camera-evidence>strong{display:block;margin-bottom:5px}.camera-record{display:flex;gap:7px;align-items:flex-start;line-height:1.5}.camera-record+.camera-record{margin-top:6px}#meeting-modal[data-size=compact] #camera-evidence{max-height:75px}@media(max-width:480px){#meeting-modal .vote-person>.self-label{font-size:10px;padding:2px 3px;left:2px;top:2px}#meeting-modal #check-camera{font-size:11px}}
+#report-window{position:relative}#meeting-modal #check-camera{position:relative;flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:36px;width:36px;padding:4px 4px 9px;color:#20465d;background:#d4e5ed;border:1px solid #5c7d93;box-shadow:none;border-radius:6px}#camera-remaining{position:absolute;right:2px;bottom:0;font:800 8px system-ui;line-height:10px}#meeting-modal #camera-evidence{position:absolute;right:16px;top:61px;z-index:8;width:min(300px,calc(100% - 32px));max-height:min(240px,55dvh);overflow:auto;margin:0;padding:11px;background:#173b48;color:#fff0b8;border:2px solid #d5b960;border-radius:9px;box-shadow:0 8px 25px #0008;font-size:12px}.camera-popover-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}#close-camera{min-width:32px;min-height:32px;padding:0;font-size:24px;line-height:1;background:#325663;color:#fff;border:1px solid #91b2ba;box-shadow:none}#camera-result>strong{display:block;margin-bottom:8px;font-size:15px;overflow-wrap:anywhere}#camera-evidence>small{display:block;margin-top:10px;font-size:10px;color:#bad0d4}#meeting-modal[data-size=compact] #camera-evidence{max-height:min(240px,55dvh)}@media(max-width:480px){#meeting-modal .dialog-head{gap:5px}#meeting-modal #check-camera{min-width:32px;width:32px}#meeting-modal #camera-evidence{right:10px;top:66px;width:min(285px,calc(100% - 20px))}}
 </style>
 </head>
 <body>
@@ -198,7 +199,7 @@ body.mobile-flight.round-active:has(#skill-status:not([hidden])) .rail{height:92
 </aside></div><p class="smallprint">ORBIT 31 · An independent social deduction game. All artwork is drawn in-game.</p>
 </main><div id="power-notice" class="power-notice" role="status" aria-live="polite" hidden></div>
 <div class="modal" id="death-modal" hidden><section class="dialog death-dialog" role="dialog" aria-modal="true" aria-labelledby="death-title"><h2 id="death-title">You died</h2><p>Leave or keep watching. Drag the view, or use WASD / arrows / joystick to look around.</p><div class="death-actions"><button id="death-out" class="danger">Out</button><button id="death-watch">Continue watching</button></div></section></div><div class="modal" id="task-modal" hidden><section class="dialog" aria-labelledby="task-title" role="dialog" aria-modal="true"><div class="dialog-head"><h2 id="task-title">Tasks</h2><button id="close-task" class="secondary" aria-label="Close task and save progress">✕</button></div><p id="task-description"></p><p id="task-hint" class="checkpoint" hidden></p><p id="task-checkpoint" class="checkpoint" hidden>Progress restored · Press Esc to close</p><div id="task-content"></div><p class="mini">Progress is saved when you close the panel or a meeting starts. Press Esc to look around.</p></section></div>
-<div class="modal" id="meeting-modal" hidden><section class="dialog" id="report-window" role="dialog" aria-modal="false" aria-labelledby="meeting-title"><div class="dialog-head" id="report-titlebar"><h2 id="meeting-title">Who is the impostor?</h2><strong id="meeting-time" aria-label="Time remaining">30s</strong><button id="compact-report" aria-label="Compact report" title="Compact / expand report">□</button><button id="minimize-report" aria-label="Minimize report" title="Minimize report">—</button><button id="journal-meeting">Logs</button></div><nav class="meeting-tabs" aria-label="Meeting views"><button id="meeting-players">Players</button><button id="meeting-chat">Chat</button><button id="meeting-map-toggle">Map & Alibis</button></nav><p id="meeting-reason"></p><div id="reporter-banner" class="reporter-banner"><span id="reporter-avatar" class="mini-crew"></span><span class="reporter-symbol" id="reporter-symbol" aria-hidden="true">📣</span><div><small id="reporter-caption">BODY REPORTER</small><strong id="reporter-name"></strong></div></div><div class="meeting-layout"><div class="vote-column"><div class="vote-grid" id="vote-grid"></div><div class="camera-toolbar"><button id="check-camera" type="button">Check Camera</button><span>Cafeteria CCTV</span></div><div id="camera-evidence" role="status" aria-live="polite" hidden></div><div class="compact-vote-row" id="vote-confirmation"><span id="compact-self" class="mini-crew" aria-label="Your character"></span><select id="vote-select" aria-label="Choose a player to vote for"></select><button id="compact-vote" aria-label="Confirm vote">✓</button><button id="vote-cancel" aria-label="Cancel vote" hidden>✕</button><button id="compact-skip">Skip vote</button><span id="selection-note" role="status"></span></div></div><details id="meeting-map-panel" class="meeting-map-column"><summary>ROOM MAP & ALIBIS <span>OPTIONAL · TAP TO OPEN</span></summary><div id="meeting-map-board" class="meeting-map-board" role="group" aria-label="Ship room map"></div><div class="meeting-map-selection"><strong id="meeting-map-selected" role="status" aria-live="polite"></strong><p id="meeting-map-claimants"></p><p id="meeting-map-hall" hidden></p></div><p class="meeting-map-note">Markers show unverified alibis. Selecting a room does not submit a statement.</p><div class="testimony"><div class="testimony-selects"><select id="claim-target" aria-label="Player mentioned"></select><select id="claim-room" aria-label="Claimed location"></select></div><div class="testimony-actions"><button id="claim-alibi">Share alibi</button><button id="claim-accuse">Accuse</button><button id="claim-defend">Defend</button><button id="claim-ask">Ask location</button></div><p class="mini"><span id="claim-note">Up to five statements per player. Bots use their own memories.</span></p></div></details><div class="discussion-column"><div class="chat" id="chat" aria-live="polite"></div><details id="quick-chat-panel" class="meeting-quick-chat"><summary>Quick chat ▾</summary><div id="quick-chat-options"></div></details><form class="chat-form" id="chat-form"><input id="chat-input" maxlength="100" placeholder="Discuss with the crew…" aria-label="Discussion message"><button type="submit">Send</button></form><p class="mini" id="vote-note">One vote each. A tie or a skip majority ejects no one.</p></div></div></section></div>
+<div class="modal" id="meeting-modal" hidden><section class="dialog" id="report-window" role="dialog" aria-modal="false" aria-labelledby="meeting-title"><div class="dialog-head" id="report-titlebar"><h2 id="meeting-title">Who is the impostor?</h2><strong id="meeting-time" aria-label="Time remaining">30s</strong><button id="check-camera" type="button" aria-label="Check Camera" aria-haspopup="dialog" aria-expanded="false"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h4l2-3h4l2 3h4v15H4z"/><circle cx="12" cy="13" r="4"/></svg><span id="camera-remaining">2/2</span></button><button id="compact-report" aria-label="Compact report" title="Compact / expand report">□</button><button id="minimize-report" aria-label="Minimize report" title="Minimize report">—</button><button id="journal-meeting">Logs</button></div><nav class="meeting-tabs" aria-label="Meeting views"><button id="meeting-players">Players</button><button id="meeting-chat">Chat</button><button id="meeting-map-toggle">Map & Alibis</button></nav><p id="meeting-reason"></p><div id="reporter-banner" class="reporter-banner"><span id="reporter-avatar" class="mini-crew"></span><span class="reporter-symbol" id="reporter-symbol" aria-hidden="true">📣</span><div><small id="reporter-caption">BODY REPORTER</small><strong id="reporter-name"></strong></div></div><section id="camera-evidence" role="dialog" aria-modal="false" aria-labelledby="camera-panel-title" hidden><div class="camera-popover-head"><strong id="camera-panel-title">Cafeteria Camera</strong><button id="close-camera" type="button" aria-label="Close camera">×</button></div><div id="camera-result" role="status" aria-live="polite"></div><small>Closes automatically after 10 seconds</small></section><div class="meeting-layout"><div class="vote-column"><div class="vote-grid" id="vote-grid"></div><div class="compact-vote-row" id="vote-confirmation"><span id="compact-self" class="mini-crew" aria-label="Your character"></span><select id="vote-select" aria-label="Choose a player to vote for"></select><button id="compact-vote" aria-label="Confirm vote">✓</button><button id="vote-cancel" aria-label="Cancel vote" hidden>✕</button><button id="compact-skip">Skip vote</button><span id="selection-note" role="status"></span></div></div><details id="meeting-map-panel" class="meeting-map-column"><summary>ROOM MAP & ALIBIS <span>OPTIONAL · TAP TO OPEN</span></summary><div id="meeting-map-board" class="meeting-map-board" role="group" aria-label="Ship room map"></div><div class="meeting-map-selection"><strong id="meeting-map-selected" role="status" aria-live="polite"></strong><p id="meeting-map-claimants"></p><p id="meeting-map-hall" hidden></p></div><p class="meeting-map-note">Markers show unverified alibis. Selecting a room does not submit a statement.</p><div class="testimony"><div class="testimony-selects"><select id="claim-target" aria-label="Player mentioned"></select><select id="claim-room" aria-label="Claimed location"></select></div><div class="testimony-actions"><button id="claim-alibi">Share alibi</button><button id="claim-accuse">Accuse</button><button id="claim-defend">Defend</button><button id="claim-ask">Ask location</button></div><p class="mini"><span id="claim-note">Up to five statements per player. Bots use their own memories.</span></p></div></details><div class="discussion-column"><div class="chat" id="chat" aria-live="polite"></div><details id="quick-chat-panel" class="meeting-quick-chat"><summary>Quick chat ▾</summary><div id="quick-chat-options"></div></details><form class="chat-form" id="chat-form"><input id="chat-input" maxlength="100" placeholder="Discuss with the crew…" aria-label="Discussion message"><button type="submit">Send</button></form><p class="mini" id="vote-note">One vote each. A tie or a skip majority ejects no one.</p></div></div></section></div>
 <div class="modal" id="help-modal" hidden><section class="dialog settings-dialog" role="dialog" aria-modal="true" aria-labelledby="help-title"><div class="dialog-head"><div><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2 id="help-title">Settings</h2></div><button id="close-help" aria-label="Close settings">✕</button></div>
 <div class="settings-profile"><div class="crew-preview"><span class="mini-crew" id="menu-crew"></span><span class="preview-shadow"></span></div><label>CALLSIGN<input id="nickname" maxlength="16" value="Astronaut" aria-label="Your name" autocomplete="nickname"></label></div>
 <div class="color-label">SUIT COLOR</div><div id="color-picker" class="color-picker" role="group" aria-label="Suit color"></div><p class="settings-note">Choose a free suit. Occupied colors are reserved; your role is random.</p>
@@ -295,7 +296,7 @@ let mouseGoal=null;
 let G, taskUI=null,lastLobbyUi='',lastVoteUi='',lastChatUi='',lastCrewUi='',lastTaskUi='',lastFrame=0,lastEngine=performance.now(),mapOpen=false;
 
 function makePlayer(i, controller, name, bot) {
- return {id:'p'+i,controller,name,bot,color:controller===myId?chosenColor:COLORS[i],x:SPAWNS[i].x,y:SPAWNS[i].y,alive:true,inVent:false,ventIndex:-1,relays:[],cloak:0,cloakUsed:false,fake:0,kills:0,working:-1,role:'crew',tasks:shuffle(STATIONS.map((_,i)=>i)).slice(0,TASKS_PER_PLAYER),done:[],cooldown:KILL_COOLDOWN,ventCooldown:0,cameraChecks:0,emergency:1,path:[],target:-1,work:0,suspicion:{},brain:{seen:{},room:"CAFETERIA",previousRoom:"CAFETERIA",witness:null,threshold:52+(i%3)*8,trust:.65+(i%4)*.12},botClock:0};
+ return {id:'p'+i,controller,name,bot,color:controller===myId?chosenColor:COLORS[i],x:SPAWNS[i].x,y:SPAWNS[i].y,alive:true,inVent:false,ventIndex:-1,ventAnimation:null,relays:[],cloak:0,cloakUsed:false,fake:0,kills:0,working:-1,role:'crew',tasks:shuffle(STATIONS.map((_,i)=>i)).slice(0,TASKS_PER_PLAYER),done:[],cooldown:KILL_COOLDOWN,ventCooldown:0,cameraChecks:0,emergency:1,path:[],target:-1,work:0,suspicion:{},brain:{seen:{},room:"CAFETERIA",previousRoom:"CAFETERIA",witness:null,threshold:52+(i%3)*8,trust:.65+(i%4)*.12},botClock:0};
 }
 function assignColors(){
  const used=new Set();
@@ -359,7 +360,19 @@ function killTarget(p){return G.players.filter(q=>q.id!==p.id&&q.alive&&!q.inVen
 function roomOf(point){return ROOMS.find(r=>point.x>=r.x&&point.x<=r.x+r.w&&point.y>=r.y&&point.y<=r.y+r.h)?.name||'HALLWAY';}
 function playTime(){return ROUND_SECONDS-G.time+(G.overtime>0?60-G.reactor:0);}
 // Each bot observes through its own field of view. Private memories never enter snapshots.
+
+function witnessAbility(actor,kind,point=actor){
+ if(!actor.alive||actor.cloak>0)return;
+ for(const bot of G.players){
+  if(!bot.bot||!bot.alive||bot.role!=='crew'||bot.inVent)continue;
+  const range=G.lights>0?200:480;
+  if(dist(bot,actor)>=range||dist(bot,point)>=range||!lineOfSight(bot,actor)||!lineOfSight(bot,point))continue;
+  bot.suspicion[actor.id]=100;bot.brain.witness={target:actor.id,kind,room:roomOf(actor),at:playTime()};bot.brain.alert={target:actor.id};bot.path=[];bot.target='alarm';bot.work=0;
+ }
+}
+
 function observeBots(){
+ for(const actor of G.players)if(actor.ventAnimation&&actor.ventAnimation.remaining>.12)witnessAbility(actor,'vent',VENTS[actor.ventAnimation.index]);
  for(const p of G.players){if(!p.bot||!p.alive||p.inVent)continue;const brain=p.brain,room=roomOf(p);if(room!==brain.room){brain.previousRoom=brain.room;brain.room=room;}
    for(const q of G.players){if(q.id===p.id||!q.alive||q.inVent||q.cloak>0)continue;if(dist(p,q)<(G.lights>0&&p.role!=='impostor'?200:480)&&lineOfSight(p,q))brain.seen[q.id]={room:roomOf(q),at:playTime(),x:q.x,y:q.y,working:q.fake>0||q.working>=0||q.bot&&q.work>0};}
    for(const id of Object.keys(brain.seen))if(playTime()-brain.seen[id].at>90)delete brain.seen[id];
@@ -402,14 +415,14 @@ function completeTask(p,index) {
 }
 function callMeeting(reporter,body=null) {
  if(G.phase!=='play'||!reporter.alive||G.overtime>0)return;
- G.phase='meeting';G.phaseTime=30;G.comms=0;G.reactor=0;G.reactorLocks=[null,null];G.doors=[0,0,0];for(const p of G.players){p.steer=null;p.cloak=0;p.fake=0;p.inVent=false;p.ventIndex=-1;}keys.clear();closeTask();
+ G.phase='meeting';G.phaseTime=30;G.comms=0;G.reactor=0;G.reactorLocks=[null,null];G.doors=[0,0,0];for(const p of G.players){p.steer=null;p.cloak=0;p.fake=0;p.inVent=false;p.ventIndex=-1;p.ventAnimation=null;if(p.brain)p.brain.alert=null;}keys.clear();closeTask();
  const victim=body&&G.players.find(p=>p.id===body.id);
  G.meeting={id:G.round+':'+playTime()+':'+reporter.id,botLines:[],reporterId:reporter.id,kind:body?'body':'emergency',results:false,cameraChecked:false,cameraFindings:[],bodyId:body?.id||null,botChatted:[],replied:[],claims:[],reason:body?reporter.name+' reported the body of '+(victim?.name||'a crewmate')+'.':reporter.name+' called an emergency meeting.',votes:{},chat:[]};
  for(const b of G.bodies)b.reported=true;
  for(const p of G.players){p.path=[];p.work=0;if(!p.alive||!p.bot||!body)continue;
    for(const [id,sighting]of Object.entries(p.brain.seen))if(id!==body.id&&playTime()-sighting.at<10&&dist(sighting,body)<230)p.suspicion[id]=Math.max(p.suspicion[id]||0,32);
  }
- advertise();publish();
+ if(reporter.bot&&reporter.brain.witness)botStatement(reporter);advertise();publish();
 }
 function revealVotes(){if(G.phase!=='meeting'||G.meeting.results)return;G.meeting.results=true;G.phaseTime=4;keys.clear();publish();}
 function resolveVotes() {
@@ -424,7 +437,7 @@ function resolveVotes() {
 }
 function addClaim(p,type,target='',room='',detail=''){
  const q=G.players.find(q=>q.id===target),claim={source:p.id,type,target:q?.id||'',room,detail};
- let text=type==='alibi'?'When the meeting started, I was in '+room+'.':type==='sighting'?'I just saw '+q?.name+' in '+room+(detail==='contradiction'?' — that contradicts their alibi.':'.'):type==='witness'?'I witnessed '+q?.name+' making a kill in '+room+'!':type==='accuse'?'I suspect '+q?.name+(detail==='kill'?' may have made the kill.':'.'):type==='defend'?'I have seen no evidence against '+q?.name+'.':'Where was '+q?.name+' just now?';
+ let text=type==='alibi'?'When the meeting started, I was in '+room+'.':type==='sighting'?'I just saw '+q?.name+' in '+room+(detail==='contradiction'?' — that contradicts their alibi.':'.'):type==='witness'?'I saw '+q?.name+(detail==='vent'?' use a vent':detail==='cloak'?' turn invisible':' making a kill')+' in '+room+' — they are the impostor!':type==='accuse'?'I suspect '+q?.name+(detail==='kill'?' may have made the kill.':'.'):type==='defend'?'I have seen no evidence against '+q?.name+'.':'Where was '+q?.name+' just now?';
  if(!['alibi','ask'].includes(type)&&!q)return;
  if(type!=='ask'&&G.meeting.claims.length<80&&!G.meeting.claims.some(c=>c.source===claim.source&&c.type===type&&c.target===claim.target&&c.room===room&&c.detail===detail))G.meeting.claims.push(claim);
  if(p.bot){G.meeting.botLines||=[];if(G.meeting.botLines.includes(text)||G.meeting.botLines.length>=80)return;G.meeting.botLines.push(text);}
@@ -432,7 +445,7 @@ function addClaim(p,type,target='',room='',detail=''){
 }
 function botStatement(p){
  const brain=p.brain,witness=brain.witness;
- if(witness&&G.players.some(q=>q.id===witness.target&&q.alive)){addClaim(p,'witness',witness.target,witness.room);return;}
+ if(witness&&G.players.some(q=>q.id===witness.target&&q.alive)){addClaim(p,'witness',witness.target,witness.room,witness.kind||'kill');return;}
  // An impostor lies about its own route; it does not inherit another bot's memories.
  const room=p.role==='impostor'?brain.previousRoom:brain.room;addClaim(p,'alibi','',room);
  const recent=Object.entries(brain.seen).filter(([id,s])=>playTime()-s.at<20&&G.players.some(q=>q.id===id&&q.alive)).sort((a,b)=>b[1].at-a[1].at);
@@ -490,9 +503,9 @@ function repairReactor(p,side){
 }
 function handleAction(controller,type,data={}) {
  const p=G.players.find(p=>p.controller===controller);if(!p)return;
- if(type==='walk'&&['play','lobby'].includes(G.phase)&&p.alive&&!p.inVent){startHumanWalk(p,data);return;}
+ if(type==='walk'&&['play','lobby'].includes(G.phase)&&p.alive&&!p.inVent&&!p.ventAnimation){startHumanWalk(p,data);return;}
  if(type==='steer'){
-  if(!['play','lobby','connecting'].includes(G.phase)||!p.alive||p.inVent||!Number.isFinite(data.x)||!Number.isFinite(data.y)||Math.hypot(data.x,data.y)>1.01)return;
+  if(!['play','lobby','connecting'].includes(G.phase)||!p.alive||p.inVent||p.ventAnimation||!Number.isFinite(data.x)||!Number.isFinite(data.y)||Math.hypot(data.x,data.y)>1.01)return;
   p.steer={x:data.x,y:data.y,until:Date.now()+350};p.path=[];p.walkTarget=null;return;
  }
  if(type==='stop-walk'){p.path=[];p.walkTarget=null;return;}
@@ -528,24 +541,24 @@ function handleAction(controller,type,data={}) {
  if(type==='restart'&&G.phase==='result'&&authority()){if(Net.mode==='online')prepareLobby();else newRound();return;}
  if(G.phase!=='play'||!p.alive)return;
  if(['vent','vent-travel'].includes(type)){
-   if(p.role!=='impostor')return;
+   if(p.role!=='impostor'||p.ventAnimation)return;
    if(type==='vent-travel'){
      if(!p.inVent||!Number.isInteger(data.target)||!VENTS[p.ventIndex]?.links.includes(data.target))return;
      const v=VENTS[data.target];p.ventIndex=data.target;p.x=v.x;p.y=v.y;
-   }else if(p.inVent){p.inVent=false;p.ventIndex=-1;p.ventCooldown=7;}
+   }else if(p.inVent){const index=p.ventIndex;p.inVent=false;p.ventIndex=-1;p.ventCooldown=7;p.ventAnimation={kind:'exit',index,remaining:.8};witnessAbility(p,'vent',VENTS[index]);}
    else{
      if(p.ventCooldown>0)return;const i=VENTS.findIndex(v=>canReach(p,v,100));if(i<0)return;
-     p.steer=null;p.inVent=true;p.ventIndex=i;p.x=VENTS[i].x;p.y=VENTS[i].y;p.path=[];p.walkTarget=null;p.cloak=0;p.fake=0;
+     witnessAbility(p,'vent',VENTS[i]);p.ventAnimation={kind:'enter',index:i,remaining:.8};p.steer=null;p.inVent=true;p.ventIndex=i;p.x=VENTS[i].x;p.y=VENTS[i].y;p.path=[];p.walkTarget=null;p.cloak=0;p.fake=0;
    }
    publish();return;
  }
- if(p.inVent)return;
+ if(p.inVent||p.ventAnimation)return;
  if(type==='deliver'&&p.role==='crew'&&data.station===5&&p.relays.includes(5)&&canReach(p,STATIONS[3])){p.relays=[];if(!p.done.includes(5))p.done.push(5);restoreJournal();checkWin();publish();return;}
  if(type==='working'){p.working=data.on&&Number.isInteger(data.station)&&STATIONS[data.station]&&canReach(p,STATIONS[data.station])?data.station:-1;return;}
  if(type==='reactor')return repairReactor(p,data.side);
  if(type==='task')return completeTask(p,data.station);
  if(!p.alive)return;
- if(type==='cloak'&&p.role==='impostor'&&!p.cloakUsed){p.cloakUsed=true;p.cloak=5;p.fake=0;publish();return;}
+ if(type==='cloak'&&p.role==='impostor'&&!p.cloakUsed){witnessAbility(p,'cloak');p.cloakUsed=true;p.cloak=5;p.fake=0;publish();return;}
  if(type==='fake'&&p.role==='impostor'&&STATIONS.some(s=>canReach(p,s))){p.fake=8;publish();return;}
  if(type==='doors'&&p.role==='impostor'&&G.doorCooldown<=0){
    const gate=GATES.map((d,i)=>({d,i,distance:dist(p,{x:d.x+d.w/2,y:d.y+d.h/2})})).sort((a,b)=>a.distance-b.distance)[0];
@@ -565,6 +578,18 @@ function handleAction(controller,type,data={}) {
 function inputMask(){return Number(keys.has('a')||keys.has('arrowleft'))|(Number(keys.has('d')||keys.has('arrowright'))<<1)|(Number(keys.has('w')||keys.has('arrowup'))<<2)|(Number(keys.has('s')||keys.has('arrowdown'))<<3);}
 function updateBot(p,dt) {
  p.botClock-=dt;if(!p.alive){if(p.role==='crew'&&p.done.length<p.tasks.length){p.work+=dt;if(p.work>15){p.done.push(p.tasks.find(i=>!p.done.includes(i)));restoreJournal();p.work=0;}}return;}
+
+ if(p.role==='crew'&&p.brain.alert&&G.reactor<=0){
+  const target=G.players.find(q=>q.id===p.brain.alert.target&&q.alive);
+  if(!target||p.emergency<=0)p.brain.alert=null;
+  else{
+   if(roomOf(p)==='CAFETERIA'&&canReach(p,TABLE,185)){
+    if(G.lights<=0&&G.overtime<=0){p.emergency--;callMeeting(p);}return;
+   }
+   const goal={x:TABLE.x,y:TABLE.y+130};if(!p.path.length||p.target!=='alarm'){p.path=pathTo(p,goal);p.target='alarm';}follow(p,dt);return;
+  }
+ }
+
  const body=nearestBody(p);if(body&&p.role==='crew'&&p.botClock<=0){callMeeting(p,body);p.botClock=5;return;}
  if(p.role==='impostor'){
    if(!p.cloakUsed&&p.kills>0&&Object.values(p.brain.seen).filter(s=>playTime()-s.at<6).length>1&&p.cooldown>10){handleAction(p.controller,'cloak');p.path=[];}
@@ -599,8 +624,8 @@ function step(dt) {
  G.observeClock=(G.observeClock||0)-dt;if(G.observeClock<=0){observeBots();G.observeClock=.75;}
  G.time=Math.max(0,G.time-dt);resetSystems(dt);if(G.phase!=='play')return;updateBlackouts();G.sabotageCooldown=Math.max(0,G.sabotageCooldown-dt);
  for(const p of G.players){
-   p.cloak=Math.max(0,(p.cloak||0)-dt);p.fake=Math.max(0,(p.fake||0)-dt);p.cooldown=Math.max(0,p.cooldown-dt);p.ventCooldown=Math.max(0,p.ventCooldown-dt);
-   if(p.inVent&&p.bot){p.inVent=false;p.ventIndex=-1;p.ventCooldown=7;}
+   p.cloak=Math.max(0,(p.cloak||0)-dt);p.fake=Math.max(0,(p.fake||0)-dt);p.cooldown=Math.max(0,p.cooldown-dt);p.ventCooldown=Math.max(0,p.ventCooldown-dt);if(p.ventAnimation){p.ventAnimation.remaining=Math.max(0,p.ventAnimation.remaining-dt);if(p.ventAnimation.remaining<=0)p.ventAnimation=null;else continue;}
+   if(p.inVent&&p.bot){handleAction(p.controller,'vent');continue;}
    if(p.bot){updateBot(p,dt);if(G.phase!=='play')break;continue;}
    if(!p.alive||p.inVent)continue;
    const member=Net.members.get(p.controller),mask=p.controller===myId?(taskUI?0:inputMask()):member&&Date.now()-member.seen<700?member.input:0;
@@ -652,7 +677,7 @@ function advertise(){
 function publicState(){
  const crew=G.players.filter(p=>p.role==='crew');
  const {cameraEvidence,...visibleGame}=G;
- return {...visibleGame,support:supportStations(),ready:readiness(),away:[...Net.members.values()].filter(m=>m.away).map(m=>m.id),spectators:[...Net.spectators.values()].map(s=>({id:s.id,name:s.name})),progress:{done:crew.reduce((n,p)=>n+p.done.length,0),total:crew.reduce((n,p)=>n+p.tasks.length,0)},players:G.players.map(p=>({id:p.id,controller:p.controller,name:p.name,bot:p.bot,color:p.color,x:p.x,y:p.y,alive:p.alive,inVent:!!p.inVent,ventIndex:p.ventIndex??-1,role:G.phase==='result'?p.role:'?',tasks:p.tasks,done:p.done,cooldown:p.cooldown,ventCooldown:p.ventCooldown,cloak:p.cloak,cloakUsed:p.cloakUsed,fake:p.fake,working:p.working,relays:p.relays,kills:G.phase==='result'?p.kills:0,emergency:p.emergency,cameraChecks:p.cameraChecks||0}))};
+ return {...visibleGame,support:supportStations(),ready:readiness(),away:[...Net.members.values()].filter(m=>m.away).map(m=>m.id),spectators:[...Net.spectators.values()].map(s=>({id:s.id,name:s.name})),progress:{done:crew.reduce((n,p)=>n+p.done.length,0),total:crew.reduce((n,p)=>n+p.tasks.length,0)},players:G.players.map(p=>({id:p.id,controller:p.controller,name:p.name,bot:p.bot,color:p.color,x:p.x,y:p.y,alive:p.alive,inVent:!!p.inVent,ventIndex:p.ventIndex??-1,ventAnimation:p.ventAnimation||null,role:G.phase==='result'?p.role:'?',tasks:p.tasks,done:p.done,cooldown:p.cooldown,ventCooldown:p.ventCooldown,cloak:p.cloak,cloakUsed:p.cloakUsed,fake:p.fake,working:p.working,relays:p.relays,kills:G.phase==='result'?p.kills:0,emergency:p.emergency,cameraChecks:p.cameraChecks||0}))};
 }
 function publish(){
  if(!Net.host||!Net.room||!Net.roomReady)return;
@@ -669,7 +694,7 @@ function validSystems(g){
 function validGame(g){
  const arr=a=>Array.isArray(a),slot=s=>/^p[0-7]$/.test(s),finite=n=>Number.isFinite(n);
  return g&&(!g.meeting||validCameraMeeting(g.meeting))&&validSystems(g)&&validBlackouts(g)&&Array.isArray(g.support)&&g.support.length<=STATIONS.length&&g.support.every(i=>Number.isInteger(i)&&i>=0&&i<STATIONS.length&&i!==5)&&new Set(g.support).size===g.support.length&&['lobby','reveal','play','paused','meeting','ejection','result'].includes(g.phase)&&Number.isSafeInteger(g.round)&&g.round>0&&finite(g.time)&&g.time>=0&&g.time<=ROUND_SECONDS&&finite(g.phaseTime)&&finite(g.lights)&&finite(g.sabotageCooldown)&&typeof g.message==='string'&&g.message.length<=250&&
- arr(g.players)&&g.players.length===8&&g.players.every(p=>p&&slot(p.id)&&typeof p.controller==='string'&&p.controller.length<80&&typeof p.name==='string'&&p.name.length<=16&&COLORS.includes(p.color)&&finite(p.x)&&finite(p.y)&&p.x>=0&&p.x<=WORLD_W&&p.y>=0&&p.y<=WORLD_H&&typeof p.alive==='boolean'&&typeof p.inVent==='boolean'&&Number.isInteger(p.ventIndex)&&p.ventIndex>=-1&&p.ventIndex<VENTS.length&&p.inVent===(p.ventIndex>=0)&&typeof p.bot==='boolean'&&['?','crew','impostor'].includes(p.role)&&arr(p.tasks)&&p.tasks.length===TASKS_PER_PLAYER&&p.tasks.every(i=>Number.isInteger(i)&&i>=0&&i<STATIONS.length)&&new Set(p.tasks).size===TASKS_PER_PLAYER&&arr(p.done)&&p.done.every(i=>p.tasks.includes(i))&&finite(p.cooldown)&&finite(p.ventCooldown)&&finite(p.cloak)&&p.cloak>=0&&p.cloak<=5&&typeof p.cloakUsed==='boolean'&&finite(p.fake)&&p.fake>=0&&p.fake<=8&&arr(p.relays)&&p.relays.length<=1&&p.relays.every(i=>i===5)&&Number.isInteger(p.emergency)&&Number.isInteger(p.cameraChecks)&&p.cameraChecks>=0&&p.cameraChecks<=2)&&new Set(g.players.map(p=>p.id)).size===8&&new Set(g.players.map(p=>p.color)).size===8&&
+ arr(g.players)&&g.players.length===8&&g.players.every(p=>p&&slot(p.id)&&typeof p.controller==='string'&&p.controller.length<80&&typeof p.name==='string'&&p.name.length<=16&&COLORS.includes(p.color)&&finite(p.x)&&finite(p.y)&&p.x>=0&&p.x<=WORLD_W&&p.y>=0&&p.y<=WORLD_H&&typeof p.alive==='boolean'&&typeof p.inVent==='boolean'&&(p.ventAnimation===null||p.ventAnimation&&['enter','exit'].includes(p.ventAnimation.kind)&&Number.isInteger(p.ventAnimation.index)&&p.ventAnimation.index>=0&&p.ventAnimation.index<VENTS.length&&finite(p.ventAnimation.remaining)&&p.ventAnimation.remaining>=0&&p.ventAnimation.remaining<=.8)&&Number.isInteger(p.ventIndex)&&p.ventIndex>=-1&&p.ventIndex<VENTS.length&&p.inVent===(p.ventIndex>=0)&&typeof p.bot==='boolean'&&['?','crew','impostor'].includes(p.role)&&arr(p.tasks)&&p.tasks.length===TASKS_PER_PLAYER&&p.tasks.every(i=>Number.isInteger(i)&&i>=0&&i<STATIONS.length)&&new Set(p.tasks).size===TASKS_PER_PLAYER&&arr(p.done)&&p.done.every(i=>p.tasks.includes(i))&&finite(p.cooldown)&&finite(p.ventCooldown)&&finite(p.cloak)&&p.cloak>=0&&p.cloak<=5&&typeof p.cloakUsed==='boolean'&&finite(p.fake)&&p.fake>=0&&p.fake<=8&&arr(p.relays)&&p.relays.length<=1&&p.relays.every(i=>i===5)&&Number.isInteger(p.emergency)&&Number.isInteger(p.cameraChecks)&&p.cameraChecks>=0&&p.cameraChecks<=2)&&new Set(g.players.map(p=>p.id)).size===8&&new Set(g.players.map(p=>p.color)).size===8&&
  arr(g.bodies)&&g.bodies.length<=8&&g.bodies.every(b=>b&&slot(b.id)&&finite(b.x)&&finite(b.y)&&COLORS.includes(b.color))&&
  Array.isArray(g.lobbyChat)&&g.lobbyChat.length<=30&&g.lobbyChat.every(m=>m&&typeof m.name==='string'&&m.name.length<=16&&typeof m.text==='string'&&m.text.length<=100)&&
  (g.meeting===null||(g.meeting&&typeof g.meeting.results==='boolean'&&slot(g.meeting.reporterId)&&g.players.some(p=>p.id===g.meeting.reporterId)&&['body','emergency'].includes(g.meeting.kind)&&(g.meeting.bodyId===null||slot(g.meeting.bodyId))&&Array.isArray(g.meeting.claims)&&g.meeting.claims.length<=80&&g.meeting.claims.every(c=>c&&/^p[0-7]$/.test(c.source)&&['alibi','sighting','witness','accuse','defend'].includes(c.type)&&typeof c.target==='string'&&c.target.length<=2&&typeof c.room==='string'&&c.room.length<40)&&Array.isArray(g.meeting.replied)&&g.meeting.replied.length<=40&&typeof g.meeting.reason==='string'&&g.meeting.reason.length<=200&&g.meeting.votes&&typeof g.meeting.votes==='object'&&Object.keys(g.meeting.votes).length<=8&&arr(g.meeting.chat)&&g.meeting.chat.length<=30&&g.meeting.chat.every(m=>m&&typeof m.name==='string'&&m.name.length<=16&&typeof m.text==='string'&&m.text.length<=100)));
@@ -1243,7 +1268,7 @@ $('lobby-scene').oncontextmenu=e=>{e.preventDefault();if(!rightMouse(e))return;c
 
 
 let mouseSteer=null,suppressSteerClickUntil=0;
-function canMouseSteer(lobby){return !!me()?.alive&&!me().inVent&&!taskUI&&!isSpectator()&&HOME_MODALS.every(id=>$(id).hidden)&&$('journal-modal').hidden&&(lobby?['lobby','connecting']:['play']).includes(G.phase);}
+function canMouseSteer(lobby){return !!me()?.alive&&!me().inVent&&!me().ventAnimation&&!taskUI&&!isSpectator()&&HOME_MODALS.every(id=>$(id).hidden)&&$('journal-modal').hidden&&(lobby?['lobby','connecting']:['play']).includes(G.phase);}
 function stopMouseSteer(){const state=mouseSteer;mouseSteer=null;if(state?.active){suppressSteerClickUntil=performance.now()+250;request('steer',{x:0,y:0});}}
 function beginMouseSteer(e,surface,lobby){
  if(e.button!==0||e.pointerType!=='mouse'||!canMouseSteer(lobby))return;
@@ -1316,7 +1341,7 @@ function layoutVentControls(camera){
  if(placed.some(p=>Math.abs(p.x-x)<115&&Math.abs(p.y-y)<65))x=clamp(x+125,65,box.width-65);placed.push({x,y});b.style.left=x+'px';b.style.top=y+'px';}
 }
 function renderVentControls(){
- const p=me(),panel=$('vent-directions'),active=G.phase==='play'&&p?.alive&&p.role==='impostor'&&p.inVent;
+ const p=me(),panel=$('vent-directions'),active=G.phase==='play'&&p?.alive&&p.role==='impostor'&&p.inVent&&!p.ventAnimation;
  panel.hidden=!active;$('joystick').style.visibility=active?'hidden':'';if(!active){lastVentUI='';return;}
  const v=VENTS[p.ventIndex];if(!v)return;
  const key=String(p.ventIndex);if(lastVentUI===key)return;lastVentUI=key;panel.replaceChildren();
@@ -1332,6 +1357,7 @@ function renderVentControls(){
 const SKILL_HINTS=[['kill','Q','Kill'],['vent','V','Vent'],['stealth','H','Cloak'],['door','Z','Doors'],['comms','C','Comms'],['critical','X','Reactor']];
 function skillReadout(source,p){
  if(!p)return 'Unavailable';
+ if(p.ventAnimation)return 'Moving…';
  if(p.inVent)return source==='vent'?'Exit · V':'In vent';
  if(source==='stealth')return p.cloak>0?'Active '+Math.ceil(p.cloak)+'s':p.cloakUsed?'Used':'1 use';
  const cooldown=source==='kill'?p.cooldown:source==='vent'?p.ventCooldown:source==='door'?G.doorCooldown:G.sabotageCooldown;
@@ -1461,7 +1487,8 @@ function renderUI(){
  for(const id of ['comms','critical'])$(id).disabled=!play||!p.alive||G.sabotageCooldown>0||G.reactor>0;
  $('meeting').disabled=!play||G.reactor>0||!p.alive||p.emergency<=0||dist(p,TABLE)>185||G.lights>0;
  $('alert').hidden=G.lights<=0&&G.comms<=0&&G.reactor<=0||!play;if(G.reactor>0)$('alert').textContent=(G.overtime>0?'FINAL EMERGENCY':'REACTOR SABOTAGE')+' · REPAIR BOTH REACTOR TERMINALS · '+Math.ceil(G.reactor)+'s';else if(G.comms>0)$('alert').textContent='COMMS DOWN · REPAIR IN NAVIGATION · '+Math.ceil(G.comms)+'s';else if(G.lights>0)$('alert').hidden=true;
- if(p.inVent)for(const id of ['kill','use','report','meeting','stealth','door','comms','critical'])$(id).disabled=true;
+ if(p.ventAnimation)$('vent').disabled=true;
+ if(p.inVent||p.ventAnimation)for(const id of ['kill','use','report','meeting','stealth','door','comms','critical'])$(id).disabled=true;
  renderVentControls();renderContextActions();if(!$('flight-modal').hidden)renderFlightPanel();renderLobby();renderPowerAlert();
  $('meeting-modal').hidden=G.phase!=='meeting';if(G.phase==='meeting')renderMeeting();
  if(taskUI&&!taskUI.fix&&!taskUI.assist&&p?.done.includes(taskUI.station))closeTask(false);
@@ -1484,7 +1511,7 @@ function renderUI(){
  $('round-summary').hidden=G.phase!=='result';if(G.phase==='result')$('round-summary').replaceChildren(...G.players.map(q=>{const row=element('div',q.name+' · '+(q.role==='impostor'?'IMPOSTOR · '+(q.kills||0)+' kills':'CREWMATE · '+q.done.length+'/'+q.tasks.length+' task'));row.style.borderLeft='4px solid '+q.color;return row;}));
  if(G.phase==='result'){const won=p?.role===G.winner;$('curtain').dataset.outcome=won?'victory':'defeat';$('curtain-title').textContent=won?'Victory!':'Defeated!';$('curtain-text').textContent=G.message+(Net.mode==='online'?' Returning to lobby in ':' Next round in ')+Math.ceil(G.phaseTime)+' seconds.';$('curtain-action').hidden=!authority();$('curtain-action').textContent=Net.mode==='online'?'RETURN TO LOBBY':'NEXT FLIGHT';}
  if(G.phase==='paused'){$('curtain-title').textContent='PAUSED';$('curtain-text').textContent='Continue when you are ready.';$('curtain-action').hidden=false;$('curtain-action').textContent='CONTINUE';}
- renderLateWaitingRoom();renderWaitingRoom();updateDeathView();renderKeyboardShortcuts();syncReportWindow();syncMouseGoal();renderRoomLabel(G.phase==='meeting'?reportWindow.camera:watchingMatch()?deathView:me());renderSkillStatus();
+ renderLateWaitingRoom();renderWaitingRoom();updateDeathView();renderKeyboardShortcuts();syncReportWindow();syncCameraPopover();syncMouseGoal();renderRoomLabel(G.phase==='meeting'?reportWindow.camera:watchingMatch()?deathView:me());renderSkillStatus();
  if(play&&!watchingMatch()){const hint=taskUI?'Working on a task…':!p.alive?'You died. Choose Out or Continue watching.':body?'R · REPORT BODY':canUse?'E · INTERACT':imp?'Q Kill · V Vent · E Interact':'Find room terminals · E Task';if($('hint').textContent!==hint)$('hint').textContent=hint;}
 }
 const meetingRoomNodes=new Map(),meetingCorridorNodes=[];
@@ -1527,19 +1554,30 @@ function meetingChatRow(m){const matches=G.players.filter(p=>p.name===m.name),p=
 
 function validCameraMeeting(m){return typeof m.cameraChecked==='boolean'&&Array.isArray(m.cameraFindings)&&m.cameraFindings.length<=7&&(!m.cameraFindings.length||m.cameraChecked&&m.kind==='body')&&m.cameraFindings.every(e=>e&&/^p[0-7]$/.test(e.impostorId)&&/^p[0-7]$/.test(e.victimId)&&e.impostorId!==e.victimId&&Number.isInteger(e.at)&&e.at>=0&&e.at<=500);}
 function cameraPlayerName(id){const p=G.players.find(q=>q.id===id);return p?(colorNames[COLORS.indexOf(p.color)]+' ('+p.name+')'):id;}
+const cameraPopover={key:'',open:false,until:0};
+function cameraMeetingKey(){return G.phase==='meeting'&&G.meeting?G.round+':'+G.meeting.id:'';}
+function closeCameraPopover(){cameraPopover.open=false;cameraPopover.until=0;$('camera-evidence').hidden=true;$('check-camera').setAttribute('aria-expanded','false');}
+function syncCameraPopover(){if(cameraPopover.open&&(cameraPopover.key!==cameraMeetingKey()||reportMinimized||performance.now()>=cameraPopover.until))closeCameraPopover();}
 function renderCameraReport(){
- const m=G.meeting,p=me(),button=$('check-camera'),panel=$('camera-evidence');
- const left=Math.max(0,2-(p?.cameraChecks||0));
- button.disabled=!p?.alive||m.results||m.kind!=='body'||m.cameraChecked||left===0;
- button.textContent=(m.cameraChecked?'Camera checked':left===0?'No checks left':'Check Camera')+' · '+left+'/2 left';
- button.title=left===0?'You have used both camera checks this round':m.kind==='body'?'Review main hall kill recordings · consumes one of your two checks':'Available after a body report';
- panel.hidden=!m.cameraChecked;
- const sig=JSON.stringify([m.cameraChecked,m.cameraFindings,G.players.map(p=>[p.id,p.name,p.color])]);if(panel.dataset.signature===sig)return;panel.dataset.signature=sig;panel.replaceChildren();
- if(!m.cameraChecked)return;
- panel.append(element('strong',m.cameraFindings.length?'IMPOSTOR IDENTIFIED · CAFETERIA':'CAFETERIA · NO KILL RECORDED'));
- for(const e of m.cameraFindings){const row=element('div','','camera-record'),p=G.players.find(p=>p.id===e.impostorId),icon=element('span','','chat-suit');icon.style.background=p?.color||'#8399a2';row.append(icon,element('span',cameraPlayerName(e.impostorId)+' is the impostor — killed '+cameraPlayerName(e.victimId)+' at '+Math.floor(e.at/60)+':'+String(e.at%60).padStart(2,'0')));panel.append(row);}
+ const m=G.meeting,p=me(),button=$('check-camera'),panel=$('camera-evidence'),content=$('camera-result'),left=Math.max(0,2-(p?.cameraChecks||0));
+ syncCameraPopover();button.disabled=!p?.alive||(!m.cameraChecked&&(m.results||m.kind!=='body'||left===0));
+ $('camera-remaining').textContent=left+'/2';button.title=m.cameraChecked?'View camera result · '+left+'/2 checks left':left===0?'No camera checks left this round':m.kind==='body'?'Check Camera · '+left+'/2 checks left':'Camera available after a body report';
+ button.setAttribute('aria-label',button.title);button.setAttribute('aria-expanded',String(cameraPopover.open));panel.hidden=!cameraPopover.open;
+ if(panel.hidden)return;
+ const sig=JSON.stringify([m.cameraChecked,m.cameraFindings,G.players.map(p=>[p.id,p.name,p.color])]);if(content.dataset.signature===sig)return;content.dataset.signature=sig;content.replaceChildren();
+ if(!m.cameraChecked){content.append(element('strong','Checking camera…'));return;}
+ content.append(element('strong',m.cameraFindings.length?'Imposter: '+[...new Set(m.cameraFindings.map(e=>e.impostorId))].map(cameraPlayerName).join(', '):'No found Imposter'));
+ for(const e of m.cameraFindings){const row=element('div','','camera-record'),p=G.players.find(p=>p.id===e.impostorId),icon=element('span','','chat-suit');icon.style.background=p?.color||'#8399a2';row.append(icon,element('span','Killed '+cameraPlayerName(e.victimId)+' at '+Math.floor(e.at/60)+':'+String(e.at%60).padStart(2,'0')));content.append(row);}
 }
-$('check-camera').onclick=()=>{request('check-camera');renderUI();};
+$('check-camera').onclick=()=>{
+ if($('check-camera').disabled||G.phase!=='meeting')return;
+ if(cameraPopover.open){closeCameraPopover();return;}
+ cameraPopover.key=cameraMeetingKey();cameraPopover.open=true;cameraPopover.until=performance.now()+10000;
+ if(!G.meeting.cameraChecked)request('check-camera');renderUI();
+};
+$('close-camera').onclick=closeCameraPopover;
+document.addEventListener('pointerdown',e=>{if(cameraPopover.open&&!$('camera-evidence').contains(e.target)&&!$('check-camera').contains(e.target))closeCameraPopover();});
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeCameraPopover();});
 
 function renderMeeting(){
  const observer=!me(),p=me()||{id:'observer',alive:false},meeting=G.meeting;if(!meeting)return;renderCameraReport();syncMeetingPanel(p,meeting);
@@ -1580,7 +1618,7 @@ function resizeStage(){
  canvas.width=canvas.width||1000;canvas.height=canvas.height||650;fogCanvas.width=canvas.width;fogCanvas.height=canvas.height;cameraRig.round=-1;
 }
 function updateVisuals(dt){
- for(const p of G.players){let v=visual.get(p.id);if(!v||v.round!==G.round||v.controller!==p.controller||dist(v,p)>300){v={x:p.x,y:p.y,round:G.round,controller:p.controller,face:1,step:0,gait:0};visual.set(p.id,v);}const oldX=v.x,oldY=v.y,blend=G.phase==='play'?1-Math.exp(-(p.controller===myId?32:20)*dt):1;v.x+=(p.x-v.x)*blend;v.y+=(p.y-v.y)*blend;if(!standable(v.x,v.y)){v.x=p.x;v.y=p.y;}const dx=v.x-oldX,dy=v.y-oldY,traveled=Math.hypot(dx,dy);if(Math.abs(dx)>.04)v.face=dx<0?-1:1;const walking=G.phase==='play'&&p.alive&&traveled>.03;if(walking){v.step+=traveled*.065;if(p.controller===myId&&performance.now()-lastStepSound>230){tone(90,.035,.012);lastStepSound=performance.now();}}v.gait+=((walking?Math.min(1,traveled/Math.max(dt,.001)/150):0)-v.gait)*(1-Math.exp(-16*dt));}
+ for(const p of G.players){let v=visual.get(p.id);if(!v||v.round!==G.round||v.controller!==p.controller||dist(v,p)>300){v={x:p.x,y:p.y,round:G.round,controller:p.controller,face:1,step:0,gait:0};visual.set(p.id,v);}if(p.ventAnimation){const key=p.ventAnimation.kind+':'+p.ventAnimation.index;if(v.ventKey!==key)v.ventLeft=p.ventAnimation.remaining;else v.ventLeft=Math.max(0,Math.min((v.ventLeft||0)-dt,p.ventAnimation.remaining));v.ventKey=key;}else{v.ventKey='';v.ventLeft=0;}const oldX=v.x,oldY=v.y,blend=G.phase==='play'?1-Math.exp(-(p.controller===myId?32:20)*dt):1;v.x+=(p.x-v.x)*blend;v.y+=(p.y-v.y)*blend;if(!standable(v.x,v.y)){v.x=p.x;v.y=p.y;}const dx=v.x-oldX,dy=v.y-oldY,traveled=Math.hypot(dx,dy);if(Math.abs(dx)>.04)v.face=dx<0?-1:1;const walking=G.phase==='play'&&p.alive&&traveled>.03;if(walking){v.step+=traveled*.065;if(p.controller===myId&&performance.now()-lastStepSound>230){tone(90,.035,.012);lastStepSound=performance.now();}}v.gait+=((walking?Math.min(1,traveled/Math.max(dt,.001)/150):0)-v.gait)*(1-Math.exp(-16*dt));}
 }
 function cameraSize(width,height){
  // Fit a useful ship view on both axes; rendering density must not change the field of view.
@@ -1641,8 +1679,19 @@ function decorRooms(time){
  rounded(2390,1560,140,160,28,'#738f86','#27434b',7);for(let i=0;i<4;i++)rounded(2405,1575+i*34,110,17,6,i%2?'#cd9a58':'#4b6d77','#294650',3);
  for(const [i,s]of STATIONS.entries()){const p=me(),delivery=i===3&&p?.relays?.includes(5),assigned=p?.role==='crew'&&G.comms<=0&&(delivery||(ownTasksDone(p)?supportStations().includes(i):p.tasks.includes(i)&&!(i===5&&p.relays?.includes(5)))),done=!delivery&&!ownTasksDone(p)&&p?.done.includes(i),color=assigned?(done?'#b0daa1':'#ffe68a'):'#a1b5a5';if(assigned&&!done){ctx.strokeStyle='#ffee99';ctx.lineWidth=4;ctx.globalAlpha=.7+Math.sin(time/300)*.25;ctx.strokeRect(s.x-38,s.y-38,76,66);ctx.globalAlpha=1;}if(i!==0){rounded(s.x-29,s.y-27,58,48,7,'#4e6771','#1c343c',5);rounded(s.x-22,s.y-21,44,29,3,color,'#2f535b',3);ctx.fillStyle='#214451';ctx.font='bold 20px system-ui';ctx.textAlign='center';ctx.fillText(done?'✓':String(i+1),s.x,s.y+1);for(let j=0;j<3;j++)ellipse(s.x-16+j*16,s.y+15,3,3,j===1?'#e3b96d':'#b6d1bd',null);}}
  rounded(POWER.x-36,POWER.y-38,72,67,7,G.lights>0?'#dcba64':'#7da99b','#17353e',5);label('ϟ',POWER.x,POWER.y+10,40,'#2f5159');
- for(const v of VENTS){rounded(v.x-40,v.y-23,80,46,8,'#566c72','#152d37',5);for(let i=-27;i<=27;i+=13)rounded(v.x+i-3,v.y-15,6,30,2,'#162b35',null);}
+ for(const [index,v]of VENTS.entries()){
+ const actor=G.players.find(p=>p.ventAnimation?.index===index&&(p.controller===myId||!me()?.alive||dist(me(),v)<(G.lights>0&&me()?.role!=='impostor'?235:680)&&lineOfSight(me(),v))),left=actor?(visual.get(actor.id)?.ventLeft??actor.ventAnimation.remaining):0,progress=1-left/.8,open=actor?Math.min(1,progress/.2,(1-progress)/.2):0;
+ rounded(v.x-40,v.y-23,80,46,8,'#07131b','#152d37',5);
+ ctx.save();ctx.translate(v.x,v.y-23-open*32);ctx.scale(1,1-open*.72);rounded(-40,0,80,46,8,'#566c72','#152d37',5);for(let i=-27;i<=27;i+=13)rounded(i-3,8,6,30,2,'#162b35',null);ctx.restore();
 }
+}
+
+function drawVentJump(p,time){
+ const a=p.ventAnimation,v=VENTS[a.index],left=visual.get(p.id)?.ventLeft??a.remaining,progress=1-left/.8,t=clamp((progress-.15)/.7,0,1),down=a.kind==='enter'?t:1-t;
+ ctx.save();ctx.beginPath();ctx.rect(v.x-55,v.y-110,110,132);ctx.clip();ctx.translate(v.x,v.y);ctx.scale(1-down*.72,1-down*.72);ctx.globalAlpha=1-down*.5;
+ astronaut(p,{x:0,y:-12+down*95,hideName:true,face:visual.get(p.id)?.face||1},time);ctx.restore();
+}
+
 function astronaut(p,point,time){
  ctx.save();ctx.translate(point.x,point.y);ctx.globalAlpha=p.cloak>0?.22:p.alive?1:.35;
  const gait=point.gait||0,stride=Math.sin(point.step||0)*gait,bob=p.alive?-Math.abs(stride)*4:Math.sin(time/300)*5-9;
@@ -1651,7 +1700,7 @@ function astronaut(p,point,time){
  ctx.translate(0,bob+Math.sin(time/550)*.5*(1-gait));ctx.rotate(stride*.03);rounded(-30,-13,17,38,7,shade(p.color,-42),'#070f13',2.5);rounded(-23,-35,47,61,20,p.color,'#070e13',2.5);ctx.save();ctx.beginPath();ctx.roundRect(-20,-32,40,54,17);ctx.clip();ctx.fillStyle=shade(p.color,-36);ctx.fillRect(-25,7,55,24);ctx.fillStyle=shade(p.color,28);ctx.beginPath();ctx.ellipse(-8,-20,10,11,-.5,0,Math.PI*2);ctx.fill();ctx.restore();
  const glass=ctx.createLinearGradient(0,-23,15,0);glass.addColorStop(0,'#d7f5fb');glass.addColorStop(.45,'#a9d3de');glass.addColorStop(1,'#568ba2');rounded(-9,-25,40,27,12,glass,'#08131c',2.5);ellipse(6,-19,12,4,'#f2fdff',null);
  if(p.fake>0||p.working>=0||p.bot&&p.work>0){ctx.fillStyle='#ffeb9c';ctx.font='bold 16px system-ui';ctx.fillText('⚙',32,-32);}
- ctx.restore();if(!mobileLayout()||p.controller!==myId)label(p.name+(p.controller===myId?' · you':''),0,-58,16,p.controller===myId?'#e4ffee':'#f5f5e9');ctx.restore();
+ ctx.restore();if(!point.hideName&&(!mobileLayout()||p.controller!==myId))label(p.name+(p.controller===myId?' · you':''),0,-58,16,p.controller===myId?'#e4ffee':'#f5f5e9');ctx.restore();
 
 }
 function visibilityPolygon(point,radius){
@@ -1680,7 +1729,7 @@ function draw(time,dt){
  const vision=p.alive?(G.lights>0&&p.role!=='impostor'?235:p.role==='impostor'?800:680):1000,visible=q=>q.controller===myId||!p.alive||dist(point,q)<vision&&lineOfSight(point,q);
  for(const b of G.bodies)if(G.phase!=='meeting'&&!b.reported&&visible(b)){rounded(b.x-33,b.y-12,66,42,16,b.color,'#111e25',6);rounded(b.x-4,b.y-33,8,31,4,'#dfe6d8','#1d343c',3);ellipse(b.x-5,b.y-31,7,6,'#e2e8d8','#1c3239',2);ellipse(b.x+5,b.y-31,7,6,'#e2e8d8','#1c3239',2);}
  const layers=[];TABLES.forEach((t,i)=>layers.push({y:t.y+75*TABLE_SCALE,draw:()=>drawTable(t,i)}));BEDS.forEach(b=>layers.push({y:b.y+b.h,draw:()=>drawBed(b)}));CRATES.forEach(b=>layers.push({y:b.y+b.h,draw:()=>drawCrate(b)}));
- for(const q of G.players)if(G.phase!=='meeting'&&q.alive&&!q.inVent&&visible(q)&&(q.cloak<=0||q.controller===myId))layers.push({y:(visual.get(q.id)?.y||q.y)+28,draw:()=>astronaut(q,visual.get(q.id)||q,time)});layers.sort((a,b)=>a.y-b.y);for(const layer of layers)layer.draw();
+ for(const q of G.players)if(G.phase!=='meeting'&&q.alive&&(!q.inVent||q.ventAnimation)&&visible(q)&&(q.cloak<=0||q.controller===myId))layers.push({y:(visual.get(q.id)?.y||q.y)+28,draw:()=>q.ventAnimation?drawVentJump(q,time):astronaut(q,visual.get(q.id)||q,time)});layers.sort((a,b)=>a.y-b.y);for(const layer of layers)layer.draw();
  if(mapOpen){for(const r of ROOMS)label(r.name,r.x+r.w/2,r.y+r.h/2,38,'#e5eee0');if(p.role==='crew'&&G.comms<=0)for(const i of offeredTasks(p))if(ownTasksDone(p)||!p.done.includes(i)){const site=taskSite(p,i);ellipse(site.x,site.y,35,35,'#ffe78c','#1c3d43',7);}}
  if(['play','paused'].includes(G.phase)&&p.alive&&!mapOpen)drawFog(point,camera,vision);
  ctx.setTransform(1,0,0,1,0,0);renderRoomLabel(point);
