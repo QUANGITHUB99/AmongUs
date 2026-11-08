@@ -203,7 +203,7 @@ body.mobile-flight.round-active:has(#skill-status:not([hidden])) .rail{height:92
 <div class="color-label">SUIT COLOR</div><div id="color-picker" class="color-picker" role="group" aria-label="Suit color"></div><p class="settings-note">Choose a free suit. Occupied colors are reserved; your role is random.</p>
 <div class="settings-links"><button id="settings-login"><span>◎</span> <span id="account-label">Log In</span> <b>↗</b></button><button id="settings-flight" hidden><span>◈</span> Ship & Abilities <b>↗</b></button><button id="settings-guide"><span>⌘</span> How to Play <b>↗</b></button><button id="settings-history"><span>◷</span> History <b>↗</b></button><button id="sound-toggle">SOUND: ON</button><button id="fullscreen">FULLSCREEN</button></div></section></div>
 <div class="modal" id="play-modal" hidden><section class="dialog play-dialog" role="dialog" aria-modal="true" aria-labelledby="play-title"><div class="dialog-head"><div><span class="eyebrow">CHOOSE YOUR FLIGHT</span><h2 id="play-title">Play</h2></div><button id="close-play" aria-label="Close play menu">✕</button></div><div class="menu-modes"><button id="mode-solo" class="mode-button selected"><b>Solo flight</b><span>You + 7 bots. Play instantly, even offline.</span></button><button id="mode-online" class="mode-button"><b>Online</b><span>Meet other players. At least 2 humans; bots fill to 8.</span></button></div><div class="room-options" id="room-options" hidden><label>ROOM CODE<input id="room-code" maxlength="6" placeholder="Leave blank for a public room" autocomplete="off" aria-label="Room code"></label></div><p id="mode-description" class="mini">You + 7 bots. Roles are random.</p><button id="enter" class="primary-wide">Play with bots →</button></section></div>
-<div class="modal" id="flight-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="flight-title"><div class="dialog-head"><h2 id="flight-title">Abilities</h2><button id="close-flight" aria-label="Close ship panel">✕</button></div><p id="flight-status"></p><canvas id="flight-map" width="480" height="330" aria-label="Ship minimap"></canvas><ul id="flight-tasks"></ul><div id="flight-abilities" class="flight-abilities"></div><button id="flight-logs">Sensor log</button><button id="flight-menu">Main menu</button></section></div><div class="modal" id="guide-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="guide-title"><div class="dialog-head"><h2 id="guide-title">How to Play</h2><button id="close-guide" aria-label="Close guide">✕</button></div><div class="help-grid"><p><strong>CREWMATE</strong><br>Learn the rooms and find their task terminals. Press E at a station to complete five brain-training tasks. Then help the crew with support tasks. Finish all tasks or vote out the impostor to win. If you die, choose Out or Continue watching.</p><p><strong>IMPOSTOR</strong><br>Press <strong>Q to KILL</strong> a nearby crewmate, with a 30-second cooldown. E also attacks when a target is in range. H cloaks you for 5 seconds, once per round; killing is disabled while cloaked. Z closes a nearby door. C sabotages comms, X reactor, and <strong>V enters/exits a nearby VENT</strong>. While hidden, click a directional arrow to travel to its connected room; the exit cooldown is 7 seconds. The ship schedules two 15-second outages with a five-second warning; impostor vision is unaffected.</p><p><strong>MEETINGS</strong><br>Meetings last up to 30 seconds. Use minus to hide the report, the square button to compact/expand it, or drag its title bar to reposition it. The footer button restores a hidden report. During meetings, drag the exposed map or use WASD/arrows to pan; characters and bodies are hidden. The discussion timer keeps running. Results show votes without a second countdown. R reports a nearby body. Space calls a meeting at the Cafeteria table. Type an alibi and tap a player to vote. Tap again to cancel; tap someone else to change your vote. Room alibis are unverified claims. A tie or no votes ejects no one.</p><p><strong>CONTROLS</strong><br>WASD / arrow keys / right-hand touch joystick to move. On PC, right-click an open floor tile to walk there; keyboard or joystick input cancels the route. On phones, buttons appear only near targets. Tap the Cafeteria emergency button directly. Use the skill tiles or keyboard shortcuts for impostor abilities. Settings contains help and sound. E to interact or attack. There is no map. Remember room locations. Esc closes a task and saves its checkpoint. P pauses solo play.</p><p><strong>PLAY TOGETHER</strong><br>Play finds a public waiting room. Create Room gives friends a private code and invite link. The host starts with 1–8 humans; bots fill the remaining slots. Choose your unique suit in lobby settings.</p><p><strong>SHIP EMERGENCIES</strong><br>Two different crewmates must activate reactor terminals within 10 seconds. Bots can help. Repair the final emergency before time runs out. Late joiners spectate until the next round.</p></div><p class="mini">A host change returns the group to the lobby. Guest play is always available; signing in is optional.</p></section></div>
+<div class="modal" id="flight-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="flight-title"><div class="dialog-head"><h2 id="flight-title">Abilities</h2><button id="close-flight" aria-label="Close ship panel">✕</button></div><p id="flight-status"></p><canvas id="flight-map" width="480" height="330" aria-label="Ship minimap"></canvas><ul id="flight-tasks"></ul><div id="flight-abilities" class="flight-abilities"></div><button id="flight-logs">Sensor log</button><button id="flight-menu">Main menu</button></section></div><div class="modal" id="guide-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="guide-title"><div class="dialog-head"><h2 id="guide-title">How to Play</h2><button id="close-guide" aria-label="Close guide">✕</button></div><div class="help-grid"><p><strong>CREWMATE</strong><br>Learn the rooms and find their task terminals. Press E at a station to complete five brain-training tasks. Then help the crew with support tasks. Finish all tasks or vote out the impostor to win. If you die, choose Out or Continue watching.</p><p><strong>IMPOSTOR</strong><br>Press <strong>Q to KILL</strong> a nearby crewmate, with a 30-second cooldown. E also attacks when a target is in range. H cloaks you for 5 seconds, once per round; killing is disabled while cloaked. Z closes a nearby door. C sabotages comms, X reactor, and <strong>V enters/exits a nearby VENT</strong>. While hidden, click a directional arrow to travel to its connected room; the exit cooldown is 7 seconds. The ship schedules two 15-second outages with a five-second warning; impostor vision is unaffected.</p><p><strong>MEETINGS</strong><br>Meetings last up to 30 seconds. Use minus to hide the report, the square button to compact/expand it, or drag its title bar to reposition it. The footer button restores a hidden report. During meetings, drag the exposed map or use WASD/arrows to pan; characters and bodies are hidden. The discussion timer keeps running. Results show votes without a second countdown. R reports a nearby body. Space calls a meeting at the Cafeteria table. Type an alibi and tap a player to vote. Tap again to cancel; tap someone else to change your vote. Room alibis are unverified claims. A tie or no votes ejects no one.</p><p><strong>CONTROLS</strong><br>WASD / arrow keys / right-hand touch joystick to move. On PC, hold the left mouse button for a moment to steer toward the cursor; release to stop. A short left click still interacts with nearby terminals. Right-click an open floor tile to walk there; keyboard or joystick input cancels the route. On phones, buttons appear only near targets. Tap the Cafeteria emergency button directly. Use the skill tiles or keyboard shortcuts for impostor abilities. Settings contains help and sound. E to interact or attack. There is no map. Remember room locations. Esc closes a task and saves its checkpoint. P pauses solo play.</p><p><strong>PLAY TOGETHER</strong><br>Play finds a public waiting room. Create Room gives friends a private code and invite link. The host starts with 1–8 humans; bots fill the remaining slots. Choose your unique suit in lobby settings.</p><p><strong>SHIP EMERGENCIES</strong><br>Two different crewmates must activate reactor terminals within 10 seconds. Bots can help. Repair the final emergency before time runs out. Late joiners spectate until the next round.</p></div><p class="mini">A host change returns the group to the lobby. Guest play is always available; signing in is optional.</p></section></div>
 <div class="modal" id="history-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="history-title"><div class="dialog-head"><div><span class="eyebrow">YOUR FLIGHT RECORDER</span><h2 id="history-title">History</h2></div><button id="close-history" aria-label="Close history">✕</button></div><p>Recent completed rounds on this browser. Guest and account history stay on this device.</p><button id="history-sensors">Open current sensor log ↗</button><div id="history-list" class="history-list"></div></section></div>
 <div class="modal" id="login-modal" hidden><section class="dialog login-dialog" role="dialog" aria-modal="true" aria-labelledby="login-title"><div class="dialog-head"><div><span class="eyebrow">WELCOME ABOARD</span><h2 id="login-title">Log In</h2></div><button id="close-login" aria-label="Close login">✕</button></div><div id="login-options"><p>No password to remember. Get a secure sign-in link by email, or continue with Google.</p><form id="email-login-form"><label>EMAIL ADDRESS<input id="login-email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com"></label><button id="email-login" type="submit" class="primary-wide">Email me a sign-in link</button></form><div class="login-divider">OR</div><button id="google-login" class="primary-wide google-button">Continue with Google</button></div><div id="signed-in" hidden><p id="signed-in-name"></p><button id="sign-out">Log Out</button></div><p id="auth-status" role="status" aria-live="polite"></p><p class="mini">Sign-in is optional. Your email is never shared in game rooms. Match history is stored on this browser.</p></section></div>
 <div class="modal" id="journal-modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="journal-title"><div class="dialog-head"><h2 id="journal-title">SENSOR LOG</h2><button id="close-journal">Close</button></div><p>Completing tasks recovers sensor fragments. Signals are anonymous, and communications sabotage can corrupt records.</p><div id="journal-list"></div></section></div><script>
@@ -400,7 +400,7 @@ function completeTask(p,index) {
 }
 function callMeeting(reporter,body=null) {
  if(G.phase!=='play'||!reporter.alive||G.overtime>0)return;
- G.phase='meeting';G.phaseTime=30;G.comms=0;G.reactor=0;G.reactorLocks=[null,null];G.doors=[0,0,0];for(const p of G.players){p.cloak=0;p.fake=0;p.inVent=false;p.ventIndex=-1;}keys.clear();closeTask();
+ G.phase='meeting';G.phaseTime=30;G.comms=0;G.reactor=0;G.reactorLocks=[null,null];G.doors=[0,0,0];for(const p of G.players){p.steer=null;p.cloak=0;p.fake=0;p.inVent=false;p.ventIndex=-1;}keys.clear();closeTask();
  const victim=body&&G.players.find(p=>p.id===body.id);
  G.meeting={id:G.round+':'+playTime()+':'+reporter.id,botLines:[],reporterId:reporter.id,kind:body?'body':'emergency',results:false,bodyId:body?.id||null,botChatted:[],replied:[],claims:[],reason:body?reporter.name+' reported the body of '+(victim?.name||'a crewmate')+'.':reporter.name+' called an emergency meeting.',votes:{},chat:[]};
  for(const b of G.bodies)b.reported=true;
@@ -489,6 +489,10 @@ function repairReactor(p,side){
 function handleAction(controller,type,data={}) {
  const p=G.players.find(p=>p.controller===controller);if(!p)return;
  if(type==='walk'&&['play','lobby'].includes(G.phase)&&p.alive&&!p.inVent){startHumanWalk(p,data);return;}
+ if(type==='steer'){
+  if(!['play','lobby','connecting'].includes(G.phase)||!p.alive||p.inVent||!Number.isFinite(data.x)||!Number.isFinite(data.y)||Math.hypot(data.x,data.y)>1.01)return;
+  p.steer={x:data.x,y:data.y,until:Date.now()+350};p.path=[];p.walkTarget=null;return;
+ }
  if(type==='stop-walk'){p.path=[];p.walkTarget=null;return;}
  if(type==='profile'&&G.phase==='lobby'){changeLobbyProfile(controller,data);return;}
  if(type==='ready'&&G.phase==='lobby'){const m=Net.members.get(controller);if(m){m.ready=!m.ready;publish();renderUI();}return;}
@@ -522,7 +526,7 @@ function handleAction(controller,type,data={}) {
    }else if(p.inVent){p.inVent=false;p.ventIndex=-1;p.ventCooldown=7;}
    else{
      if(p.ventCooldown>0)return;const i=VENTS.findIndex(v=>canReach(p,v,100));if(i<0)return;
-     p.inVent=true;p.ventIndex=i;p.x=VENTS[i].x;p.y=VENTS[i].y;p.path=[];p.walkTarget=null;p.cloak=0;p.fake=0;
+     p.steer=null;p.inVent=true;p.ventIndex=i;p.x=VENTS[i].x;p.y=VENTS[i].y;p.path=[];p.walkTarget=null;p.cloak=0;p.fake=0;
    }
    publish();return;
  }
@@ -591,7 +595,7 @@ function step(dt) {
    if(p.bot){updateBot(p,dt);if(G.phase!=='play')break;continue;}
    if(!p.alive||p.inVent)continue;
    const member=Net.members.get(p.controller),mask=p.controller===myId?(taskUI?0:inputMask()):member&&Date.now()-member.seen<700?member.input:0;
-   if(mask){p.fake=0;p.path=[];p.walkTarget=null;move(p,Number(!!(mask&2))-Number(!!(mask&1)),Number(!!(mask&8))-Number(!!(mask&4)),dt);}else advanceHumanWalk(p,dt,false);
+   if(mask){p.fake=0;p.path=[];p.walkTarget=null;move(p,Number(!!(mask&2))-Number(!!(mask&1)),Number(!!(mask&8))-Number(!!(mask&4)),dt);}else if(p.steer?.until>Date.now()){move(p,p.steer.x,p.steer.y,dt);}else advanceHumanWalk(p,dt,false);
  }
  checkWin();
 }
@@ -769,7 +773,7 @@ function disconnect(){
  if(Net.db)for(const ch of new Set(old))Net.db.removeChannel(ch).catch(()=>{});
 }
 function offlineFallback(text){disconnect();G.phase='connection-error';G.message=text||'Could not connect. Retry or play solo.';$('connection-note').textContent=G.message;renderUI();}
-function request(type,data={}){if(type==='walk'&&G.phase==='connecting'){startHumanWalk(me(),data);return;}if(type==='stop-walk'&&G.phase==='connecting'){if(me()){me().path=[];me().walkTarget=null;}return;}if(me()&&!me().alive&&!['restart','profile'].includes(type))return;if(type==='profile'&&G.phase==='connecting'){changeLobbyProfile(myId,data);return;}if(authority())handleAction(myId,type,data);else roomSend('action',{id:myId,seq:++actionSeq,action:type,data});}
+function request(type,data={}){if(type==='steer'&&G.phase==='connecting'){handleAction(myId,type,data);return;}if(type==='walk'&&G.phase==='connecting'){startHumanWalk(me(),data);return;}if(type==='stop-walk'&&G.phase==='connecting'){if(me()){me().path=[];me().walkTarget=null;}return;}if(me()&&!me().alive&&!['restart','profile'].includes(type))return;if(type==='profile'&&G.phase==='connecting'){changeLobbyProfile(myId,data);return;}if(authority())handleAction(myId,type,data);else roomSend('action',{id:myId,seq:++actionSeq,action:type,data});}
 setInterval(()=>{
  const now=Date.now();
  if(Net.lobbyRetryAt&&now>=Net.lobbyRetryAt&&Net.status!=='idle'){Net.lobbyRetryAt=0;subscribeLobby();}
@@ -1153,7 +1157,7 @@ function tapWorld(clientX,clientY){
  if(dist(point,TABLE)<90&&!$('meeting').disabled){request('meeting');renderUI();return true;}
  if(!$('use').disabled&&STATIONS.some(s=>dist(point,s)<65&&canReach(me(),s))){interact();return true;}return false;
 }
-canvas.onclick=e=>{if(!cameraCanPan()&&tapWorld(e.clientX,e.clientY))cancelMouseWalk();};canvas.oncontextmenu=e=>{e.preventDefault();if(rightMouse(e)&&!cameraCanPan())queueMouseWalk(worldClickPoint(e.clientX,e.clientY),false);};
+canvas.onclick=e=>{if(performance.now()<suppressSteerClickUntil)return;if(!cameraCanPan()&&tapWorld(e.clientX,e.clientY))cancelMouseWalk();};canvas.oncontextmenu=e=>{e.preventDefault();if(rightMouse(e)&&!cameraCanPan())queueMouseWalk(worldClickPoint(e.clientX,e.clientY),false);};
 
 
 
@@ -1217,14 +1221,39 @@ function advanceHumanWalk(p,dt,lobby){
  if(lobby){p.x+=dx/d*310*step;p.y+=dy/d*310*step;}else move(p,dx,dy,step);
 }
 function queueMouseWalk(target,lobby){
+ stopMouseSteer();
  if(!target||!me()?.alive||taskUI||HOME_MODALS.some(id=>!$(id).hidden)||!$('journal-modal').hidden||!(lobby?['lobby','connecting']:['play']).includes(G.phase))return;
  const probe={...me(),path:[]};if(!startHumanWalk(probe,target)){showToast('Choose a reachable part of the floor.');return;}
  mouseGoal={...target,round:G.round,phase:G.phase};request('walk',target);
 }
-function cancelMouseWalk(){if(!mouseGoal)return;mouseGoal=null;request('stop-walk');}
+function cancelMouseWalk(){stopMouseSteer();if(!mouseGoal)return;mouseGoal=null;request('stop-walk');}
 function syncMouseGoal(){if(mouseGoal&&(!me()?.alive||mouseGoal.round!==G.round||mouseGoal.phase!==G.phase||dist(me(),mouseGoal)<8))mouseGoal=null;}
 function drawMouseGoal(time){if(!mouseGoal||G.phase==='meeting')return;ctx.save();ctx.strokeStyle='#b4f4df';ctx.lineWidth=2;ctx.beginPath();ctx.arc(mouseGoal.x,mouseGoal.y,10+Math.sin(time/160)*2,0,Math.PI*2);ctx.stroke();ctx.restore();}
 $('lobby-scene').oncontextmenu=e=>{e.preventDefault();if(!rightMouse(e))return;const r=$('lobby-scene').getBoundingClientRect();queueMouseWalk({x:(e.clientX-r.left)*800/r.width,y:(e.clientY-r.top)*520/r.height},true);};
+
+
+let mouseSteer=null,suppressSteerClickUntil=0;
+function canMouseSteer(lobby){return !!me()?.alive&&!me().inVent&&!taskUI&&!isSpectator()&&HOME_MODALS.every(id=>$(id).hidden)&&$('journal-modal').hidden&&(lobby?['lobby','connecting']:['play']).includes(G.phase);}
+function stopMouseSteer(){const state=mouseSteer;mouseSteer=null;if(state?.active){suppressSteerClickUntil=performance.now()+250;request('steer',{x:0,y:0});}}
+function beginMouseSteer(e,surface,lobby){
+ if(e.button!==0||e.pointerType!=='mouse'||!canMouseSteer(lobby))return;
+ cancelMouseWalk();mouseSteer={surface,lobby,id:e.pointerId,x:e.clientX,y:e.clientY,at:performance.now(),sent:0,active:false,round:G.round,phase:G.phase};surface.setPointerCapture?.(e.pointerId);
+}
+function updateMouseSteer(){
+ const state=mouseSteer;if(!state)return;
+ if(!canMouseSteer(state.lobby)||state.round!==G.round||state.phase!==G.phase){stopMouseSteer();return;}
+ const now=performance.now();if(now-state.at<160)return;
+ if(!state.active){state.active=true;mouseGoal=null;request('stop-walk');}
+ if(now-state.sent<80)return;state.sent=now;
+ const r=state.surface.getBoundingClientRect(),target=state.lobby?{x:(state.x-r.left)*800/r.width,y:(state.y-r.top)*520/r.height}:worldClickPoint(state.x,state.y);if(!target)return;
+ const p=me(),dx=target.x-p.x,dy=target.y-p.y,length=Math.hypot(dx,dy);request('steer',length<35?{x:0,y:0}:{x:dx/length,y:dy/length});
+}
+function trackMouseSteer(e){if(!mouseSteer||mouseSteer.id!==e.pointerId)return;if(!(e.buttons&1)){stopMouseSteer();return;}mouseSteer.x=e.clientX;mouseSteer.y=e.clientY;}
+canvas.addEventListener('pointerdown',e=>beginMouseSteer(e,canvas,false));
+canvas.addEventListener('pointermove',trackMouseSteer);
+$('lobby-scene').addEventListener('pointerdown',e=>beginMouseSteer(e,$('lobby-scene'),true));
+$('lobby-scene').addEventListener('pointermove',trackMouseSteer);
+for(const surface of [canvas,$('lobby-scene')])for(const event of ['pointerup','pointercancel','lostpointercapture'])surface.addEventListener(event,e=>{if(mouseSteer?.id===e.pointerId)stopMouseSteer();});
 
 function validBlackouts(g){return Array.isArray(g.blackoutTimes)&&[0,2].includes(g.blackoutTimes.length)&&g.blackoutTimes.every(n=>Number.isInteger(n)&&n>=5&&n<=300)&&(g.blackoutTimes.length===0||g.blackoutTimes[1]>g.blackoutTimes[0]+20)&&Number.isInteger(g.blackoutIndex)&&g.blackoutIndex>=0&&g.blackoutIndex<=g.blackoutTimes.length&&Number.isFinite(g.blackoutEnd)&&g.blackoutEnd>=0&&g.blackoutEnd<=320&&Number.isFinite(g.lights)&&g.lights>=0&&g.lights<=15;}
 function updateBlackouts(){const elapsed=ROUND_SECONDS-G.time;while(G.blackoutIndex<G.blackoutTimes.length&&elapsed>=G.blackoutTimes[G.blackoutIndex]){G.blackoutEnd=G.blackoutTimes[G.blackoutIndex]+15;G.blackoutIndex++;}G.lights=Math.max(0,G.blackoutEnd-elapsed);}
@@ -1239,7 +1268,7 @@ function stepWaitingRoom(dt){
   if(G.phase==='connecting'&&p.controller!==myId)continue;
   const member=Net.members.get(p.controller),mask=p.controller===myId?(modal?0:inputMask()):member&&Date.now()-member.seen<700?member.input:0;
   const dx=Number(!!(mask&2))-Number(!!(mask&1)),dy=Number(!!(mask&8))-Number(!!(mask&4)),len=Math.hypot(dx,dy)||1;
-  if(mask){p.path=[];p.walkTarget=null;const nx=p.x+dx/len*310*dt,ny=p.y+dy/len*310*dt;if(waitingStandable(nx,p.y))p.x=nx;if(waitingStandable(p.x,ny))p.y=ny;}else advanceHumanWalk(p,dt,true);
+  if(mask){p.path=[];p.walkTarget=null;const nx=p.x+dx/len*310*dt,ny=p.y+dy/len*310*dt;if(waitingStandable(nx,p.y))p.x=nx;if(waitingStandable(p.x,ny))p.y=ny;}else if(!modal&&p.steer?.until>Date.now()){const v=p.steer,nx=p.x+v.x*310*dt,ny=p.y+v.y*310*dt;if(waitingStandable(nx,p.y))p.x=nx;if(waitingStandable(p.x,ny))p.y=ny;}else advanceHumanWalk(p,dt,true);
  }
 }
 function renderWaitingRoom(){
@@ -1317,7 +1346,7 @@ function renderRoomLabel(point){
 
 function renderKeyboardShortcuts(){
  const bar=$('keyboard-shortcuts'),p=me();bar.hidden=!['play','paused'].includes(G.phase)||!p||(!p.alive&&!watchingMatch());if(bar.hidden)return;
- let hints=watchingMatch()?[['WASD / ↑↓←→','Pan'],['Drag','Look around']]:[['WASD / ↑↓←→','Move'],['RMB','Walk'],['E','Use / Task'],['R','Report'],['Space','Meeting']];
+ let hints=watchingMatch()?[['WASD / ↑↓←→','Pan'],['Drag','Look around']]:[['WASD / ↑↓←→','Move'],['Hold LMB','Steer'],['RMB','Walk'],['E','Use / Task'],['R','Report'],['Space','Meeting']];
  if(Net.mode==='solo')hints.push(['P','Pause']);hints.push(['Esc','Close']);
  const signature=JSON.stringify(hints);if(bar.dataset.signature===signature)return;bar.dataset.signature=signature;
  bar.replaceChildren(...hints.map(([key,action])=>{const item=element('span','','keyboard-shortcut');item.append(element('kbd',key),element('span',action));return item;}));
@@ -1630,7 +1659,7 @@ function draw(time,dt){
 function frame(time){const dt=Math.min(.05,(time-lastFrame)/1000||.016);lastFrame=time;draw(time,dt);requestAnimationFrame(frame);}
 let lastHud=0;
 setInterval(()=>{
- const now=performance.now(),dt=Math.min(.15,(now-lastEngine)/1000);lastEngine=now;
+ const now=performance.now(),dt=Math.min(.15,(now-lastEngine)/1000);lastEngine=now;updateMouseSteer();
  if(authority()||G.phase==='connecting')step(dt);
  if(now-lastHud>=100){lastHud=now;renderUI();}
 },16);
